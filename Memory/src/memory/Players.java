@@ -16,8 +16,10 @@ public class Players {
     // long wins = 0;
     // long losses = 0;
     // long ties = 0;
-    
-    
+    /* - name - a String variable for the players name
+    - points - an int variable for the number of points that player has
+    - pairs - an array of type Pair that holds the list of cards won by this player
+    */
     
     //public Players(){
     //}

@@ -10,4 +10,12 @@ package memory;
  */
 public class Tool {
     
+    
+    public Tool(){
+        
+    }
+    
+    public void arrowTool(){
+        
+    }
 }

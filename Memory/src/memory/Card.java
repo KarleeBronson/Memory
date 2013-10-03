@@ -4,15 +4,16 @@
  */
 package memory;
 
+import java.io.Serializable;
 /**
  *
  * @author Karalee Olsen
  */
-public class Card {
-   /* - value - a variable for the word, number, or picture on the card 
+public class Card implements Serializable{
+   /*- value - a variable for the word, number, or picture on the card 
     */
     
-    Star star;
+   Star star;
     
     
     public Card(){
@@ -20,5 +21,6 @@ public class Card {
     }
     
     public void cardColor(Star, star){
-        this.star = star;
+         this.star = star
+    
 }

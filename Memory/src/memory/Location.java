@@ -6,7 +6,7 @@ package memory;
 
 /**
  *
- * @author Karalee Foster
+ * @author Karalee Olsen
  */
 public class Location {
     int row;

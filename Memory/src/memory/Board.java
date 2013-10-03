@@ -13,9 +13,12 @@ import javax.swing.table.AbstractTableModel;
  * @author Karalee Olsen
  */
 public class Board {
-    
-    int rowCount = 3;
-    int columnCount = 3;
+    // cards - a two-dimensional array of cards (i.e., the cards laid out face down)
+    //- turn - a variable containing a reference to the Player who's turn is next
+    int cardArray = new.Array;
+    int whoseTurn = ;
+    int rowCount = 2;
+    int columnCount = 5;
     
     Location[][] boardLocations;
     
