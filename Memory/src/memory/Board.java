@@ -20,7 +20,7 @@ public class Board implements Serializable {
     public Board() {
     }
     
-    
+         
     public void displayCardArray() {
         System.out.println("\n\t The cards are " + this.cardArray + " .");
     }

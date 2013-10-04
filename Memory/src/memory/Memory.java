@@ -29,8 +29,10 @@ public class Memory {
         // TODO code application logic here
         Card myCard = new Card();
         myCard.displayCard();
-        
-        
+        Game newGame = new Game();
+        newGame.displayGame();
+        Board myBoard = new Board();
+        myBoard.displaySize();
     }
     public void getName() {
         Scanner input = new Scanner (System.in);

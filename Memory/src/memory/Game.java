@@ -53,7 +53,10 @@ public class Game implements Serializable{
        this.playerB.displayName();
        
    }
-
+   
+   public void displayGame(){
+       System.out.println(this.playerA.name + " is Player A. " + this.playerB.name + " is Player B. " );
+   }
     public String getGameType() {
         return gameType;
     }
