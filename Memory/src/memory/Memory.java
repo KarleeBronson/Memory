@@ -33,6 +33,14 @@ public class Memory {
         newGame.displayGame();
         Board myBoard = new Board();
         myBoard.displaySize();
+        Tool myTool = new Tool();
+        myTool.displayTool();
+        Players myPlayer = new Players();
+        myPlayer.displayName();
+        Pair myPair = new Pair();
+        myPair.displayCardType();
+        Location myLocation = new Location();
+        myLocation.displayFlippedCard();
     }
     public void getName() {
         Scanner input = new Scanner (System.in);
