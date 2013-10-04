@@ -163,6 +163,8 @@ public class Players implements Serializable{
         this.flippedCard = flippedCard;
     }
       
+      public void displayName(){
+       System.out.println ("Enter your name:");
  
 }    
 
