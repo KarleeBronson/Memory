@@ -6,7 +6,7 @@ package memory;
 import java.io.Serializable;
 /**
  *
- * @author Karalee Olsen
+ * @author Karlee Bronson
  */
 public class Pair implements Serializable{
     /* - card1 - a variable of type Card that holds a reference to the first card in the pair
@@ -122,4 +122,6 @@ public class Pair implements Serializable{
         this.card10 = card10;
     }
     
-}
+      public void displayCardType(){
+       System.out.println("Card type: " + this.cardType);
+       }
