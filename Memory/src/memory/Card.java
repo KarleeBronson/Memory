@@ -11,8 +11,22 @@ public class Card implements Serializable{
     
     public void Card(){
     }
-    
-    public void cardColor(){
-        
+
+    public int getStarPicture() {
+        return starPicture;
     }
+
+    public void setStarPicture(int starPicture) {
+        this.starPicture = starPicture;
+    }
+
+    public int getStarColor() {
+        return starColor;
+    }
+
+    public void setStarColor(int starColor) {
+        this.starColor = starColor;
+    }
+    
+   
 }

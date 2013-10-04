@@ -4,11 +4,13 @@
  */
 package memory;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Karalee Olsen
  */
-public class Game {
+public class Game implements Serializable{
     
     String gameType;
     Player playerA;
@@ -51,4 +53,77 @@ public class Game {
        this.playerB.displayName();
        
    }
+
+    public String getGameType() {
+        return gameType;
+    }
+
+    public void setGameType(String gameType) {
+        this.gameType = gameType;
+    }
+
+    public Player getPlayerA() {
+        return playerA;
+    }
+
+    public void setPlayerA(Player playerA) {
+        this.playerA = playerA;
+    }
+
+    public Player getPlayerB() {
+        return playerB;
+    }
+
+    public void setPlayerB(Player playerB) {
+        this.playerB = playerB;
+    }
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public void setCurrentPlayer(Player currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
+    public Player getOtherPlayer() {
+        return otherPlayer;
+    }
+
+    public void setOtherPlayer(Player otherPlayer) {
+        this.otherPlayer = otherPlayer;
+    }
+
+    public Player getWinner() {
+        return winner;
+    }
+
+    public void setWinner(Player winner) {
+        this.winner = winner;
+    }
+
+    public Player getLoser() {
+        return loser;
+    }
+
+    public void setLoser(Player loser) {
+        this.loser = loser;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
+    public void setBoard(Board board) {
+        this.board = board;
+    }
+   
 }

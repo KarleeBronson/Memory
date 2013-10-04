@@ -1,11 +1,12 @@
 package memory;
 
+import java.io.Serializable;
     import java.util.Scanner;
 /**
  *
  * @author kbronson
  */
-public class Players {
+public class Players implements Serializable{
      /*I do not think we need the fistName and lastName variables if we use String name.
       * int lastName,               players last name*/
      /*firstName;                  players firstname */         
@@ -89,6 +90,79 @@ public class Players {
         double winLossAverage = wins / totalScore;
         return winLossAverage * 100;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public int[] getPairsWon() {
+        return pairsWon;
+    }
+
+    public void setPairsWon(int[] pairsWon) {
+        this.pairsWon = pairsWon;
+    }
+
+    public int getNumberOfPairsWon() {
+        return numberOfPairsWon;
+    }
+
+    public void setNumberOfPairsWon(int numberOfPairsWon) {
+        this.numberOfPairsWon = numberOfPairsWon;
+    }
+
+    public String getPlayerType() {
+        return playerType;
+    }
+
+    public void setPlayerType(String playerType) {
+        this.playerType = playerType;
+    }
+
+    public long getWins() {
+        return wins;
+    }
+
+    public void setWins(long wins) {
+        this.wins = wins;
+    }
+
+    public long getLosses() {
+        return losses;
+    }
+
+    public void setLosses(long losses) {
+        this.losses = losses;
+    }
+
+    public long getTies() {
+        return ties;
+    }
+
+    public void setTies(long ties) {
+        this.ties = ties;
+    }
+
+    public int getFlippedCard() {
+        return flippedCard;
+    }
+
+    public void setFlippedCard(int flippedCard) {
+        this.flippedCard = flippedCard;
+    }
+      
  
 }    
 
