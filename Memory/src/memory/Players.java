@@ -13,11 +13,11 @@ public class Players {
     lastName,
     firstName;
                  
-    // String name;
-    // String playerType;
-    // long wins = 0;
-    // long losses = 0;
-    // long ties = 0;
+   String name;
+   String playerType;
+   long wins = 0;
+   long losses = 0;
+   long ties = 0;
     /* - name - a String variable for the players name
     - points - an int variable for the number of points that player has
     - pairs - an array of type Pair that holds the list of cards won by this player
@@ -25,7 +25,7 @@ public class Players {
     
     
     public static void main(String[] args) {
-               
+                   
       public void winnerLoser (){
         
    if(playerA < playerB) System.out.println ("playerA wins");
