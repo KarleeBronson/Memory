@@ -9,11 +9,17 @@ import java.io.Serializable;
  * @author kbronson
  */
 public class Tool implements Serializable{
-
+        //arrowTool=;
+    String arrowTool = "arrow";
     public Tool() {
     }
     
-    
-    
+    public String getArrowTool () {
+            return arrowTool;
+    }
+    public void setArrowTool (string arrowTool){
+        this.arrowTool = arrowTool;
+    }
+    public void displayTool();
+        System.out.println("Tool arrow:" + this.arrowTool);
 }
-
