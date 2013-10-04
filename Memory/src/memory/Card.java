@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package memory;
 
 import java.io.Serializable;
@@ -10,17 +6,13 @@ import java.io.Serializable;
  * @author Karalee Olsen
  */
 public class Card implements Serializable{
-   /*- value - a variable for the word, number, or picture on the card 
-    */
+    int starPicture;         //a variable for the word, number, or picture on the card
+    int starColor;
     
-   Star star;
-    
-    
-    public Card(){
-        
+    public void Card(){
     }
     
-    public void cardColor(Star, star){
-         this.star = star
-    
+    public void cardColor(){
+        
+    }
 }

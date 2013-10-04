@@ -22,7 +22,14 @@ public class Location {
         this.player = player;
     }
     
-    
+    public void displayFlippedCard() {
+        if (this.player != null) {
+            System.out.println(this.player.flippedCard);
+        }
+        else {
+            System.out.println(" ");
         }
     }
+        }
+    
 }
