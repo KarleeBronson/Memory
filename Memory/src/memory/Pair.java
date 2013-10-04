@@ -13,7 +13,7 @@ public class Pair {
 -       card2 - a variable of type Card that holds a reference to the second card in the pair
 *   */
     
-    String cardType
+    String cardType;
     Card card1;
     Card card2;
     Card card3;
