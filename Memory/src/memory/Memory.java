@@ -27,6 +27,10 @@ public class Memory {
         myGame.getName();
         myGame.displayHelp();
         // TODO code application logic here
+        Card myCard = new Card();
+        myCard.displayCard();
+        
+        
     }
     public void getName() {
         Scanner input = new Scanner (System.in);

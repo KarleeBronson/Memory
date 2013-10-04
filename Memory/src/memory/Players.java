@@ -24,7 +24,7 @@ public class Players implements Serializable{
      *
      * @param args
      */
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
           Players playerA = new Players();
           playerA.getName();
           playerA.getPairsWon();
@@ -35,7 +35,7 @@ public class Players implements Serializable{
           playerB.getPairsWon();
           playerB.getPoints();
           playerB.getNumberOfPairsWon();
-    }    
+    }    */ 
       public void Players(){
       }    
       public void getName(){
