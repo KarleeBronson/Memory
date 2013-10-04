@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Karalee Olsen
+ * @author Karlee Bronson
  */
 public class Location implements Serializable{
     int row;
@@ -57,5 +57,7 @@ public class Location implements Serializable{
         this.player = player;
     }
         
+      public void displayFlippedCard(){
+       System.out.println("Card location:" + this.location);
     
 }
