@@ -53,10 +53,13 @@ public class Game implements Serializable{
        this.playerB.displayName();
        
    }
-   
+   // I think we will need to change this.playerA.name to this.name and this.name2 
+   // like in the Memory main class but am not sure if it can pull from the main class.
    public void displayGame(){
-       System.out.println(this.playerA.name + " is Player A. " + this.playerB.name + " is Player B. " );
+       System.out.println(this.playerA.name + " is Player A. " 
+               + this.playerB.name + " is Player B. " );
    }
+   
     public String getGameType() {
         return gameType;
     }
