@@ -17,9 +17,14 @@ public class Tool implements Serializable{
     public String getArrowTool () {
             return arrowTool;
     }
-    public void setArrowTool (string arrowTool){
+    public void setArrowTool (String arrowTool){
         this.arrowTool = arrowTool;
     }
-    public void displayTool();
+    
+    /**
+     *
+     */
+    public void displayTool(){
         System.out.println("Tool arrow:" + this.arrowTool);
+}
 }

@@ -165,7 +165,7 @@ public class Players implements Serializable{
       
       public void displayName(){
        System.out.println ("Enter your name:");
- 
+      }
 }    
 
 /*dataType variableName= values

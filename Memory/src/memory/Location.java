@@ -57,7 +57,8 @@ public class Location implements Serializable{
         this.player = player;
     }
         
-      public void displayFlippedCard(){
-       System.out.println("Card location:" + this.location);
+      //public void displayFlippedCard(){
+      // System.out.println("Card location:" + this.location);
     
+//}
 }
