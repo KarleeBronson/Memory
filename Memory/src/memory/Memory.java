@@ -11,7 +11,8 @@ import java.util.Scanner;
  * @author kbronson
  */
 public class Memory {
-    String name; 
+    String name;
+    String name2;
     String instructions = "This is the game of Memory \n\n"
             + "There will be a total of 2 players.\n\n"
             + "Each player will take a turn choosing 1 card at a time.\n\n"
@@ -35,8 +36,16 @@ public class Memory {
         myBoard.displaySize();
         Tool myTool = new Tool();
         myTool.displayTool();
-        Players myPlayer = new Players();
+        Player myPlayer = new Player();
         myPlayer.displayName();
+        //myPlayer.getName();
+        // I think we should change this to the getName() 
+        //function that was created when I did the insert 
+        //"getter setter" thing that we were told to do in
+        // one of the videos last week. (The getter setter 
+        // thing is what input a lot of code without us 
+        // needing to input it. Almost any of the code that 
+        //says has a get function and then a set function was created by NetBeans.
         Pair myPair = new Pair();
         myPair.displayCardType();
         Location myLocation = new Location();
@@ -44,14 +53,21 @@ public class Memory {
     }
     public void getName() {
         Scanner input = new Scanner (System.in);
-        System.out.println ("Enter your name:");
+        //System.out.println ("Enter your name:");
+        System.out.println ("Enter your name Player A:");
         this.name = input.next ();
+        System.out.println ("Enter your name Player B:");
+        this.name2 = input.next ();
     }
     
     public void displayHelp (){
-    System.out.println("Welcome" + this.name + "");    
+    System.out.println("Welcome " + this.name + " and " + this.name2 + "");    
     System.out.println(this.instructions);
     
     }}
             
       
+// I added String name2 so that two people could enter their names 
+// at the begining of the game. In order to do this, I also had to 
+// add a spot under the getName() for player B to enter his or her 
+// name, as well as add to the displayHelp() in the Welcome Section.
