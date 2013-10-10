@@ -75,7 +75,7 @@ public class Player implements Serializable{
       }
                 
       
-     public void getWinnerLoser (String name){
+     public void getWinnerLoser (){
           
           Player playerA = new Player();
           playerA.getName();
