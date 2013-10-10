@@ -82,11 +82,11 @@ public class Player implements Serializable{
           Player playerB = new Player();
           playerB.getName();
           
-          if (playerA. < playerB){ 
+          if (playerA.points < playerB.points){ 
                 System.out.println (name "wins");
                 return ;
             }
-                else if (playerA > playerB) {
+                else if (playerA.points > playerB.points) {
                     System.out.println (name "wins");
                     return ;
                 }
