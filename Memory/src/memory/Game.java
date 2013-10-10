@@ -44,15 +44,10 @@ public class Game implements Serializable{
        System.out.println(
                "\n\t*************************************************************************************************"
                + "\n\t The game is a tie. Better Luck next time!"
-               + "******************************************************************************************************");
+               + "\n\t******************************************************************************************************");
    }
    
-   public void displayPlayer() {
-       System.out.println("\n\tHere are the two default players in the game of Memory.");
-       this.playerA.displayName();
-       this.playerB.displayName();
-       
-   }
+ 
    // I think we will need to change this.playerA.name to this.name and this.name2 
    // like in the Memory main class but am not sure if it can pull from the main class.
    public void displayGame(){

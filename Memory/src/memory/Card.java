@@ -8,7 +8,16 @@ import java.io.Serializable;
 public class Card implements Serializable{
      //starPicture = ;         //a variable for the word, number, or picture on the card
     String starColor = "yellow";
-    
+   /* String starColor1 = "yellow";
+    String starColor2 = "blue";
+    String starColor3 = "blue";
+    String starColor4 = "green";
+    String starColor5 = "green";
+    String starColor6 = "red";
+    String starColor7 = "red";
+    String starColor8 = "orange";
+    String starColor9 = "orange";
+    */
     public void Card(){
     }
 

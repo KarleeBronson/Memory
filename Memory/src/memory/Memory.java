@@ -13,15 +13,18 @@ import java.util.Scanner;
 public class Memory {
     String name;
     String name2;
-    String instructions = "This is the game of Memory \n\n"
+    String instructions =  "This is the game of Memory \n\n"
             + "There will be a total of 2 players.\n\n"
             + "Each player will take a turn choosing 1 card at a time.\n\n"
             + "By clicking on a card with the arrow, card will flip over.\n\n"  
             + "The object of the game is to find the cards match.\n\n"
             + "The player continues until they can't find a match.\n\n"
             + "The player who gets the most matches wins.\n\n";
-    /**
-     * @param args the command line arguments
+           
+    /**     
+     * 
+     * @param args the command line argumentsk
+     * 
      */
     public static void main(String[] args) {
         Memory myGame = new Memory();
@@ -32,8 +35,11 @@ public class Memory {
         myCard.displayCard();
         Game newGame = new Game();
         newGame.displayGame();
+        //newGame.displayTiedMessage();
         Board myBoard = new Board();
         myBoard.displaySize();
+       // myBoard.displayCardArray();
+        //myBoard.displayWhoseTurn();
         Tool myTool = new Tool();
         myTool.displayTool();
         Player myPlayer = new Player();
@@ -53,7 +59,6 @@ public class Memory {
     }
     public void getName() {
         Scanner input = new Scanner (System.in);
-        //System.out.println ("Enter your name:");
         System.out.println ("Enter your name Player A:");
         this.name = input.next ();
         System.out.println ("Enter your name Player B:");
@@ -61,7 +66,7 @@ public class Memory {
     }
     
     public void displayHelp (){
-    System.out.println("Welcome " + this.name + " and " + this.name2 + "");    
+    System.out.println("Welcome " + this.name + " and " + this.name2 + ",\n");    
     System.out.println(this.instructions);
     
     }}

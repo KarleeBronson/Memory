@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author Karalee Olsen
  */
 public class Board implements Serializable {
-    int [] cardArray;       //a two-dimensional array of cards (i.e., the cards laid out face down)
+    char [] cardArray = new char[10];       //a two-dimensional array of cards (i.e., the cards laid out face down)
     String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
     int rowCount = 2;
     int columnCount = 5;
@@ -22,25 +22,33 @@ public class Board implements Serializable {
     
          
     public void displayCardArray() {
-        System.out.println("\n\t The cards are " + this.cardArray + " .");
+       /* cardArray= "yellow.card, blue.card, green.card, red.card, orange.card".toCharArray();
+        int i = 0;
+        
+            for(i = 0; i<10; i++) {
+            System.out.print(cardArray[i] + " ");
+            }
+        System.out.println("\n The cards are " + this.cardArray + " .");
+        System.out.print("\n");
+        */
     }
     
     
     public void displayWhoseTurn(){
-        System.out.println("\n\t It is " + this.whoseTurn + " turn to find a match.");
+        System.out.println("\n It is " + this.whoseTurn + " turn to find a match.");
     }
     
     
     public void displaySize() {
-        System.out.println("\n\tThe board is " + this.rowCount + " by "
+        System.out.println("\nThe board is " + this.rowCount + " by "
                             + this.columnCount + " in size.");
     }
 
-    public int[] getCardArray() {
+    public char[] getCardArray() {
         return cardArray;
     }
 
-    public void setCardArray(int[] cardArray) {
+    public void setCardArray(char[] cardArray) {
         this.cardArray = cardArray;
     }
 
