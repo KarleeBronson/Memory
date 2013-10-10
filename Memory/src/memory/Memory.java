@@ -23,7 +23,7 @@ public class Memory {
            
     /**     
      * 
-     * @param args the command line argumentsk
+     * @param args the command line arguments
      * 
      */
     public static void main(String[] args) {
@@ -74,7 +74,3 @@ public class Memory {
     }}
             
       
-// I added String name2 so that two people could enter their names 
-// at the begining of the game. In order to do this, I also had to 
-// add a spot under the getName() for player B to enter his or her 
-// name, as well as add to the displayHelp() in the Welcome Section.

@@ -12,8 +12,8 @@ public class Player implements Serializable{
      /*firstName;                  players firstname */         
      String name;             //a String variable for the players name
      int points;              //an int variable for the number of points that player has
-     int [] pairsWon;         //an array of type Pair that holds the list of cards won by this player
-     int numberOfPairsWon;
+     int [] pairsWon;         // an array of type Pair that holds the list of cards won by this player
+     int numberOfPairsWon;    // an int variable for the number of pairs won by this player
      String playerType;
      long wins = 0;
      long losses = 0;
@@ -48,19 +48,56 @@ public class Player implements Serializable{
         System.out.println("\t\tHello, my name is " + this.name);
       }
       
-      // The following information inside this function might 
+     
+    public String getName() {
+        Scanner input = new Scanner (System.in);
+          System.out.println ("Enter your name:");
+          this.name = input.next ();
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+ public int[] getPairsWon() {
+        
+        return pairsWon;
+    }
+
+    public void setPairsWon(int[] pairsWon) {
+        this.pairsWon = pairsWon;
+    }
+    public int getPoints(int pairsWon) {
+        
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+   
+
+   /* public int getNumberOfPairsWon() {
+         return numberOfPairsWon;
+    }
+
+    public void setNumberOfPairsWon(int numberOfPairsWon) {
+        this.numberOfPairsWon = numberOfPairsWon;
+    }*/
+ // The following information inside this function might 
       // actually need to be somewhere else becasue the results 
       // are not telling us the number of pairs won, it is telling 
       // us who wins. 
       public void getNumberOfPairsWon (){
             if (numberOfPairsWon >= 3) {
-                System.out.println (this.name + " wins!");
+                System.out.println (this.name + " wins this round!");
              } 
                 else if (numberOfPairsWon <= 2){
-                    System.out.println (this.name + " loses.");
+                    System.out.println (this.name + " loses this round.");
                 }
-                else if (numberOfPairsWon == 3){ 
-                    System.out.println ("Players are tied.");
+                else { 
+                    System.out.println ("Players are tied this round.");
                 }
        }
         
@@ -82,13 +119,11 @@ public class Player implements Serializable{
           Player playerB = new Player();
           playerB.getName();
           
-          if (playerA. < playerB){ 
-                System.out.println (name "wins");
-                return ;
+          if (playerA.points < playerB.points){ 
+                System.out.println (name + "wins");
             }
-                else if (playerA > playerB) {
-                    System.out.println (name "wins");
-                    return ;
+                else if (playerA.points > playerB.points) {
+                    System.out.println (name + "wins");
                 }
             
    
@@ -107,41 +142,6 @@ public class Player implements Serializable{
         double winLossAverage = wins / totalScore;
         return winLossAverage * 100;*/
     }
-
-    public String getName() {
-        Scanner input = new Scanner (System.in);
-          System.out.println ("Enter your name:");
-          this.name = input.next ();
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
-    public int[] getPairsWon() {
-        return pairsWon;
-    }
-
-    public void setPairsWon(int[] pairsWon) {
-        this.pairsWon = pairsWon;
-    }
-
-   /* public int getNumberOfPairsWon() {
-         return numberOfPairsWon;
-    }
-
-    public void setNumberOfPairsWon(int numberOfPairsWon) {
-        this.numberOfPairsWon = numberOfPairsWon;
-    }*/
 
     public String getPlayerType() {
         return playerType;
