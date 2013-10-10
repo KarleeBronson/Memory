@@ -56,6 +56,8 @@ public class Memory {
         myPair.displayCardType();
         Location myLocation = new Location();
         myLocation.displayFlippedCard();
+        myPlayer.displayNumberOfPairsWon();
+        myPlayer.getWinnerLoser ();
     }
     public void getName() {
         Scanner input = new Scanner (System.in);

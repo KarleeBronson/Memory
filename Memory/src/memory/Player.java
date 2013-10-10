@@ -64,29 +64,49 @@ public class Player implements Serializable{
                 }
        }
         
+      //This will tell the user how to the win the game. 
       
-     /* public double getWinnerLoser (long wins, long losses, long ties){
-            if (playerA < playerB){ 
-                System.out.println ("playerA wins");
+     
+
+        public void displayNumberOfPairsWon (){
+            System.out.println ("To becmome the winner of Memory you must win");
+            System.out.println ("Two rounds or more \t One round or less \t.\n Winner \t\t Loser");
+            System.out.println ("\t\n");
+      }
+                
+      
+     public void getWinnerLoser (String name){
+          
+          Player playerA = new Player();
+          playerA.getName();
+          Player playerB = new Player();
+          playerB.getName();
+          
+          if (playerA. < playerB){ 
+                System.out.println (name "wins");
                 return ;
             }
                 else if (playerA > playerB) {
-                    System.out.println ("playerB wins");
+                    System.out.println (name "wins");
                     return ;
                 }
-                else if (playerA = playerB) {
+            
+   
+             
+                /*else if (playerA = playerB) {
                     System.out.println ("players are tied");
                     return;
-                }
-            double totalScore = wins + losses + ties;
+                }*/
+            
+            /*double totalScore = wins + losses + ties;
         
         if (totalScore == 0) {
             return 0;
         }
         
         double winLossAverage = wins / totalScore;
-        return winLossAverage * 100;
-    }*/
+        return winLossAverage * 100;*/
+    }
 
     public String getName() {
         Scanner input = new Scanner (System.in);
