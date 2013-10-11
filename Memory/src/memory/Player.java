@@ -12,8 +12,8 @@ public class Player implements Serializable{
      /*firstName;                  players firstname */         
      String name;             //a String variable for the players name
      int points;              //an int variable for the number of points that player has
-     int [] pairsWon;         //an array of type Pair that holds the list of cards won by this player
-     int numberOfPairsWon;
+     int [] pairsWon;         // an array of type Pair that holds the list of cards won by this player
+     int numberOfPairsWon;    // an int variable for the number of pairs won by this player
      String playerType;
      long wins = 0;
      long losses = 0;
@@ -48,19 +48,56 @@ public class Player implements Serializable{
         System.out.println("\t\tHello, my name is " + this.name);
       }
       
-      // The following information inside this function might 
+     
+    public String getName() {
+        Scanner input = new Scanner (System.in);
+          System.out.println ("Enter your name:");
+          this.name = input.next ();
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+ public int[] getPairsWon() {
+        
+        return pairsWon;
+    }
+
+    public void setPairsWon(int[] pairsWon) {
+        this.pairsWon = pairsWon;
+    }
+    public int getPoints(int pairsWon) {
+        
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+   
+
+   /* public int getNumberOfPairsWon() {
+         return numberOfPairsWon;
+    }
+
+    public void setNumberOfPairsWon(int numberOfPairsWon) {
+        this.numberOfPairsWon = numberOfPairsWon;
+    }*/
+ // The following information inside this function might 
       // actually need to be somewhere else becasue the results 
       // are not telling us the number of pairs won, it is telling 
       // us who wins. 
       public void getNumberOfPairsWon (){
             if (numberOfPairsWon >= 3) {
-                System.out.println (this.name + " wins!");
+                System.out.println (this.name + " wins this round!");
              } 
                 else if (numberOfPairsWon <= 2){
-                    System.out.println (this.name + " loses.");
+                    System.out.println (this.name + " loses this round.");
                 }
-                else if (numberOfPairsWon == 3){ 
-                    System.out.println ("Players are tied.");
+                else { 
+                    System.out.println ("Players are tied this round.");
                 }
        }
         
@@ -75,30 +112,27 @@ public class Player implements Serializable{
       }
                 
       
-     public void getWinnerLoser (){
+     public void  getWinnerLoser(){
           
           Player playerA = new Player();
           playerA.getName();
           Player playerB = new Player();
           playerB.getName();
           
-          if (playerA. < playerB){ 
-                System.out.println (name "wins");
-                return ;
+          if (playerA.points < playerB.points){ 
+                System.out.println (name + "wins");
             }
-                else if (playerA > playerB) {
-                    System.out.println (name "wins");
-                    return ;
+                else if (playerA.points > playerB.points) {
+                    System.out.println (name + "wins");
                 }
             
-   
-             
+            
                 /*else if (playerA = playerB) {
                     System.out.println ("players are tied");
                     return;
                 }*/
-            
-            /*double totalScore = wins + losses + ties;
+         /*   int wins
+            double totalScore = wins + losses + ties;
         
         if (totalScore == 0) {
             return 0;
@@ -107,41 +141,50 @@ public class Player implements Serializable{
         double winLossAverage = wins / totalScore;
         return winLossAverage * 100;*/
     }
-
-    public String getName() {
-        Scanner input = new Scanner (System.in);
-          System.out.println ("Enter your name:");
-          this.name = input.next ();
-        return name;
+    /**
+     *
+     * @param wins
+     * @param losses
+     * @param ties
+     * @return
+     */
+    public double getWinningPercentage(long wins, long losses, long ties) {
+       
+        if (this.wins < 0 ) {
+            System.out.println("\n\tThe number of wins must be "
+                    + "greater than or equal to zero.");
+            return -999;
+        }
+        
+        if (this.losses < 0 ) {
+            System.out.println("\n\tThe number of losses must be "
+                    + "greater than or equal to zero.");
+            return -999;
+        }
+        
+        if (this.ties < 0 ) {
+            System.out.println("\n\tThe number of ties must be "
+                    + "greater than or equal to zero.");
+            return -999;
+        }
+        
+        long totalScore = this.wins + this.losses + this.ties;
+        double totalScore1 = totalScore;
+        if (totalScore1 == 0) {
+            return 0;
+        }
+        
+        double winLossRatio = this.wins / totalScore1;
+        return winLossRatio * 100;
+        
     }
+public void displayWinningPercentage(){
+    System.out.println("\ntotalScore1: " + this.wins + this.losses + this.ties);
+     System.out.println("The 'totalScore1' will eventually change once we are more progressed "
+             + "in our program.\n");
+}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
-    public int[] getPairsWon() {
-        return pairsWon;
-    }
-
-    public void setPairsWon(int[] pairsWon) {
-        this.pairsWon = pairsWon;
-    }
-
-   /* public int getNumberOfPairsWon() {
-         return numberOfPairsWon;
-    }
-
-    public void setNumberOfPairsWon(int numberOfPairsWon) {
-        this.numberOfPairsWon = numberOfPairsWon;
-    }*/
+    
 
     public String getPlayerType() {
         return playerType;
