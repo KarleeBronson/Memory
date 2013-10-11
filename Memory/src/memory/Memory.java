@@ -38,12 +38,14 @@ public class Memory {
         //newGame.displayTiedMessage();
         Board myBoard = new Board();
         myBoard.displaySize();
-       // myBoard.displayCardArray();
+        //myBoard.displayCardArray();
         //myBoard.displayWhoseTurn();
         Tool myTool = new Tool();
         myTool.displayTool();
         Player myPlayer = new Player();
         myPlayer.displayName();
+        myPlayer.displayWinningPercentage();
+        
         //myPlayer.getName();
         // I think we should change this to the getName() 
         //function that was created when I did the insert 

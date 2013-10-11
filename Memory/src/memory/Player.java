@@ -112,7 +112,7 @@ public class Player implements Serializable{
       }
                 
       
-     public void getWinnerLoser (){
+     public void  getWinnerLoser(){
           
           Player playerA = new Player();
           playerA.getName();
@@ -126,14 +126,13 @@ public class Player implements Serializable{
                     System.out.println (name + "wins");
                 }
             
-   
-             
+            
                 /*else if (playerA = playerB) {
                     System.out.println ("players are tied");
                     return;
                 }*/
-            
-            /*double totalScore = wins + losses + ties;
+         /*   int wins
+            double totalScore = wins + losses + ties;
         
         if (totalScore == 0) {
             return 0;
@@ -142,6 +141,50 @@ public class Player implements Serializable{
         double winLossAverage = wins / totalScore;
         return winLossAverage * 100;*/
     }
+    /**
+     *
+     * @param wins
+     * @param losses
+     * @param ties
+     * @return
+     */
+    public double getWinningPercentage(long wins, long losses, long ties) {
+       
+        if (this.wins < 0 ) {
+            System.out.println("\n\tThe number of wins must be "
+                    + "greater than or equal to zero.");
+            return -999;
+        }
+        
+        if (this.losses < 0 ) {
+            System.out.println("\n\tThe number of losses must be "
+                    + "greater than or equal to zero.");
+            return -999;
+        }
+        
+        if (this.ties < 0 ) {
+            System.out.println("\n\tThe number of ties must be "
+                    + "greater than or equal to zero.");
+            return -999;
+        }
+        
+        long totalScore = this.wins + this.losses + this.ties;
+        double totalScore1 = totalScore;
+        if (totalScore1 == 0) {
+            return 0;
+        }
+        
+        double winLossRatio = this.wins / totalScore1;
+        return winLossRatio * 100;
+        
+    }
+public void displayWinningPercentage(){
+    System.out.println("\ntotalScore1: " + this.wins + this.losses + this.ties);
+     System.out.println("The 'totalScore1' will eventually change once we are more progressed "
+             + "in our program.\n");
+}
+
+    
 
     public String getPlayerType() {
         return playerType;
