@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @author Karalee Olsen
  */
 public class Board implements Serializable {
-    char [] cardArray = new char[10];       //a two-dimensional array of cards (i.e., the cards laid out face down)
+    char[] cardArray = new char[55];       //a two-dimensional array of cards (i.e., the cards laid out face down)
     String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
     int rowCount = 2;
     int columnCount = 5;

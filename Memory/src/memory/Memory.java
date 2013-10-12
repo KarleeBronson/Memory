@@ -33,6 +33,8 @@ public class Memory {
         // TODO code application logic here
         Card myCard = new Card();
         myCard.displayCard();
+        myCard.displayPossibleMatches();
+        myCard.displayRoundScores();
         Game newGame = new Game();
         newGame.displayGame();
         //newGame.displayTiedMessage();
@@ -67,6 +69,7 @@ public class Memory {
         this.name = input.next ();
         System.out.println ("Enter your name Player B:");
         this.name2 = input.next ();
+        
     }
     
     public void displayHelp (){
