@@ -4,6 +4,7 @@
  */
 package memory;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -26,7 +27,7 @@ public class Memory {
      * @param args the command line arguments
      * 
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Memory myGame = new Memory();
         myGame.getName();
         myGame.displayHelp();

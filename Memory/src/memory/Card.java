@@ -210,5 +210,5 @@ public class Card implements Serializable{
 
     public void displayRoundScores{
     System.out.println("Round score for Player A" + "\tRound score for Player B" + "\n" + this.roundScore + "\t" this.roundscore2);
-    }
+    } 
 }
