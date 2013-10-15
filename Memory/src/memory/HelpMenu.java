@@ -24,8 +24,8 @@ public class HelpMenu {
         for (;;) {
             do {
                 System.out.println("Help on:");
-                System.out.println(" 1.   helpMenu ");
-                System.out.println(" 2.   FAQs ");
+                System.out.println(" H.   helpMenu ");
+                System.out.println(" F.   FAQs ");
                 System.out.println("Choose one (E to Exit): ");
                 choice = (char) System.in.read();
 
@@ -33,7 +33,7 @@ public class HelpMenu {
                 do {
                     ignore = (char) System.in.read();
                 } while (ignore != '\n');
-            } while (choice < '1' | choice > '2' & choice != 'E');
+            } while (choice < 'H' | choice > 'F' & choice != 'E');
 
             if (choice == 'E') {
                 break;
@@ -42,12 +42,12 @@ public class HelpMenu {
             System.out.println("\n");
 
             switch (choice) {
-                case '1':
+                case "H":
                     System.out.println("helpMenu:\n");
                     System.out.println("");
                     System.out.println("");
                     break;
-                case '2':
+                case "F":
                     System.out.println("FAQs:\n");
                     System.out.println(" Can more than 2 players be added to the game?"
                             + "There can only be 2 players ");
