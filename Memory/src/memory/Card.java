@@ -168,8 +168,7 @@ public class Card implements Serializable{
     public double getRoundScore() {
         int points = 0;
         roundScore = points;
-        boolean isTrue;
-        isTrue = true;
+        
         if (this.cardMatch ; || this.cardMatch1; || this.cardMatch2; || this.cardMatch3; || this.cardMatch4){
             do {
                 System.out.println(" You have found a match.\n Take another turn.");
