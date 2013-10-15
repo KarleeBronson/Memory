@@ -47,7 +47,8 @@ public class Memory {
         Player myPlayer = new Player();
         myPlayer.displayName();
         myPlayer.displayWinningPercentage();
-        
+        HelpMenu myHelpMenu= new HelpMenu();
+        myHelpMenu.displayHelpMenu();
         //myPlayer.getName();
         // I think we should change this to the getName() 
         //function that was created when I did the insert 

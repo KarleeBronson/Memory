@@ -25,6 +25,9 @@ public class Pair implements Serializable{
     Card card9;
     Card card10;
     
+    public void display getCardType() {
+        System.out.println("\n\tThis is where the card types are displayed " + this.cardtype);
+      }
     
     public Pair(){
         
@@ -121,6 +124,45 @@ public class Pair implements Serializable{
     public void setCard10(Card card10) {
         this.card10 = card10;
     }
+    //the array to conatin number of cards to make pairs
+    char[] PairArray = new char[10];
+    
+    public Pair() {
+    }
+
+public void makePair (){
+    PairArray= "12345678910".toCharArray(); //type conversion
+}
+    
+public void displayPair (char number) {
+    
+    System.out.println("Remaining Numbers:");
+    
+    for(int i = 0; i < PairArray.length; i++) {
+        
+        if (PairArray[i] == number) {
+            PairArray[i] = '_';
+        }
+        
+        
+        System.out.print(PairArray[i] + " ");
+    }
+    
+    /* public void displayMatch (){
+          
+          Player playerA = new Player();
+          playerA.getName();
+          Player playerB = new Player();
+          playerB.getName();
+          
+          if (playerA. < playerB){ 
+                System.out.println (name "wins");
+                return ;
+            }
+                else if (playerA > playerB) {
+                    System.out.println (name "wins");
+                    return ;
+                }*/
     
       public void displayCardType(){
        System.out.println("Card type: " + this.cardType);
