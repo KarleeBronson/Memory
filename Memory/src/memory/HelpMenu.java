@@ -42,12 +42,12 @@ public class HelpMenu {
             System.out.println("\n");
 
             switch (choice) {
-                case "H":
+                case 'H':
                     System.out.println("helpMenu:\n");
                     System.out.println("");
                     System.out.println("");
                     break;
-                case "F":
+                case 'F':
                     System.out.println("FAQs:\n");
                     System.out.println(" Can more than 2 players be added to the game?"
                             + "There can only be 2 players ");

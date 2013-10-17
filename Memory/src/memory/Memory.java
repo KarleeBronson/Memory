@@ -12,6 +12,19 @@ import java.util.Scanner;
  * @author kbronson
  */
 public class Memory {
+    
+     private static final Scanner inFile = new Scanner(System.in);
+     private static final HelpMenuView helpMenu = new HelpMenuView();
+    //private static String[] nameList;
+    /* private final static String WELCOME =
+            "Welcome! This is the game of Memory \n\n"
+            + "There will be a total of 2 players.\n\n"
+            + "Each player will take a turn choosing 1 card at a time.\n\n"
+            + "By clicking on a card with the arrow, card will flip over.\n\n"  
+            + "The object of the game is to find the cards match.\n\n"
+            + "The player continues until they can't find a match.\n\n"
+            + "The player who gets the most matches wins.\n\n";
+    */ 
     String name;
     String name2;
     String instructions =  "This is the game of Memory \n\n"
@@ -22,6 +35,24 @@ public class Memory {
             + "The player continues until they can't find a match.\n\n"
             + "The player who gets the most matches wins.\n\n";
            
+    
+     public Memory() {
+        
+    }
+     public static Scanner getInputFile() {
+        return Memory.inFile;
+    }
+    
+    public static HelpMenuView getHelpMenu() {
+        return Memory.helpMenu;
+    }
+    /*public static String[] getNameList() {
+        return nameList;
+    }
+
+    public static void setNameList(String[] nameList) {
+        TicTacToe.nameList = nameList;
+    */
     /**     
      * 
      * @param args the command line arguments
@@ -31,13 +62,18 @@ public class Memory {
         Memory myGame = new Memory();
         myGame.getName();
         myGame.displayHelp();
+        
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput(null);
+        Memory.inFile.close();
         // TODO code application logic here
         Card myCard = new Card();
         myCard.displayCard();
         myCard.displayPossibleMatches();
-        myCard.displayRoundScores();
+        //myCard.displayRoundScores();
+        
         Game newGame = new Game();
-        newGame.displayGame();
+        //newGame.displayGame();
         //newGame.displayTiedMessage();
         Board myBoard = new Board();
         myBoard.displaySize();
@@ -45,25 +81,22 @@ public class Memory {
         //myBoard.displayWhoseTurn();
         Tool myTool = new Tool();
         myTool.displayTool();
+       
         Player myPlayer = new Player();
         myPlayer.displayName();
         myPlayer.displayWinningPercentage();
-        HelpMenu myHelpMenu= new HelpMenu();
-        myHelpMenu.displayHelpMenu();
-        //myPlayer.getName();
-        // I think we should change this to the getName() 
-        //function that was created when I did the insert 
-        //"getter setter" thing that we were told to do in
-        // one of the videos last week. (The getter setter 
-        // thing is what input a lot of code without us 
-        // needing to input it. Almost any of the code that 
-        //says has a get function and then a set function was created by NetBeans.
-        Pair myPair = new Pair();
-        myPair.displayCardType();
-        Location myLocation = new Location();
-        myLocation.displayFlippedCard();
         myPlayer.displayNumberOfPairsWon();
         myPlayer.getWinnerLoser ();
+        
+        HelpMenu myHelpMenu= new HelpMenu();
+        myHelpMenu.displayHelpMenu();
+        
+        Pair myPair = new Pair();
+        //myPair.displayCardType();
+        
+        Location myLocation = new Location();
+        myLocation.displayFlippedCard();
+        
     }
     public void getName() {
         Scanner input = new Scanner (System.in);
@@ -78,6 +111,10 @@ public class Memory {
     System.out.println("Welcome " + this.name + " and " + this.name2 + ",\n");    
     System.out.println(this.instructions);
     
-    }}
+    }
+    //private void display() {
+       // System.out.println(Memory.WELCOME);
+    //}
+}
             
       

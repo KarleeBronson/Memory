@@ -165,7 +165,7 @@ public class Card implements Serializable{
         System.out.println("The possible matches are: " + this.cardMatch + "\t" + this.cardMatch1 + "\t" + this.cardMatch2 + "\t" + this.cardMatch3 + "\t" + this.cardMatch4);
     }
   
-    public double getRoundScore() {
+  /*  public double getRoundScore() {
         int points = 0;
         roundScore = points;
         
@@ -211,4 +211,5 @@ public class Card implements Serializable{
     public void displayRoundScores{
     System.out.println("Round score for Player A" + "\tRound score for Player B" + "\n" + this.roundScore + "\t" this.roundscore2);
     } 
+    */
 }
