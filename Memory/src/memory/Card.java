@@ -1,29 +1,31 @@
 package memory;
 
 import java.io.Serializable;
+
 /**
  *
  * @author Karalee Olsen
  */
-public class Card implements Serializable{
-     //starPicture = ;         //a variable for the word, number, or picture on the card
+public class Card implements Serializable {
+    //starPicture = ;         //a variable for the word, number, or picture on the card
+
     String starColor = "yellow";
     String greenCard, yellowCard, redCard, blueCard, orangeCard, greenCard2, yellowCard2, redCard2, blueCard2, orangeCard2;
-    String cardMatch ,cardMatch1, cardMatch2 ,cardMatch3, cardMatch4 ;
+    String cardMatch, cardMatch1, cardMatch2, cardMatch3, cardMatch4;
     double roundScore;
     double roundScore2;
-    
-    public void Card(){
+
+    public void Card() {
     }
 
     /*public int getStarPicture() {
-        return starPicture;
-    }
+     return starPicture;
+     }
 
-    public void setStarPicture(int starPicture) {
-        this.starPicture = starPicture;
-    }
-*/
+     public void setStarPicture(int starPicture) {
+     this.starPicture = starPicture;
+     }
+     */
     public String getStarColor() {
         return starColor;
     }
@@ -31,10 +33,10 @@ public class Card implements Serializable{
     public void setStarColor(String starColor) {
         this.starColor = starColor;
     }
-    
-   public void displayCard(){
-       System.out.println("Card color: " + this.starColor);
-   }
+
+    public void displayCard() {
+        System.out.println("Card color: " + this.starColor);
+    }
 
     public String getGreenCard() {
         return greenCard;
@@ -153,63 +155,62 @@ public class Card implements Serializable{
     }
 
     public String getCardMatch4() {
-       cardMatch4 = this.yellowCard + this.yellowCard2;
+        cardMatch4 = this.yellowCard + this.yellowCard2;
         return cardMatch4;
     }
 
     public void setCardMatch4(String cardMatch4) {
         this.cardMatch4 = cardMatch4;
     }
-   
-    public void displayPossibleMatches(){
+
+    public void displayPossibleMatches() {
         System.out.println("The possible matches are: " + this.cardMatch + "\t" + this.cardMatch1 + "\t" + this.cardMatch2 + "\t" + this.cardMatch3 + "\t" + this.cardMatch4);
     }
-  
-  /*  public double getRoundScore() {
-        int points = 0;
-        roundScore = points;
+    /*  public double getRoundScore() {
+     int points = 0;
+     roundScore = points;
         
-        if (this.cardMatch ; || this.cardMatch1; || this.cardMatch2; || this.cardMatch3; || this.cardMatch4){
-            do {
-                System.out.println(" You have found a match.\n Take another turn.");
-                roundScore++;
-            }
-                while(roundScore < 5.0);
-        }
-            else if{
-                System.out.println("Not a match.\n Your turn is over.");
-            }
+     if (this.cardMatch ; || this.cardMatch1; || this.cardMatch2; || this.cardMatch3; || this.cardMatch4){
+     do {
+     System.out.println(" You have found a match.\n Take another turn.");
+     roundScore++;
+     }
+     while(roundScore < 5.0);
+     }
+     else if{
+     System.out.println("Not a match.\n Your turn is over.");
+     }
     
-        return roundScore;
-    }
+     return roundScore;
+     }
 
-    public void setRoundScore(double roundScore) {
-        this.roundScore = roundScore;
-    }
- public double getRoundScore2() {
-        int points = 0;
-        roundScore2 = points;
+     public void setRoundScore(double roundScore) {
+     this.roundScore = roundScore;
+     }
+     public double getRoundScore2() {
+     int points = 0;
+     roundScore2 = points;
        
-        if (this.cardMatch ; || this.cardMatch1; || this.cardMatch2; || this.cardMatch3; || this.cardMatch4){
-            do {
-                System.out.println(" You have found a match.\n Take another turn.");
-                roundScore2++;
-            }
-                while(roundScore2 < 5.0);
-        }
-            else if{
-                System.out.println("Not a match.\n Your turn is over.");
-            }
+     if (this.cardMatch ; || this.cardMatch1; || this.cardMatch2; || this.cardMatch3; || this.cardMatch4){
+     do {
+     System.out.println(" You have found a match.\n Take another turn.");
+     roundScore2++;
+     }
+     while(roundScore2 < 5.0);
+     }
+     else if{
+     System.out.println("Not a match.\n Your turn is over.");
+     }
     
-        return roundScore2;
-    }
+     return roundScore2;
+     }
 
-    public void setRoundScore2(double roundScore2) {
-        this.roundScore2 = roundScore2;
-    }
+     public void setRoundScore2(double roundScore2) {
+     this.roundScore2 = roundScore2;
+     }
 
-    public void displayRoundScores{
-    System.out.println("Round score for Player A" + "\tRound score for Player B" + "\n" + this.roundScore + "\t" this.roundscore2);
-    } 
-    */
+     public void displayRoundScores{
+     System.out.println("Round score for Player A" + "\tRound score for Player B" + "\n" + this.roundScore + "\t" this.roundscore2);
+     } 
+     */
 }

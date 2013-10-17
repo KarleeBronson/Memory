@@ -11,22 +11,20 @@ import java.util.Scanner;
  * @author Karalee Foster
  */
 public class MainMenuView {
-     private static final String[][] menuItems = {
+
+    private static final String[][] menuItems = {
         {"1", "One player game"},
         {"2", "Two player game"},
         {"H", "Help"},
         {"X", "Exit Memory"}
-    }; 
-  
+    };
     MainMenuControl mainMenuControl = new MainMenuControl();
-    
-    public MainMenuView() {
 
+    public MainMenuView() {
     }
- 
-    
-    public String getInput(Object object) {       
-        
+
+    public String getInput(Object object) {
+
         String gameStatus = Game.PLAYING; // make a PLAYING like in the tictactoe game class
         do {
             this.display();
@@ -51,9 +49,8 @@ public class MainMenuView {
 
         return "QUIT";
     }
-    
-    
-   public final String getCommand() {
+
+    public final String getCommand() {
 
         Scanner inFile = Memory.getInputFile();
         String command;
@@ -66,14 +63,13 @@ public class MainMenuView {
                 new MemoryError().displayError("Invalid command. Please enter a valid command."); //create a MemoryError Class like in the tictactoe example
                 continue;
             }
-                
+
         } while (!valid);
-        
+
         return command;
     }
-    
-    
-   public final void display() {
+
+    public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
@@ -93,9 +89,4 @@ public class MainMenuView {
         }
         return false;
     }
-    
-   
-    
 }
-
-

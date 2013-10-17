@@ -15,8 +15,9 @@ public class HelpMenu {
     /**
      *
      * @throws IOException
-     * 
-     * I put our stuff in the function and changed the letters H and F to 1 and 2.
+     *
+     * I put our stuff in the function and changed the letters H and F to 1 and
+     * 2.
      */
     public void displayHelpMenu() throws IOException {
 

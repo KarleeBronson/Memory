@@ -11,31 +11,30 @@ import java.util.Scanner;
  * @author Karalee Foster
  */
 public class HelpMenuView {
+
     private final static String[][] menuItems = {
         {"B", "The board"},
-        {"C", "A computer player"}, 
+        {"C", "A computer player"},
         {"G", "The Memory game"},
         {"D", "A Flipped Down Card"},
         {"U", "A Flipped Up Card"},
-        {"R", "A regular player"},        
-        {"Q", "Quit Help"}        
+        {"R", "A regular player"},
+        {"Q", "Quit Help"}
     };
-    
     // Create instance of the HelpMenuControl (action) class
     private HelpMenuControl helpMenuControl = new HelpMenuControl();
-    
+
     // default constructor
     public HelpMenuView() {
-        
-    } 
-    
+    }
+
     // display the help menu and get the end users input selection
-    public String getInput() {       
-        
+    public String getInput() {
+
         String gameStatus = Game.PLAYING; // create a PLAYING on the game class like in the tic tac to example
         do {
             this.display();
-            
+
             // get commaned entered
             String command = this.getCommand();
             switch (command) {
@@ -47,25 +46,25 @@ public class HelpMenuView {
                     break;
                 case "G":
                     this.helpMenuControl.displayGameHelp();
-                    break;                  
+                    break;
                 case "D":
                     this.helpMenuControl.displayFlippedDownCardHelp();
                     break;
                 case "U":
                     this.helpMenuControl.displayFlippedUpCardHelp();
                     break;
-                 case "R":
+                case "R":
                     this.helpMenuControl.displayRealPlayerHelp();
-                    break; 
-                case "Q": 
+                    break;
+                case "Q":
                     return "QUIT";
             }
-        } while (!gameStatus.equals("QUIT"));  
-        
-         return gameStatus;
+        } while (!gameStatus.equals("QUIT"));
+
+        return gameStatus;
     }
 
-        // displays the help menu
+    // displays the help menu
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
@@ -76,8 +75,6 @@ public class HelpMenuView {
         System.out.println("\t===============================================================\n");
     }
 
-    
-    
     // retrieves the command entered by the end user
     protected final String getCommand() {
 
@@ -93,13 +90,12 @@ public class HelpMenuView {
                 new MemoryError().displayError("Invalid command. Please enter a valid command."); //create a MemoryError class like in the tic tac toe example
                 continue;
             }
-                
+
         } while (!valid);
-        
+
         return command;
     }
-    
-    
+
     // determines if the command is valid
     private boolean validCommand(String command) {
         String[][] items = HelpMenuView.menuItems;
@@ -111,5 +107,4 @@ public class HelpMenuView {
         }
         return false;
     }
-  
 }

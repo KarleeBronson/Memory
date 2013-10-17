@@ -10,25 +10,23 @@ import java.io.Serializable;
  *
  * @author Karlee Bronson
  */
-public class Location implements Serializable{
+public class Location implements Serializable {
+
     int row;
     int column;
     Player player;
-    
-    
+
     public Location() {
-        
     }
-    
-    public void occupyLocation(Player player){
+
+    public void occupyLocation(Player player) {
         this.player = player;
     }
-    
+
     public void displayFlippedCard() {
         if (this.player != null) {
             System.out.println(this.player.flippedCard);
-        }
-        else {
+        } else {
             System.out.println(" ");
         }
     }
@@ -56,9 +54,7 @@ public class Location implements Serializable{
     public void setPlayer(Player player) {
         this.player = player;
     }
-        
-      //public void displayFlippedCard(){
-      // System.out.println("Card location:" + this.location);
-    
+    //public void displayFlippedCard(){
+    // System.out.println("Card location:" + this.location);
 //}
 }

@@ -11,36 +11,34 @@ import java.util.Scanner;
  * @author Karalee Foster
  */
 public class GameMenuView {
+
     private Game game;
-    private GameMenuControl gameMenuControl ; // create a GameMenuControl class like in the tic tac toe example
-
-
+    private GameMenuControl gameMenuControl; // create a GameMenuControl class like in the tic tac toe example
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
         {"D", "Display the board"},
         {"N", "New Game"},
+        {"P", "Game Preferences"},
         {"R", "Report stastics"},
         {"H", "Help"},
         {"Q", "QUIT"}
     };
 
     public GameMenuView(Game game) {
-        this.gameMenuControl = new GameMenuControl(game); 
-                                                          
+        this.gameMenuControl = new GameMenuControl(game);
+
     }
 
-    
-    
     public Object getInput(Object object) {
         this.game = (Game) object;
 
         this.game.setStatus(Game.CONTINUE); // create a CONTINUE on the game class like in the tic tac toe example
-        
+
         String gameStatus = this.game.getStatus();
         do {
-     
+
             this.display();
-            
+
             // get commaned entered
             String command = this.getCommand();
             switch (command) {
@@ -53,10 +51,13 @@ public class GameMenuView {
                 case "N":
                     gameMenuControl.startNewGame();
                     break;
+                case "P":
+                    gameMenuControl.displayPreferencesMenu();
+                    break;    
                 case "R":
                     gameMenuControl.displayStatistics();
                     break;
-                
+
                 case "H":
                     gameMenuControl.displayHelpMenu();
                     break;
@@ -68,8 +69,6 @@ public class GameMenuView {
 
         return Game.PLAYING; // create a PLAYING like on the tic tac to game class
     }
-    
-
 
     public final void display() {
         System.out.println("\n\t===============================================================");
@@ -105,9 +104,9 @@ public class GameMenuView {
                 new MemoryError().displayError("Invalid command. Please enter a valid command."); // create a memory error class like in the tic tac to example
                 continue;
             }
-                
+
         } while (!valid);
-        
+
         return command;
     }
 }

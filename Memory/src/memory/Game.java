@@ -10,21 +10,18 @@ import java.io.Serializable;
  *
  * @author Karalee Olsen
  */
-public class Game implements Serializable{
-    
-    
+public class Game implements Serializable {
+
     public static final String ONE_PLAYER = "ONE_PLAYER";
     public static final String TWO_PLAYER = "TWO_PLAYER";
-    
     public static final String CONTINUE = "CONTINUE";
     public static final String NEW_GAME = "NEW_GAME";
-    public static final String PLAYING = "PLAYING"; 
-    public static final String WINNER = "WINNER"; 
-    public static final String TIE = "TIE"; 
-    public static final String QUIT = "QUIT"; 
+    public static final String PLAYING = "PLAYING";
+    public static final String WINNER = "WINNER";
+    public static final String TIE = "TIE";
+    public static final String QUIT = "QUIT";
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
-    
     String gameType;
     Player playerA;
     Player playerB;
@@ -34,29 +31,29 @@ public class Game implements Serializable{
     Player loser;
     String status;
     Board board;
-   
-   
-   public Game() {
-       
-       this.playerA = new Player();
-       //this.playerA.name = "";       not needed?
-       this.playerB = new Player();
-       //this.playerB.name = "";       not needed?
-   }
-   
-   public Game(String gameType) {
+
+    public Game() {
+
+        this.playerA = new Player();
+        //this.playerA.name = "";       not needed?
+        this.playerB = new Player();
+        //this.playerB.name = "";       not needed?
+    }
+
+    public Game(String gameType) {
         this();
 
         this.gameType = gameType;
         //this.board = new Board(5, 2);
-        
+
     }
-   /*public void displayGame(){
-       System.out.println(this.playerA.name + " is Player A. " 
-               + this.playerB.name + " is Player B. " );
-   }
-   * Not needed?
-   */
+    /*public void displayGame(){
+     System.out.println(this.playerA.name + " is Player A. " 
+     + this.playerB.name + " is Player B. " );
+     }
+     * Not needed?
+     */
+
     public String getGameType() {
         return gameType;
     }
@@ -128,19 +125,19 @@ public class Game implements Serializable{
     public void setBoard(Board board) {
         this.board = board;
     }
-    
+
     public void displayWinningMessage() {
-       System.out.println(
-               "\n\t*************************************************************************************************"
-               + "\n\t Congratulations " + this.winner.name + "! You found the most matches. You are the Winner"
-               + "\n\t Sorry " + this.loser.name + ", You are the loser."
-               + "\n\t*************************************************************************************************");
-   }
-   
-   public void displayTiedMessage () {
-       System.out.println(
-               "\n\t*************************************************************************************************"
-               + "\n\t The game is a tie. Better Luck next time!"
-               + "\n\t******************************************************************************************************");
-   }
+        System.out.println(
+                "\n\t*************************************************************************************************"
+                + "\n\t Congratulations " + this.winner.name + "! You found the most matches. You are the Winner"
+                + "\n\t Sorry " + this.loser.name + ", You are the loser."
+                + "\n\t*************************************************************************************************");
+    }
+
+    public void displayTiedMessage() {
+        System.out.println(
+                "\n\t*************************************************************************************************"
+                + "\n\t The game is a tie. Better Luck next time!"
+                + "\n\t******************************************************************************************************");
+    }
 }
