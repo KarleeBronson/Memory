@@ -8,13 +8,15 @@ import java.util.Scanner;
 
 /**
  *
- * @author Karalee Foster
+ * @author Karalee Olsen
+ * Karlee Bronson
  */
 public class HelpMenuView {
 
     private final static String[][] menuItems = {
         {"B", "The board"},
         {"C", "A computer player"},
+        {"CC", "Collect Cards"
         {"G", "The Memory game"},
         {"D", "A Flipped Down Card"},
         {"U", "A Flipped Up Card"},
@@ -43,6 +45,9 @@ public class HelpMenuView {
                     break;
                 case "C":
                     this.helpMenuControl.displayComputerPlayerHelp();
+                    break;
+                case "CC":
+                    this.helpMenuControl.displayCollectCardHelp();
                     break;
                 case "G":
                     this.helpMenuControl.displayGameHelp();
@@ -78,7 +83,7 @@ public class HelpMenuView {
     // retrieves the command entered by the end user
     protected final String getCommand() {
 
-        Scanner inFile = Memory.getInputFile(); // creat like in the tictactoe example on the main class
+        Scanner inFile = Memory.getInputFile(); // create like in the tictactoe example on the main class
         String command;
         boolean valid = false;
         do {

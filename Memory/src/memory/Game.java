@@ -22,18 +22,19 @@ public class Game implements Serializable {
     public static final String QUIT = "QUIT";
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
-    String gameType;
-    Player playerA;
-    Player playerB;
-    Player currentPlayer;
-    Player otherPlayer;
-    Player winner;
-    Player loser;
-    String status;
+   
+    private String gameType;
+    private Player playerA;
+    private Player playerB;
+    private Player currentPlayer;
+    private Player otherPlayer;
+    private Player winner;
+    private Player loser;
+    private String status;
     Board board;
 
     public Game() {
-
+//put into player class
         this.playerA = new Player();
         //this.playerA.name = "";       not needed?
         this.playerB = new Player();
@@ -44,7 +45,7 @@ public class Game implements Serializable {
         this();
 
         this.gameType = gameType;
-        //this.board = new Board(5, 2);
+        this.board = new Board();
 
     }
     /*public void displayGame(){

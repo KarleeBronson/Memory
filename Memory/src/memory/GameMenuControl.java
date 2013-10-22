@@ -4,6 +4,8 @@
  */
 package memory;
 
+import java.awt.Point;
+
 /**
  *
  * @author Karalee Foster

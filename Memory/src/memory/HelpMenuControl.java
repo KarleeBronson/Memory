@@ -6,7 +6,8 @@ package memory;
 
 /**
  *
- * @author Karalee Foster
+ * @author Karalee Olsen
+ * Karlee Bronson
  */
 public class HelpMenuControl {
 
@@ -74,6 +75,13 @@ public class HelpMenuControl {
         displayHelpBorder();
     }
 
+    public void displayCollectCardHelp() {
+         System.out.println();
+        displayHelpBorder();
+        System.out.println(
+                "\tThis option will collect each match you make and put it into your pile. ");
+        displayHelpBorder();
+    }
     public void displayHelpBorder() {
         System.out.println(
                 "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
