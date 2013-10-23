@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Karalee Olsen
+ * @author Karalee Olsen/ karlee bronson (function for shuffle)
  */
 public class Card implements Serializable {
     //starPicture = ;         //a variable for the word, number, or picture on the card
