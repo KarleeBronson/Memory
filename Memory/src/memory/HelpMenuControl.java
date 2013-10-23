@@ -82,6 +82,14 @@ public class HelpMenuControl {
                 "\tThis option will collect each match you make and put it into your pile. ");
         displayHelpBorder();
     }
+    
+    public void displayShuffleCardsHelp() {
+         System.out.println();
+         displayHelpBorder();
+         System.out.println(
+                 "/tThis option will shuffle the cards on the board.");
+         displayHelpBorder();
+    }
     public void displayHelpBorder() {
         System.out.println(
                 "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");

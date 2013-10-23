@@ -21,6 +21,7 @@ public class HelpMenuView {
         {"D", "A Flipped Down Card"},
         {"U", "A Flipped Up Card"},
         {"R", "A regular player"},
+        {"S", "Shuffle Cards"},
         {"Q", "Quit Help"}
     };
     // Create instance of the HelpMenuControl (action) class
@@ -61,6 +62,8 @@ public class HelpMenuView {
                 case "R":
                     this.helpMenuControl.displayRealPlayerHelp();
                     break;
+                case "S";
+                    this.helpMenuControl.displayShuffleCardsHelp();
                 case "Q":
                     return "QUIT";
             }

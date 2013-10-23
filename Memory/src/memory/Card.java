@@ -166,6 +166,10 @@ public class Card implements Serializable {
     public void displayPossibleMatches() {
         System.out.println("The possible matches are: " + this.cardMatch + "\t" + this.cardMatch1 + "\t" + this.cardMatch2 + "\t" + this.cardMatch3 + "\t" + this.cardMatch4);
     }
+    
+    public void setShuffleCards () {
+        System.out.println ("All of your cards will now be shuffled for your convience.");
+     }
     /*  public double getRoundScore() {
      int points = 0;
      roundScore = points;
