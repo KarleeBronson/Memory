@@ -12,6 +12,8 @@ public class Player implements Serializable {
      * int lastName,               players last name*/
     /*firstName;                  players firstname */
 
+    public static final String REGULAR_PLAYER = "REGULAR";
+    public static final String COMPUTER_PLAYER = "COMPUTER";
     String name;             //a String variable for the players name
     int points;              //an int variable for the number of points that player has
     int[] pairsWon;         // an array of type Pair that holds the list of cards won by this player

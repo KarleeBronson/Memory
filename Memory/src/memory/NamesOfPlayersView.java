@@ -92,6 +92,7 @@ public class NamesOfPlayersView {
                     t = names[b - 1];
                     names[b - 1] = names[b];
                 }
+                return names;
             }
         }
 
@@ -111,9 +112,7 @@ private boolean alreadyInList(String[] list, String value) {
         }
         return false;
     }
-    
-    
-    
+        
     public void displayNameList(String[] names) {
         System.out.println("\n\t===============================================================");
         System.out.println("\tHere is the ist of players in the game");
@@ -122,7 +121,6 @@ private boolean alreadyInList(String[] list, String value) {
             if (names[i] == null) {
                 break;
             }
-                
             int namePosition = i+1;
             System.out.println("\t   " + namePosition + "\t" + names[i]);
         }
@@ -130,23 +128,4 @@ private boolean alreadyInList(String[] list, String value) {
     }
     
     
-}
-
-
-//This is the Bubble Sort. 
-for (a=1; a < size; a++)
-    for (b=size-1; b >=a; b--){
-        if(nums [b-1] > nums [b]) { // if out of ourder
-              //exchange elements
-              t= nums [b-1];
-              nums [b-1] = nums [b];
-            }
-        }
-
-//display sorted array
-    System.out.print ("Sorted array is: ");
-    for (int i=0; 1 <size; i++)
-     System.out.print (""+ nums [i]);
-    System.out.println ();
-   }
 }

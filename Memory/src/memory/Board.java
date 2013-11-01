@@ -14,6 +14,7 @@ public class Board implements Serializable {
     String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
     int rowCount;
     int columnCount = 5;
+    
     //Location[][] boardLocations;
 
     public Board() {
@@ -87,6 +88,9 @@ public class Board implements Serializable {
      this.boardLocations = boardLocations;
      }
      */
+    
+    
+    /*
     public final void cardTableArray(){
         int t, i;
        int cardTable[][] = new int [4][4];
@@ -99,6 +103,7 @@ public class Board implements Serializable {
            System.out.println();
        }
     }
+    * */
     private final static String[][] cardMatches = { //this section will list the matches 
         
     };
