@@ -34,7 +34,7 @@ public class HelpMenuView {
     // display the help menu and get the end users input selection
     public String getInput() {
 
-        String gameStatus = Game.PLAYING; // create a PLAYING on the game class like in the tic tac to example
+        String gameStatus = Game.PLAYING; 
         do {
             this.display();
 
