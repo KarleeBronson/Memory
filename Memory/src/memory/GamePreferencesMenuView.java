@@ -8,9 +8,7 @@ package memory;
  *
  * @author kbronson
  */
-public class GamePreferencesMenuView {
-    
-}
+
 public class GamePreferencesMenuView  {
     
     private Game game;
