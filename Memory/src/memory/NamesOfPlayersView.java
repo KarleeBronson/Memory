@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author jacksonrkj
+ * @author kbronson/ karalee olsen
  */
 public class NamesOfPlayersView {
 
