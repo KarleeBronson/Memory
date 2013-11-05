@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author kbronson
+ * @author karlee ,.l.,bronson + Karalee Olsen
  */
 public class Player implements Serializable {
     /*I do not think we need the fistName and lastName variables if we use String name.
@@ -23,18 +23,20 @@ public class Player implements Serializable {
     long losses = 0;
     long ties = 0;
     int flippedCard;
-
+    Player playerA = new Player();
+    Player playerB = new Player();
+    
     /**
      *
      * @param args
      */
     /* public static void main(String[] args) {
-     Players playerA = new Players();
+     
      playerA.getName();
      playerA.getPairsWon();
      playerA.getPoints();
      playerA.getNumberOfPairsWon();
-     Players playerB = new Players();
+     
      playerB.getName();
      playerB.getPairsWon();
      playerB.getPoints();
@@ -82,33 +84,61 @@ public class Player implements Serializable {
         this.points = points;
     }
 
-    /* public int getNumberOfPairsWon() {
+     public int getNumberOfPairsWon() {
      return numberOfPairsWon;
      }
 
      public void setNumberOfPairsWon(int numberOfPairsWon) {
      this.numberOfPairsWon = numberOfPairsWon;
-     }*/
+     }
     // The following information inside this function might 
     // actually need to be somewhere else becasue the results 
     // are not telling us the number of pairs won, it is telling 
     // us who wins. 
-    public void getNumberOfPairsWon() {
-        if (numberOfPairsWon >= 3) {
-            System.out.println(this.name + " wins this round!");
-        } else if (numberOfPairsWon <= 2) {
-            System.out.println(this.name + " loses this round.");
-        } else {
-            System.out.println("Players are tied this round.");
+    public int getRoundWinnerLoser() {
+        for ( playerA.numberOfPairsWon >= 0 && playerB.numberOfPairsWon >= 0) {
+            if (playerA.numberOfPairsWon >= 3) {
+                System.out.println(this.name + " wins this round!");
+                System.out.println(this.name + " loses this round.");
+            } else if (playerA.numberOfPairsWon <= 2) {
+                System.out.println(this.name + " loses this round.");
+                System.out.println(this.name + " wins this round!");
+            } else {
+                System.out.println("Players are tied this round.");
+            }
         }
+        return playerA.numberOfPairsWon;
+        return playerB.numberOfPairsWon;
+        return 0;
     }
 
     //This will tell the user how to the win the game. 
-    public void displayNumberOfPairsWon() {
+    
+    public void displayHowToWin(){
         System.out.println("To becmome the winner of Memory you must win");
         System.out.println("Two rounds or more \t One round or less \t.\n Winner \t\t Loser");
         System.out.println("\t\n");
     }
+    public void displayNumberOfPairsWon[]() {
+        int sumA = 0;
+        int sumB = 0;
+        
+        // these will eventually have more in the array and will have the matches for each round put in.
+        int roundMatchesA [] = {playerA.numberOfPairsWon}; 
+        int roundMatchesB [] = {playerB.numberOfPairsWon};
+        
+        // the sum of the matches for each round - player A
+        for(int x : roundMatchesA){
+            System.out.print("Player A Matches: " + x);
+            sumA += x;
+        }
+        // the sum of the matches for each round - player B
+        for (int y : roundMatchesB){
+            System.out.print("Player B Matches: " + y);
+            sumB += y;
+        }
+        System.out.println("Player A's total matches: " + sumA + "\n Player B's total matches: " + sumB);
+}
 
     public void getWinnerLoser() {
 
