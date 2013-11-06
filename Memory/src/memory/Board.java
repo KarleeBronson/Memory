@@ -10,13 +10,12 @@ import javax.swing.table.AbstractTableModel;
  */
 public class Board implements Serializable {
 
-   // String cardArray[][]= new String[16];       //a two-dimensional array of cards (i.e., the cards laid out face down)
+    String cardArray[] = new String[16];       //a two-dimensional array of cards (i.e., the cards laid out face down)
     String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
     int rowCount;
     int columnCount = 5;
-    
-    //Location[][] boardLocations;
 
+    //Location[][] boardLocations;
     public Board() {
     }
 
@@ -88,27 +87,22 @@ public class Board implements Serializable {
      this.boardLocations = boardLocations;
      }
      */
-    
-    
-    /*
-    public final void cardTableArray(){
+    public final void cardTableArray() {
         int t, i;
-       int cardTable[][] = new int [4][4];
-       System.out.println("Pick a card to flip over by typing the number of the card you want to view");
-       for (t=0; t < 4; ++t){
-           for(i=0; i < 4; ++i){
-               cardTable[t][i] = (t*4)+i+1;
-               System.out.print("|\t" + cardTable[t][i] + "\t|");
-           }
-           System.out.println();
-       }
+        int cardTable[][] = new int[4][4];
+        System.out.println("Pick a card to flip over by typing the number of the card you want to view");
+        for (t = 0; t < 4; ++t) {
+            for (i = 0; i < 4; ++i) {
+                cardTable[t][i] = (t * 4) + i + 1;
+                System.out.print("|\t" + cardTable[t][i] + "\t|");
+            }
+            System.out.println();
+        }
     }
-    * */
     private final static String[][] cardMatches = { //this section will list the matches 
-        
     };
 
-    // displays the help menu
+    // displays the card matches
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");

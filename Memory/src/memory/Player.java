@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author karlee ,.l.,bronson + Karalee Olsen
+ * @author karlee bronson + Karalee Olsen
  */
 public class Player implements Serializable {
     /*I do not think we need the fistName and lastName variables if we use String name.
@@ -25,7 +25,7 @@ public class Player implements Serializable {
     int flippedCard;
     Player playerA = new Player();
     Player playerB = new Player();
-    
+
     /**
      *
      * @param args
@@ -84,19 +84,20 @@ public class Player implements Serializable {
         this.points = points;
     }
 
-     public int getNumberOfPairsWon() {
-     return numberOfPairsWon;
-     }
+    public int getNumberOfPairsWon() {
+        return numberOfPairsWon;
+    }
 
-     public void setNumberOfPairsWon(int numberOfPairsWon) {
-     this.numberOfPairsWon = numberOfPairsWon;
-     }
+    public void setNumberOfPairsWon(int numberOfPairsWon) {
+        this.numberOfPairsWon = numberOfPairsWon;
+    }
     // The following information inside this function might 
     // actually need to be somewhere else becasue the results 
     // are not telling us the number of pairs won, it is telling 
     // us who wins. 
+
     public int getRoundWinnerLoser() {
-        for ( playerA.numberOfPairsWon >= 0 && playerB.numberOfPairsWon >= 0) {
+        for (playerA.numberOfPairsWon >= 0 && playerB.numberOfPairsWon >= 0 ) {
             if (playerA.numberOfPairsWon >= 3) {
                 System.out.println(this.name + " wins this round!");
                 System.out.println(this.name + " loses this round.");
@@ -110,35 +111,43 @@ public class Player implements Serializable {
         return playerA.numberOfPairsWon;
         return playerB.numberOfPairsWon;
         return 0;
+
     }
 
     //This will tell the user how to the win the game. 
-    
-    public void displayHowToWin(){
+    public void displayHowToWin() {
         System.out.println("To becmome the winner of Memory you must win");
         System.out.println("Two rounds or more \t One round or less \t.\n Winner \t\t Loser");
         System.out.println("\t\n");
     }
-    public void displayNumberOfPairsWon[]() {
+
+    /**
+     *
+     * @return
+     */
+    public int[] displayNumberOfPairsWon() {
         int sumA = 0;
         int sumB = 0;
-        
+
         // these will eventually have more in the array and will have the matches for each round put in.
-        int roundMatchesA [] = {playerA.numberOfPairsWon}; 
-        int roundMatchesB [] = {playerB.numberOfPairsWon};
-        
+        int roundMatchesA[] = {playerA.numberOfPairsWon};
+        int roundMatchesB[] = {playerB.numberOfPairsWon};
+
         // the sum of the matches for each round - player A
-        for(int x : roundMatchesA){
+        for (int x : roundMatchesA) {
             System.out.print("Player A Matches: " + x);
             sumA += x;
         }
         // the sum of the matches for each round - player B
-        for (int y : roundMatchesB){
+        for (int y : roundMatchesB) {
             System.out.print("Player B Matches: " + y);
             sumB += y;
         }
         System.out.println("Player A's total matches: " + sumA + "\n Player B's total matches: " + sumB);
-}
+        return ;
+        
+        
+    }
 
     public void getWinnerLoser() {
 
@@ -151,13 +160,10 @@ public class Player implements Serializable {
             System.out.println(name + "wins");
         } else if (playerA.points > playerB.points) {
             System.out.println(name + "wins");
+        } else if (playerA == playerB) {
+            System.out.println("players are tied");
+            return;
         }
-
-
-        /*else if (playerA = playerB) {
-         System.out.println ("players are tied");
-         return;
-         }*/
         /*   int wins
          double totalScore = wins + losses + ties;
         
@@ -260,9 +266,8 @@ public class Player implements Serializable {
     // I think we should delete this one, since the getter setter 
     // thing automatically put it on above. We should also choose if 
     // we want to even have this in this class, since the Memory class already asks for the names.
-}    
 
-/*dataType variableName= values
-String lastName
-String firstName
-*/
+    String getPlayerStastics() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}    

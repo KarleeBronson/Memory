@@ -36,9 +36,9 @@ public class GameMenuControl {
         this.displayBoard();
     }
 
-    public void displayPreferencesMenu() {
-        GamePreferencesMenuView gamePreferenceMenuView = new GamePreferencesMenuView(this.game);
-        gamePreferenceMenuView.getInput();
+   public void displayPreferencesMenu() {
+        GamePreferencesMenuView gamePreferencesMenuView = new GamePreferencesMenuView(this.game);
+        gamePreferencesMenuView.getInput();
     }
 
     public void displayStatistics() {
@@ -55,10 +55,3 @@ public class GameMenuControl {
         helpMenu.getInput();
     }
 }
-/*
- * Display help menu action
- */
-public void displayHelpMenu() {
-        HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.getInput();
-    }

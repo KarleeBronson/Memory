@@ -92,27 +92,26 @@ public class NamesOfPlayersView {
                     t = names[b - 1];
                     names[b - 1] = names[b];
                 }
-                return names;
+                //display sorted array
+                System.out.print("Sorted array is: ");
+                for (int i = 0; 1 < names.length; i++) {
+                    System.out.print("" + names[i]);
+                }
+                System.out.println();
             }
         }
-
-//display sorted array
-        System.out.print("Sorted array is: ");
-        for (int i = 0; 1 < names.length; i++) {
-            System.out.print("" + names[i]);
-        }
-        System.out.println();
+        return names;
     }
-}
-private boolean alreadyInList(String[] list, String value) {
+
+    private boolean alreadyInList(String[] list, String value) {
         for (String valueInList : list) {
             if (value.equals(valueInList)) {
                 return true;
-            }           
+            }
         }
         return false;
     }
-        
+
     public void displayNameList(String[] names) {
         System.out.println("\n\t===============================================================");
         System.out.println("\tHere is the ist of players in the game");
@@ -121,11 +120,9 @@ private boolean alreadyInList(String[] list, String value) {
             if (names[i] == null) {
                 break;
             }
-            int namePosition = i+1;
+            int namePosition = i + 1;
             System.out.println("\t   " + namePosition + "\t" + names[i]);
         }
         System.out.println("\t===============================================================\n");
     }
-    
-    
 }

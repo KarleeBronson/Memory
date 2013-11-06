@@ -16,7 +16,7 @@ public class HelpMenuView {
     private final static String[][] menuItems = {
         {"B", "The board"},
         {"C", "A computer player"},
-        {"CC", "Collect Cards"
+        {"CC", "Collect Cards"},
         {"G", "The Memory game"},
         {"D", "A Flipped Down Card"},
         {"U", "A Flipped Up Card"},
@@ -62,7 +62,7 @@ public class HelpMenuView {
                 case "R":
                     this.helpMenuControl.displayRealPlayerHelp();
                     break;
-                case "S";
+                case "S":
                     this.helpMenuControl.displayShuffleCardsHelp();
                 case "Q":
                     return "QUIT";

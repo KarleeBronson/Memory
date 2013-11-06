@@ -23,14 +23,14 @@ public class Game implements Serializable {
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
    
-    private String gameType;
-    private Player playerA;
-    private Player playerB;
-    private Player currentPlayer;
-    private Player otherPlayer;
-    private Player winner;
-    private Player loser;
-    private String status;
+    public String gameType;
+    public Player playerA;
+    public Player playerB;
+    public Player currentPlayer;
+    public Player otherPlayer;
+    public Player winner;
+    public Player loser;
+    public String status;
     Board board;
 
     public Game() {
@@ -140,5 +140,13 @@ public class Game implements Serializable {
                 "\n\t*************************************************************************************************"
                 + "\n\t The game is a tie. Better Luck next time!"
                 + "\n\t******************************************************************************************************");
+    }
+
+    Game shuffleCards() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Game changeNumberOfMatches() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

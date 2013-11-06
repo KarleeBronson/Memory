@@ -15,7 +15,7 @@ public class PickPlayersView {
     private Game game;
     private Player[] playerList;
 
-    public SelectPlayersView(Game game) {
+    public PickPlayersView(Game game) {
         this.game = game;
         playerList = Memory.getPlayerList();
     }

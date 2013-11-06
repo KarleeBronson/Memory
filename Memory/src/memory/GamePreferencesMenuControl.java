@@ -27,7 +27,6 @@ public class GamePreferencesMenuControl {
     public void shuffleCards(Game game) { 
         this.game = game;
     }
-          
     
     public void changeNumberOfMatches(Game game) {
         System.out.println("\n\tChange number of matches");

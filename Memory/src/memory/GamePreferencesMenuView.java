@@ -4,6 +4,8 @@
  */
 package memory;
 
+import java.util.Scanner;
+
 /**
  *
  * @author kbronson
@@ -12,7 +14,7 @@ package memory;
 public class GamePreferencesMenuView  {
     
     private Game game;
-    private GamePreferencesMenuControl gamePreferenceControl = new GamePreferencesMenuControl();
+    private GamePreferencesMenuControl gamePreferenceControl = new GamePreferencesMenuControl(game);
 
     private final static String[][] menuItems = {
         {"1", "Shuffle Cards"},
@@ -23,7 +25,10 @@ public class GamePreferencesMenuView  {
     public GamePreferencesMenuView() {
     }
 
-    
+    GamePreferencesMenuView(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getInput(Object object) {       
         this.game = (Game) object;
         this.gamePreferenceControl.setGame(game);
@@ -37,10 +42,10 @@ public class GamePreferencesMenuView  {
             
             switch (command) {
                 case "1":
-                    this.gamePreferenceControl.shuffleCards(this.game.shuffleCards());
+                    this.gamePreferenceControl.shuffleCards(this.game.shuffleCards());// i do not think we need the stuff in the parenthesis
                     break;
                 case "2":
-                    this.gamePreferenceControl.changeNumberOfCards(this.game.changeNumberOfCards());
+                    this.gamePreferenceControl.changeNumberOfMatches(this.game.changeNumberOfMatches()); // i do not think we need the stuff in the parenthesis
                     break;
                 case "Q":
                     return Game.QUIT;
@@ -50,8 +55,6 @@ public class GamePreferencesMenuView  {
         return gameStatus;
     }
     
-    
-        
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
@@ -79,7 +82,7 @@ public class GamePreferencesMenuView  {
         String command;
         boolean valid = false;
         do {
-            command = inFile.nextRow();
+            command = inFile.nextLine();
             valid = validCommand(command);
             if (!validCommand(command)) {
                 new MemoryError().displayError("Invalid command. Please enter a valid command.");
@@ -89,6 +92,10 @@ public class GamePreferencesMenuView  {
         } while (!valid);
         
         return command;
+    }
+
+    void getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
  
 }

@@ -13,9 +13,9 @@ import java.util.Scanner;
  */
 public class Memory {
 
-    private static Player[] playerList;
-    private static final Scanner inFile = new Scanner(System.in);
-    private static final HelpMenuView helpMenu = new HelpMenuView();
+    public static Player[] playerList;
+    public static final Scanner inFile = new Scanner(System.in);
+    public static final HelpMenuView helpMenu = new HelpMenuView();
     //private static String[] nameList;
     /* private final static String WELCOME =
      "Welcome! This is the game of Memory \n\n"
