@@ -42,7 +42,7 @@ public class Player implements Serializable {
      playerB.getPoints();
      playerB.getNumberOfPairsWon();
      }    */
-    public void Players() {
+    public void Player() {
     }
     /* public void getName(){
      Scanner input = new Scanner (System.in);
