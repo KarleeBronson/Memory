@@ -53,8 +53,6 @@ public class MainMenuControl {
 
         }
 
-
-
         game.setPlayerA(playerA);
         game.setPlayerB(playerB);
 
