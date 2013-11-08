@@ -74,7 +74,7 @@ public class SelectPlayersView {
             String strNumber = inFile.nextLine();
             
             if (strNumber.length() < 1) { // was a value entered ?
-                new TicTacToeError().displayError(
+                new MemoryError().displayError(
                         "You must enter a number associated with the name or "
                         + "enter a \"Q\" to quit. Try again.");
                 continue;
@@ -87,8 +87,8 @@ public class SelectPlayersView {
                 return null;
             }
                     
-            if (!strNumber.matches("[0-9]+")) { // is the value entered a number?
-                new TicTacToeError().displayError(
+            if (!strNumber.matches("[0-3]+")) { // is the value entered a number?
+                new MemoryError().displayError(
                         "You must enter a number associated with the name or "
                         + "enter a \"Q\" to quit. Try again.");
                 continue;
