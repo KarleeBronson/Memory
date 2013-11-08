@@ -10,28 +10,33 @@ import javax.swing.table.AbstractTableModel;
  */
 public class Board implements Serializable {
 
-    String cardArray[] = new String[16];       //a two-dimensional array of cards (i.e., the cards laid out face down)
+    String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
     String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
     int rowCount;
-    int columnCount = 5;
+    int columnCount;
 
     //Location[][] boardLocations;
     public Board() {
     }
 
-    /*  
+    
      //Displays the array of cards 
-     public void displayCardArray() {
-     cardArray = ;
-     char i = 0;
-     int d = i;
-     for(d = 0; d<10; d++) {
-     System.out.print(cardArray[d] + " ");
-     }
-     System.out.println("\n The cards are " + this.cardArray + " .");
-     System.out.print("\n");
+     public void displayCardArray(String x[][]) {
+     System.out.println("These are the cards.\n");
+        display(cardArray);
+        System.out.println("\nEnter the number for each card that you would like "
+                + "to flip over, one at a time. \nFor example : \n2\n6 ");
+    }
+
+    public static void display(String x[][]) {
+        for (int row = 0; row < x.length; row++) {
+            for (int column = 0; column < x[row].length; column++) {
+                System.out.print(x[row][column] + "\t");
+            }
+            System.out.println();
+        }
+    }
        
-     }*/
     // displays whose turn it is.
     public void displayWhoseTurn() {
         System.out.println("\n It is " + this.whoseTurn + " turn to find a match.");
@@ -43,11 +48,14 @@ public class Board implements Serializable {
                 + this.columnCount + " in size.");
     }
 
-    public char[] getCardArray() {
-        return cardArray;
-    }
-
-    public void setCardArray(char[] cardArray) {
+    public String[][] getCardArray() {
+        String cardArray[][] = {{"CARD1", "CARD2", "CARD3", "CARD4", "CARD5"}, 
+            {"CARD6", "CARD7", "CARD8", "CARD9", "CARD10"}};
+    
+    return cardArray;
+}
+    
+public void setCardArray(String[][] cardArray) {
         this.cardArray = cardArray;
     }
 
@@ -62,7 +70,6 @@ public class Board implements Serializable {
     }
 
     public int getRowCount() {
-        rowCount = 5;
         return rowCount;
     }
 
@@ -71,7 +78,6 @@ public class Board implements Serializable {
     }
 
     public int getColumnCount() {
-        columnCount = 2;
         return columnCount;
     }
 

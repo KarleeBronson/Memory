@@ -17,62 +17,62 @@ public class CardMenuControl {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a blue star.");
         displayCardBorder();
     }
     public void displayCard2() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a red star.");
         displayCardBorder();
     }public void displayCard3() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a red star.");
         displayCardBorder();
     }public void displayCard4() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a orange star.");
         displayCardBorder();
     }public void displayCard5() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a blue star.");
         displayCardBorder();
     }public void displayCard6() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a green star.");
         displayCardBorder();
     }public void displayCard7() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a orange star.");
         displayCardBorder();
     }public void displayCard8() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a yellow star.");
         displayCardBorder();
     }public void displayCard9() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a green star.");
         displayCardBorder();
     }public void displayCard10() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tWhat to say about card?");
+                "\tThe card is a yellow star.");
         displayCardBorder();
     }
 
