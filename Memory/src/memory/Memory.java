@@ -74,9 +74,9 @@ public class Memory {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput(null);
         Memory.inFile.close();
-        // TODO code application logic here
+       
 
-        GameMenuView gameMenuView = new GameMenuView();
+       GameMenuView gameMenuView = new GameMenuView();
 
         Card myCard = new Card();
         myCard.displayCard();

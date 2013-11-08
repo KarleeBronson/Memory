@@ -97,7 +97,8 @@ public class Player implements Serializable {
     // us who wins. 
 
     public int getRoundWinnerLoser() {
-        for (playerA.numberOfPairsWon >= 0 && playerB.numberOfPairsWon >= 0 ) {
+        
+        while (playerA.numberOfPairsWon >= 0 && playerB.numberOfPairsWon >= 0 ) {
             if (playerA.numberOfPairsWon >= 3) {
                 System.out.println(this.name + " wins this round!");
                 System.out.println(this.name + " loses this round.");
@@ -109,8 +110,8 @@ public class Player implements Serializable {
             }
         }
         return playerA.numberOfPairsWon;
-        return playerB.numberOfPairsWon;
-        return 0;
+       return playerB.numberOfPairsWon;
+       return 0;
 
     }
 
@@ -125,7 +126,7 @@ public class Player implements Serializable {
      *
      * @return
      */
-    public int[] displayNumberOfPairsWon() {
+    public  int displayNumberOfPairsWon() {
         int sumA = 0;
         int sumB = 0;
 
@@ -144,22 +145,26 @@ public class Player implements Serializable {
             sumB += y;
         }
         System.out.println("Player A's total matches: " + sumA + "\n Player B's total matches: " + sumB);
-        return ;
+        return sumA;
+        return sumB;
         
         
     }
 
     public void getWinnerLoser() {
 
-        Player playerA = new Player();
+       // Player playerA = new Player();
         playerA.getName();
-        Player playerB = new Player();
+        //Player playerB = new Player();
         playerB.getName();
 
+
         if (playerA.points < playerB.points) {
-            System.out.println(name + "wins");
+            System.out.println(playerB.name + "wins");
+            System.out.println(playerA.name + "loses");
         } else if (playerA.points > playerB.points) {
-            System.out.println(name + "wins");
+            System.out.println(playerA.name + "wins");
+            System.out.println(playerB.name + "loses");
         } else if (playerA == playerB) {
             System.out.println("players are tied");
             return;
