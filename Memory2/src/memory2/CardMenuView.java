@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 /**
  * Card Menu
+ * Checks if cards are equal to each other
  * @author kbronson
  */
     
