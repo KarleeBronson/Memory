@@ -24,11 +24,11 @@ public class Memory2 {
     public static final CardMenuView cardMenu = new CardMenuView();
     //public static final HelpMenuView helpMenu = new HelpMenuView();
 
-    public static void main(String[] args) throws IOException {
+public Memory2() {
+}
 
-        Memory2 myGame = new Memory2();
-        myGame.displayHelp(); 
-        
+    
+
     public static Scanner getInputFile() {
         return Memory2.inFile;
     }
@@ -39,27 +39,34 @@ public class Memory2 {
     //public static HelpMenuView getHelpMenu() {
     //   return Memory2.helpMenu;
     //}
-    CardMenuView cardMenuView = new CardMenuView();
 
-    cardMenuView.displayCardMenu ();
-    Game newGame = new Game();
-    //newGame.displayGame();
-    //newGame.displayTiedMessage();
-    Board myBoard = new Board();
-    //myBoard.displayCardArray();
-    //myBoard.displayWhoseTurn();
-    Player myPlayer = new Player();
+    public static void main(String[] args) throws IOException {
 
-    myPlayer.displayName ();
+        Memory2 myGame = new Memory2();
+        myGame.displayHelp();
 
-    myPlayer.displayPoints ();
+        CardMenuView cardMenuView = new CardMenuView();
+        cardMenuView.display();
 
-    myPlayer.getWinnerLoser ();
+        Game newGame = new Game();
+        //newGame.displayGame();
+        //newGame.displayTiedMessage();
+        Board myBoard = new Board();
+        //myBoard.displayCardArray();
+        //myBoard.displayWhoseTurn();
+        Player myPlayer = new Player();
 
-    //HelpMenu myHelpMenu = new HelpMenu();
-    // myHelpMenu.displayHelpMenu();
+        myPlayer.displayName();
+        myPlayer.displayPoints();
+        myPlayer.getWinnerLoser();
+
+        //HelpMenu myHelpMenu = new HelpMenu();
+        // myHelpMenu.displayHelpMenu();
+    
+    }
     public void displayHelp() {
         System.out.println("Welcome player A and Player B \n");
         System.out.println(this.instructions);
     }
 }
+
