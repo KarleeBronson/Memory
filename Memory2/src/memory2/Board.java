@@ -17,12 +17,14 @@ public class Board {
     //Location[][] boardLocations;
     public Board() {
     }
-    
-    public void displayCardArray(String x[][]) {
-     System.out.println("These are the cards.\n");
+    //how do we display this?
+    public void displayCardArray() {
+     String cardArray[][] = {{"CARD1", "CARD2", "CARD3" }, 
+            {"CARD4", "CARD5", "CARD6"}};
+        System.out.println("These are the cards.\n");
         display(cardArray);
-        System.out.println("\nEnter the number for each card that you would like "
-                + "to flip over, one at a time. \nFor example : \n2\n6 ");
+       // System.out.println("\nEnter the number for each card that you would like "
+         //       + "to flip over, one at a time. \nFor example : \n2\n6 ");
     }
 
     public static void display(String x[][]) {
@@ -33,13 +35,5 @@ public class Board {
             System.out.println();
         }
     }
-public String[][] getCardArray() {
-        String cardArray[][] = {{"CARD1", "CARD2", "CARD3" }, 
-            {"CARD4", "CARD5", "CARD6"}};
-    
-    return cardArray;
-}
-public void setCardArray(String[][] cardArray) {
-        this.cardArray = cardArray;
-    }
+
 }
