@@ -77,7 +77,7 @@ private final static String[][] menuItems = {
     // displays the help menu
     public final void display() {
         System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the number of the card you want to pick:");
+        System.out.println("\tEnter the numbers of the cards you want to pick:\n\t\tFor Example, 2 6\n");
 
         for (int i = 0; i < CardMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);

@@ -50,6 +50,7 @@ public Memory2() {
      
 
         Game newGame = new Game();
+        //newGame.start();
         //newGame.displayGame();
         //newGame.displayTiedMessage();
         Board myBoard = new Board();

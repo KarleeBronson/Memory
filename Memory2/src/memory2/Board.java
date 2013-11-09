@@ -11,13 +11,12 @@ package memory2;
 public class Board {
  String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
     String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
-    int rowCount;
-    int columnCount;
+    int rowCount;    int columnCount;
 
     //Location[][] boardLocations;
     public Board() {
     }
-    //how do we display this?
+   
     public void displayCardArray() {
      String cardArray[][] = {{"CARD1", "CARD2", "CARD3" }, 
             {"CARD4", "CARD5", "CARD6"}};

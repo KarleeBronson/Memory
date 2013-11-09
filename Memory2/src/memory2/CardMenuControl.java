@@ -13,8 +13,7 @@ public class CardMenuControl {
 public CardMenuControl() {
     }
 
-    // copy method for all 10 cards
-    public void displayCard1() {
+        public void displayCard1() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
