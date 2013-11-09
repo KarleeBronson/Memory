@@ -5,7 +5,7 @@
 package memory2;
 
 /**
- *
+ *Store Card Value
  * @author kbronson
  */
 public class CardMenuControl {
@@ -27,37 +27,43 @@ public CardMenuControl() {
         System.out.println(
                 "\tThe card is a red star.");
         displayCardBorder();
-    }public void displayCard3() {
+    }
+    public void displayCard3() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
                 "\tThe card is a red star.");
         displayCardBorder();
-    }public void displayCard4() {
-        System.out.println();
-        this.displayCardBorder();
-        System.out.println(
-                "\tThe card is a orange star.");
-        displayCardBorder();
-    }public void displayCard5() {
-        System.out.println();
-        this.displayCardBorder();
-        System.out.println(
-                "\tThe card is a blue star.");
-        displayCardBorder();
-    }public void displayCard6() {
+    }
+    public void displayCard4() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
                 "\tThe card is a green star.");
         displayCardBorder();
-    }public void displayCard7() {
+    }
+    public void displayCard5() {
+        System.out.println();
+        this.displayCardBorder();
+        System.out.println(
+                "\tThe card is a blue star.");
+        displayCardBorder();
+    }
+    public void displayCard6() {
+        System.out.println();
+        this.displayCardBorder();
+        System.out.println(
+                "\tThe card is a green star.");
+        displayCardBorder();
+    }
+    /*public void displayCard7() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
                 "\tThe card is a orange star.");
         displayCardBorder();
-    }public void displayCard8() {
+    }
+    public void displayCard8() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
@@ -67,7 +73,7 @@ public CardMenuControl() {
         System.out.println();
         this.displayCardBorder();
         System.out.println(
-                "\tThe card is a green star.");
+                "\tThe card is a orange star.");
         displayCardBorder();
     }public void displayCard10() {
         System.out.println();
@@ -75,7 +81,7 @@ public CardMenuControl() {
         System.out.println(
                 "\tThe card is a yellow star.");
         displayCardBorder();
-    }
+    }*/
 
     public void displayCardBorder() {
         System.out.println(

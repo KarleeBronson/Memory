@@ -5,7 +5,7 @@
 package memory2;
 
 /**
- *
+ *Create Cards, Shuffle cards, Collect cards
  * @author kbronson
  */
 public class Board {

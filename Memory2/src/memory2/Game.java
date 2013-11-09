@@ -5,14 +5,15 @@
 package memory2;
 
 /**
- *
+ *Start game, end game, respond to catd selection
  * @author kbronson
  */
 public class Game {
     
     public static final String QUIT = "QUIT";
     public static final String PLAYING = "PLAYING";
-    
+   // public String status;
+    // we need this and some of the other methods in game, or we need to write loops to make our card menu loop.
 public void displayWinningMessage() {
         System.out.println(
                 "\n\t*************************************************************************************************"

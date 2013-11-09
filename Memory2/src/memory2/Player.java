@@ -7,7 +7,7 @@ package memory2;
 import java.util.Scanner;
 
 /**
- *
+ *Score Value/Keeping score, store score, store players name
  * @author kbronson
  */
 public class Player {

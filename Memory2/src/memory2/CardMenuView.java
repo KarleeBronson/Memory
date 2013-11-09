@@ -7,7 +7,7 @@ package memory2;
 import java.util.Scanner;
 
 /**
- *
+ * Card Menu
  * @author kbronson
  */
     
@@ -24,11 +24,11 @@ private final static String[][] menuItems = {
         {"4", "Card 4"},
         {"5", "Card 5"},
         {"6", "Card 6"},
-        {"7", "Card 7"},
+       /* {"7", "Card 7"},
         {"8", "Card 8"},
         {"9", "Card 9"},
-        {"10", "Card 10"},
-        {"Q", "Quit Help"}
+        {"10", "Card 10"}, */
+        {"Q", "Quit Game"}
     };
     // Create instance of the CardMenuControl (action) class
     private CardMenuControl cardMenuControl = new CardMenuControl();
@@ -64,18 +64,7 @@ private final static String[][] menuItems = {
                     break;
                 case "6":
                     this.cardMenuControl.displayCard6();
-                    break;
-                case "7":
-                    this.cardMenuControl.displayCard7();
-                    break;
-                case "8":
-                    this.cardMenuControl.displayCard8();
-                    break;
-                case "9":
-                    this.cardMenuControl.displayCard9();
-                    break;
-                case "10":
-                    this.cardMenuControl.displayCard10();
+                              
                 case "Q":
                     return "QUIT";
             }
