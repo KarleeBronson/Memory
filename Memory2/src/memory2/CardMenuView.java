@@ -10,9 +10,7 @@ import java.util.Scanner;
  *
  * @author kbronson
  */
-public class CardMenuView {
     
-}
 public class CardMenuView {
     //an idea is to make a switch statement that has a case for each  number 
 //that is select. So case 1 : replace the 1 with a B. case 5 : replace 5 with a B. 
@@ -100,7 +98,7 @@ private final static String[][] menuItems = {
     // retrieves the command entered by the end user
     protected final String getCard() {
 
-        Scanner inFile = Memory.getInputFile(); // create like in the tictactoe example on the main class
+        Scanner inFile = Memory2.getInputFile(); // create like in the tictactoe example on the main class
         String card;
         boolean valid = false;
         do {
@@ -109,7 +107,7 @@ private final static String[][] menuItems = {
             card = card.trim().toUpperCase();
             valid = validCard(card);
             if (!validCard(card)) {
-                new MemoryError().displayError("Invalid card. Please enter a valid card."); 
+                new Memory2Error().displayError("Invalid card. Please enter a valid card."); 
                 continue;
             }
 

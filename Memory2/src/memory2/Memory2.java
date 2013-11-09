@@ -16,18 +16,28 @@ public class Memory2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
         // TODO code application logic here
+        
+    
 
 public static void main(String[] args) throws IOException {
         Memory2 myGame = new Memory2();
-        myGame.getName();
-        myGame.displayHelp();
+       
+        myGame.displayHelp(); 
+        public static final Scanner inFile = new Scanner(System.in);
+        //public static final HelpMenuView helpMenu = new HelpMenuView();
+    
+        public static Scanner getInputFile() {
+            return Memory2.inFile;
+    }
+
+        //public static HelpMenuView getHelpMenu() {
+        //   return Memory2.helpMenu;
+        //}
 
         CardMenuControl myCard = new CardMenuControl();
         myCard.displayCardMenuControl();
-        myCard.displayPossibleMatches();
-        //myCard.displayRoundScores();
+        
 
         Game newGame = new Game();
         //newGame.displayGame();
@@ -41,27 +51,13 @@ public static void main(String[] args) throws IOException {
         myPlayer.displayName();
         myPlayer.displayPoints();
         myPlayer.getWinnerLoser();
-        
      
-        
+        //HelpMenu myHelpMenu = new HelpMenu();
+       // myHelpMenu.displayHelpMenu();
 
-        HelpMenu myHelpMenu = new HelpMenu();
-        myHelpMenu.displayHelpMenu();
-
-    }
-
-
-    public void getName() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter your name Player A:");
-        this.name = input.next();
-        System.out.println("Enter your name Player B:");
-        this.name2 = input.next();
-
-    }
-
+    
     public void displayHelp() {
-        System.out.println("Welcome " + this.name + " and " + this.name2 + ",\n");
+        System.out.println("Welcome player A and Player B \n");
         System.out.println(this.instructions);
-     }
+}
 }

@@ -10,7 +10,6 @@ package memory2;
  */
 public class CardMenuControl {
     
-}
 public CardMenuControl() {
     }
 
