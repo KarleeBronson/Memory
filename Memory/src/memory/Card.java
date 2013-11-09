@@ -170,11 +170,29 @@ public class Card implements Serializable {
     public void setShuffleCards () {
         System.out.println ("All of your cards will now be shuffled for your convience.");
      }
-    /*  public double getRoundScore() {
-     int points = 0;
+      public double getRoundScore() {
+    /* int points = 0;
      roundScore = points;
-        
-     if (this.cardMatch ; || this.cardMatch1; || this.cardMatch2; || this.cardMatch3; || this.cardMatch4){
+       Switch (roundScore) {
+                case "1":
+                    this.cardMatch
+                    break;
+                case "2":
+                    
+                    break;
+                case "3":
+                    
+                    break;
+                case "4":
+                    
+                    break;
+                case "5":
+                    
+                    break;
+                
+            }
+            */
+     for (this.cardMatch = true; || this.cardMatch1 = true; || this.cardMatch2 = true; || this.cardMatch3 = true; || this.cardMatch4 == true;){
      do {
      System.out.println(" You have found a match.\n Take another turn.");
      roundScore++;
@@ -191,6 +209,7 @@ public class Card implements Serializable {
      public void setRoundScore(double roundScore) {
      this.roundScore = roundScore;
      }
+
      public double getRoundScore2() {
      int points = 0;
      roundScore2 = points;

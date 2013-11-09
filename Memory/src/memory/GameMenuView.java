@@ -101,7 +101,7 @@ public class GameMenuView {
             command = command.trim().toUpperCase();
             valid = validCommand(command);
             if (!validCommand(command)) {
-                new MemoryError().displayError("Invalid command. Please enter a valid command."); // create a memory error class like in the tic tac to example
+                new MemoryError().displayError("Invalid command. Please enter a valid command."); 
                 continue;
             }
 

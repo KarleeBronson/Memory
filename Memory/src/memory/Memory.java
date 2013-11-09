@@ -13,8 +13,9 @@ import java.util.Scanner;
  */
 public class Memory {
 
-    private static final Scanner inFile = new Scanner(System.in);
-    private static final HelpMenuView helpMenu = new HelpMenuView();
+    public static Player[] playerList;
+    public static final Scanner inFile = new Scanner(System.in);
+    public static final HelpMenuView helpMenu = new HelpMenuView();
     //private static String[] nameList;
     /* private final static String WELCOME =
      "Welcome! This is the game of Memory \n\n"
@@ -52,6 +53,13 @@ public class Memory {
      public static void setNameList(String[] nameList) {
      TicTacToe.nameList = nameList;
      */
+    public static Player[] getPlayerList() {
+        return playerList;
+    }
+
+    public static void setPlayerList(Player[] playerList) {
+        Memory.playerList = playerList;
+    }
 
     /**
      *
@@ -66,10 +74,10 @@ public class Memory {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput(null);
         Memory.inFile.close();
-        // TODO code application logic here
-        
-        GameMenuView gameMenuView = new GameMenuView();
-        
+       
+
+       GameMenuView gameMenuView = new GameMenuView();
+
         Card myCard = new Card();
         myCard.displayCard();
         myCard.displayPossibleMatches();

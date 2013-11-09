@@ -1,18 +1,16 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package memory;
+
 import java.io.Serializable;
+
 /**
  *
  * @author Karlee Bronson
  */
-public class Pair implements Serializable{
+public class Pair implements Serializable {
     /* - card1 - a variable of type Card that holds a reference to the first card in the pair
--       card2 - a variable of type Card that holds a reference to the second card in the pair
-*   */
-    
+     -       card2 - a variable of type Card that holds a reference to the second card in the pair
+     *   */
+
     String cardType;
     Card card1;
     Card card2;
@@ -24,17 +22,15 @@ public class Pair implements Serializable{
     Card card8;
     Card card9;
     Card card10;
-    
-    public void display getCardType() {
-        System.out.println("\n\tThis is where the card types are displayed " + this.cardtype);
-      }
-    
-    public Pair(){
-        
+
+    public void displayGetCardType() {
+        System.out.println("\n\tThis is where the card types are displayed " + this.cardType);
     }
-    
-    public void numberOfPairs(){
-        
+
+    public Pair() {
+    }
+
+    public void numberOfPairs() {
     }
 
     public String getCardType() {
@@ -126,45 +122,45 @@ public class Pair implements Serializable{
     }
     //the array to conatin number of cards to make pairs
     char[] PairArray = new char[10];
+
     
-    public Pair() {
+
+    public void makePair() {
+        PairArray = "12345678910".toCharArray(); //type conversion
     }
 
-public void makePair (){
-    PairArray= "12345678910".toCharArray(); //type conversion
-}
-    
-public void displayPair (char number) {
-    
-    System.out.println("Remaining Numbers:");
-    
-    for(int i = 0; i < PairArray.length; i++) {
-        
-        if (PairArray[i] == number) {
-            PairArray[i] = '_';
-        }
-        
-        
-        System.out.print(PairArray[i] + " ");
-    }
-    
-    /* public void displayMatch (){
-          
-          Player playerA = new Player();
-          playerA.getName();
-          Player playerB = new Player();
-          playerB.getName();
-          
-          if (playerA. < playerB){ 
-                System.out.println (name "wins");
-                return ;
+    public void displayPair(char number) {
+
+        System.out.println("Remaining Numbers:");
+
+        for (int i = 0; i < PairArray.length; i++) {
+
+            if (PairArray[i] == number) {
+                PairArray[i] = '_';
             }
-                else if (playerA > playerB) {
-                    System.out.println (name "wins");
-                    return ;
-                }*/
+
+
+            System.out.print(PairArray[i] + " ");
+        }
+
+        /* public void displayMatch (){
+          
+         Player playerA = new Player();
+         playerA.getName();
+         Player playerB = new Player();
+         playerB.getName();
+          
+         if (playerA. < playerB){ 
+         System.out.println (name "wins");
+         return ;
+         }
+         else if (playerA > playerB) {
+         System.out.println (name "wins");
+         return ;
+         }*/
     
-      public void displayCardType(){
-       System.out.println("Card type: " + this.cardType);
-       }
+    } 
+    public void displayCardType() {
+        System.out.println("Card type: " + this.cardType);
+    }
 }

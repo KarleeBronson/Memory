@@ -53,11 +53,19 @@ public class MainMenuControl {
 
         }
 
-
-
-        game.setPlayerA(playerA);
-        game.setPlayerB(playerB);
-
+        // set default players
+        game.playerA = playerA;
+        game.playerB = playerB;
+        
+        
+        // select the name of the players of the game
+        PickPlayersView pickPlayersView = new PickPlayersView(game);
+        pickPlayersView.getInput();
+                
+           
+        // set the game status to game not yet in playing mode
+        game.status = Game.NO_ACTIVE_GAME;
         return game;
     }
+    
 }

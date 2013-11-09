@@ -16,7 +16,7 @@ public class HelpMenuView {
     private final static String[][] menuItems = {
         {"B", "The board"},
         {"C", "A computer player"},
-        {"CC", "Collect Cards"
+        {"CC", "Collect Cards"},
         {"G", "The Memory game"},
         {"D", "A Flipped Down Card"},
         {"U", "A Flipped Up Card"},
@@ -34,7 +34,7 @@ public class HelpMenuView {
     // display the help menu and get the end users input selection
     public String getInput() {
 
-        String gameStatus = Game.PLAYING; // create a PLAYING on the game class like in the tic tac to example
+        String gameStatus = Game.PLAYING; 
         do {
             this.display();
 
@@ -62,7 +62,7 @@ public class HelpMenuView {
                 case "R":
                     this.helpMenuControl.displayRealPlayerHelp();
                     break;
-                case "S";
+                case "S":
                     this.helpMenuControl.displayShuffleCardsHelp();
                 case "Q":
                     return "QUIT";
@@ -95,7 +95,7 @@ public class HelpMenuView {
             command = command.trim().toUpperCase();
             valid = validCommand(command);
             if (!validCommand(command)) {
-                new MemoryError().displayError("Invalid command. Please enter a valid command."); //create a MemoryError class like in the tic tac toe example
+                new MemoryError().displayError("Invalid command. Please enter a valid command."); 
                 continue;
             }
 

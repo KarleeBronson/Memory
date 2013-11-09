@@ -35,10 +35,11 @@ public class GameMenuControl {
         System.out.println("\n\tstartNewGame() called");
         this.displayBoard();
     }
-    
-    public void displayPreferencesMenu() {
-        GamePreferencesMenuView gamePreferencesMenu = Memory.getGamePreferencesMenu();
-        gamePreferencesMenu.getInput(this.game);
+
+   public void displayPreferencesMenu() {
+        GamePreferencesMenuView gamePreferencesMenuView = new GamePreferencesMenuView(this.game);
+        gamePreferencesMenuView.getInput();
+    }
 
     public void displayStatistics() {
         String playerAStatistics = this.game.getPlayerA().getPlayerStastics();
