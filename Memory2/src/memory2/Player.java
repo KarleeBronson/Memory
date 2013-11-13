@@ -12,9 +12,10 @@ import java.util.Scanner;
  * @author kbronson
  */
 public class Player implements Serializable{
-    int points = 0;
-    String name = "";
-    String name2 = "";
+   private int points = 0;
+   public String name = "";
+    public String name2 = "";
+    public String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
     Player playerA;
     Player playerB;
 
@@ -23,17 +24,17 @@ public class Player implements Serializable{
         this.playerA = new Player();
     }
 
-    public int getPoints() {
+    private int getPoints() {
         return points;
 
     }
 
-    public void displayPoints() {
+    private void displayPoints() {
         System.out.println("Display Points:" + points);
 
     }
 
-    public void setPoints(int points) {
+    private void setPoints(int points) {
         this.points = points;
     }
 
@@ -52,7 +53,7 @@ public class Player implements Serializable{
         System.out.println("Your name will be displayed here" + playerA.name + playerB.name);
     }
 
-    public void getWinnerLoser() {
+    private void getWinnerLoser() {
 
         playerA.getName();
         playerB.getName();
@@ -93,5 +94,11 @@ public class Player implements Serializable{
     public void setPlayerB(Player playerB) {
         this.playerB = playerB;
     }
-    
+    public String getWhoseTurn() {
+        return whoseTurn;
+    }
+
+    public void setWhoseTurn(String whoseTurn) {
+        this.whoseTurn = whoseTurn;
+    }
 }

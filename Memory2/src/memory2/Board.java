@@ -5,26 +5,29 @@
 package memory2;
 
 /**
- *Create Cards, Shuffle cards, Collect cards
+ * Create Cards, Shuffle cards, Collect cards
+ *
  * @author kbronson
  */
 import java.io.Serializable;
+
 public class Board implements Serializable {
- String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
-    String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
-    int rowCount;    int columnCount;
+
+    String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
+    int rowCount;
+    int columnCount;
 
     //Location[][] boardLocations;
     public Board() {
     }
-   
+
     public void displayCardArray() {
-     String cardArray[][] = {{"CARD1", "CARD2", "CARD3" }, 
+        String cardArray[][] = {{"CARD1", "CARD2", "CARD3"},
             {"CARD4", "CARD5", "CARD6"}};
         System.out.println("These are the cards.\n");
         display(cardArray);
-       // System.out.println("\nEnter the number for each card that you would like "
-         //       + "to flip over, one at a time. \nFor example : \n2\n6 ");
+        // System.out.println("\nEnter the number for each card that you would like "
+        //       + "to flip over, one at a time. \nFor example : \n2\n6 ");
     }
 
     public static void display(String x[][]) {
@@ -37,7 +40,7 @@ public class Board implements Serializable {
     }
 
     public String[][] getCardArray() {
-        
+
         return cardArray;
     }
 
@@ -45,13 +48,7 @@ public class Board implements Serializable {
         this.cardArray = cardArray;
     }
 
-    public String getWhoseTurn() {
-        return whoseTurn;
-    }
-
-    public void setWhoseTurn(String whoseTurn) {
-        this.whoseTurn = whoseTurn;
-    }
+    
 
     public int getRowCount() {
         return rowCount;
@@ -68,5 +65,4 @@ public class Board implements Serializable {
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
-
 }

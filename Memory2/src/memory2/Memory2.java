@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Memory2 {
 
-    String instructions = "========================================================================\n"
+    public static String instructions = "========================================================================\n"
             + "This is the game of Memory \n\n"
             + "There will be a total of 2 players.\n\n"
             + "Each player will take a turn choosing 1 card at a time.\n\n"
@@ -57,8 +57,8 @@ public Memory2() {
         myBoard.displayCardArray();
         //myBoard.displayCardArray();
         //myBoard.displayWhoseTurn();  
-        CardMenuView cardMenuView = new CardMenuView();
-        cardMenuView.display();
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
       /* Player myPlayer = new Player();
         myPlayer.getName();
         myPlayer.displayName();
