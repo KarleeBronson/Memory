@@ -8,7 +8,8 @@ package memory2;
  *Create Cards, Shuffle cards, Collect cards
  * @author kbronson
  */
-public class Board {
+import java.io.Serializable;
+public class Board implements Serializable {
  String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
     String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
     int rowCount;    int columnCount;
@@ -33,6 +34,39 @@ public class Board {
             }
             System.out.println();
         }
+    }
+
+    public String[][] getCardArray() {
+        
+        return cardArray;
+    }
+
+    public void setCardArray(String[][] cardArray) {
+        this.cardArray = cardArray;
+    }
+
+    public String getWhoseTurn() {
+        return whoseTurn;
+    }
+
+    public void setWhoseTurn(String whoseTurn) {
+        this.whoseTurn = whoseTurn;
+    }
+
+    public int getRowCount() {
+        return rowCount;
+    }
+
+    public void setRowCount(int rowCount) {
+        this.rowCount = rowCount;
+    }
+
+    public int getColumnCount() {
+        return columnCount;
+    }
+
+    public void setColumnCount(int columnCount) {
+        this.columnCount = columnCount;
     }
 
 }

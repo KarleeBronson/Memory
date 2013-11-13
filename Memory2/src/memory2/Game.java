@@ -4,12 +4,14 @@
  */
 package memory2;
 
+import java.io.Serializable;
+
 /**
  * Start game, end game, respond to catd selection
  *
  * @author kbronson
  */
-public class Game {
+public class Game implements Serializable{
     //public static final String START_GAME = "START_GAME";
     public static final String PLAYING = "PLAYING";
     public static final String QUIT = "QUIT";

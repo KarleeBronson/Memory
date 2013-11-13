@@ -4,18 +4,24 @@
  */
 package memory2;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *Score Value/Keeping score, store score, store players name
  * @author kbronson
  */
-public class Player {
+public class Player implements Serializable{
     int points = 0;
     String name = "";
     String name2 = "";
-    Player playerA = new Player();
-    Player playerB = new Player();
+    Player playerA;
+    Player playerB;
+
+    public Player() {
+        this.playerB = new Player();
+        this.playerA = new Player();
+    }
 
     public int getPoints() {
         return points;
@@ -32,9 +38,9 @@ public class Player {
     }
 
     public String getName() {
-        Scanner input = new Scanner(System.in);
+        Scanner inFile = Memory2.getInputFile();
         System.out.println("Enter your name:");
-        this.name = input.next();
+        this.name = inFile.nextLine();
         return name;
     }
 
@@ -63,4 +69,29 @@ public class Player {
         }
 
     }
+
+    public String getName2() {
+        return name2;
+    }
+
+    public void setName2(String name2) {
+        this.name2 = name2;
+    }
+
+    public Player getPlayerA() {
+        return playerA;
+    }
+
+    public void setPlayerA(Player playerA) {
+        this.playerA = playerA;
+    }
+
+    public Player getPlayerB() {
+        return playerB;
+    }
+
+    public void setPlayerB(Player playerB) {
+        this.playerB = playerB;
+    }
+    
 }

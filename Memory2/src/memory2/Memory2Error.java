@@ -9,6 +9,9 @@ package memory2;
  * @author kbronson
  */
 public class Memory2Error {
+
+    public Memory2Error() {
+    }
    
     public Object displayError(Object object) {
         String message = (String) object;

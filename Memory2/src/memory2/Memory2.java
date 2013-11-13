@@ -59,7 +59,7 @@ public Memory2() {
         //myBoard.displayWhoseTurn();  
         CardMenuView cardMenuView = new CardMenuView();
         cardMenuView.display();
-       /* Player myPlayer = new Player();
+      /* Player myPlayer = new Player();
         myPlayer.getName();
         myPlayer.displayName();
         myPlayer.displayPoints();
