@@ -65,7 +65,7 @@ private final static String[][] menuItems = {
                     break;
                 case "6":
                     this.cardMenuControl.displayCard6();
-                              
+                    break;          
                 case "Q":
                     return "QUIT";
             }

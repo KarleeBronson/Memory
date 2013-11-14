@@ -17,7 +17,7 @@ public class MainMenuView {
     private static final String[][] menuItems = {
         {"S", "Start game"},
         {"H", "Help"},
-        {"X", "Exit Memory"}
+        {"Q", "Exit Memory"}
     };
     MainMenuControl mainMenuControl = new MainMenuControl();
 
@@ -31,10 +31,13 @@ public class MainMenuView {
             String command = this.getCommand();
             switch (command) {
                 case "S":
-                    CardMenuView cardMenu = Memory2.cardMenu;
+                    Board myBoard = new Board();
+                    myBoard.displayCardArray();
+                    CardMenuView myCardMenu = new CardMenuView();
+                    myCardMenu.getInput();
                     //cardMenuView.display();
                     break;
-               case "H":
+                case "H":
                     this.mainMenuControl.displayBoardHelp();
                     this.mainMenuControl.displayComputerPlayerHelp();
                     this.mainMenuControl.displayCollectCardHelp();

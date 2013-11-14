@@ -13,9 +13,9 @@ import java.io.Serializable;
 
 public class Board implements Serializable {
 
-    String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
-    int rowCount;
-    int columnCount;
+   public String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
+   public int rowCount;
+   public int columnCount;
 
     //Location[][] boardLocations;
     public Board() {
@@ -30,7 +30,7 @@ public class Board implements Serializable {
         //       + "to flip over, one at a time. \nFor example : \n2\n6 ");
     }
 
-    public static void display(String x[][]) {
+    private void display(String x[][]) {
         for (int row = 0; row < x.length; row++) {
             for (int column = 0; column < x[row].length; column++) {
                 System.out.print(x[row][column] + "\t");
@@ -49,20 +49,19 @@ public class Board implements Serializable {
     }
 
     
-
-    public int getRowCount() {
+    private int getRowCount() {
         return rowCount;
     }
 
-    public void setRowCount(int rowCount) {
+   private void setRowCount(int rowCount) {
         this.rowCount = rowCount;
     }
 
-    public int getColumnCount() {
+    private int getColumnCount() {
         return columnCount;
     }
 
-    public void setColumnCount(int columnCount) {
+    private void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
 }
