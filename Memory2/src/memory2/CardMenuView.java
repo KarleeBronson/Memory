@@ -49,22 +49,22 @@ private final static String[][] menuItems = {
             String card = this.getCard();
             switch (card) {
                 case "1":
-                    this.cardMenuControl.displayCard1();
+                    CardMenuControl.displayCard1();
                     break;
                 case "2":
-                    this.cardMenuControl.displayCard2();
+                    CardMenuControl.displayCard2();
                     break;
                 case "3":
-                    this.cardMenuControl.displayCard3();
+                    CardMenuControl.displayCard3();
                     break;
                 case "4":
-                    this.cardMenuControl.displayCard4();
+                    CardMenuControl.displayCard4();
                     break;
                 case "5":
-                    this.cardMenuControl.displayCard5();
+                    CardMenuControl.displayCard5();
                     break;
                 case "6":
-                    this.cardMenuControl.displayCard6();
+                    CardMenuControl.displayCard6();
                     break;          
                 case "Q":
                     return "QUIT";

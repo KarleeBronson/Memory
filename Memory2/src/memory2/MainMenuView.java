@@ -35,7 +35,7 @@ public class MainMenuView {
                    // myPlayer.getName();
                     //myPlayer.getName2();
                     Board myBoard = new Board();
-                    myBoard.displayCardArray();
+                    Board.displayCardArray();
                     CardMenuView myCardMenu = new CardMenuView();
                     myCardMenu.getInput();
                     //cardMenuView.display();

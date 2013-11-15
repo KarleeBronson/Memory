@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 public class Board implements Serializable {
 
-   public String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
+   public static String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)
    public int rowCount;
    public int columnCount;
 
@@ -21,7 +21,7 @@ public class Board implements Serializable {
     public Board() {
     }
 
-    public void displayCardArray() {
+    public static void displayCardArray() {
         String cardArray[][] = {{"CARD1", "CARD2", "CARD3"},
             {"CARD4", "CARD5", "CARD6"}};
         System.out.println("These are the cards.\n");
@@ -30,7 +30,7 @@ public class Board implements Serializable {
         //       + "to flip over, one at a time. \nFor example : \n2\n6 ");
     }
 
-    private void display(String x[][]) {
+    public static void display(String x[][]) {
         for (int row = 0; row < x.length; row++) {
             for (int column = 0; column < x[row].length; column++) {
                 System.out.print(x[row][column] + "\t");
@@ -39,7 +39,7 @@ public class Board implements Serializable {
         }
     }
 
-    public String[][] getCardArray() {
+    public static String[][] getCardArray() {
 
         return cardArray;
     }

@@ -13,44 +13,44 @@ public class CardMenuControl {
 public CardMenuControl() {
     }
 
-        public void displayCard1() {
+        public static void displayCard1() {
         System.out.println();
-        this.displayCardBorder();
+        displayCardBorder();
         System.out.println(
                 "\tThe card is a blue star.");
         displayCardBorder();
     }
-    public void displayCard2() {
+    public static void displayCard2() {
         System.out.println();
-        this.displayCardBorder();
+        displayCardBorder();
         System.out.println(
                 "\tThe card is a red star.");
         displayCardBorder();
     }
-    public void displayCard3() {
+    public static void displayCard3() {
         System.out.println();
-        this.displayCardBorder();
+        displayCardBorder();
         System.out.println(
                 "\tThe card is a red star.");
         displayCardBorder();
     }
-    public void displayCard4() {
+    public static void displayCard4() {
         System.out.println();
-        this.displayCardBorder();
+        displayCardBorder();
         System.out.println(
                 "\tThe card is a green star.");
         displayCardBorder();
     }
-    public void displayCard5() {
+    public static void displayCard5() {
         System.out.println();
-        this.displayCardBorder();
+        displayCardBorder();
         System.out.println(
                 "\tThe card is a blue star.");
         displayCardBorder();
     }
-    public void displayCard6() {
+    public static void displayCard6() {
         System.out.println();
-        this.displayCardBorder();
+        displayCardBorder();
         System.out.println(
                 "\tThe card is a green star.");
         displayCardBorder();
@@ -82,7 +82,7 @@ public CardMenuControl() {
         displayCardBorder();
     }*/
 
-    public void displayCardBorder() {
+    public static void displayCardBorder() {
         System.out.println(
                 "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
