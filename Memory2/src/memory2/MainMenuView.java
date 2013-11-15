@@ -31,6 +31,9 @@ public class MainMenuView {
             String command = this.getCommand();
             switch (command) {
                 case "S":
+                    //Player myPlayer = new Player();
+                   // myPlayer.getName();
+                    //myPlayer.getName2();
                     Board myBoard = new Board();
                     myBoard.displayCardArray();
                     CardMenuView myCardMenu = new CardMenuView();
@@ -38,14 +41,15 @@ public class MainMenuView {
                     //cardMenuView.display();
                     break;
                 case "H":
-                    this.mainMenuControl.displayBoardHelp();
-                    this.mainMenuControl.displayComputerPlayerHelp();
-                    this.mainMenuControl.displayCollectCardHelp();
-                    this.mainMenuControl.displayGameHelp();
-                    this.mainMenuControl.displayFlippedDownCardHelp();
-                    this.mainMenuControl.displayFlippedUpCardHelp();
-                    this.mainMenuControl.displayRealPlayerHelp();
-                    this.mainMenuControl.displayShuffleCardsHelp();
+                    MainMenuControl.displayBoardHelp();
+                    MainMenuControl.displayComputerPlayerHelp();
+                    MainMenuControl.displayCollectCardHelp();
+                    MainMenuControl.displayGameHelp();
+                    MainMenuControl.displayFlippedDownCardHelp();
+                    MainMenuControl.displayFlippedUpCardHelp();
+                    MainMenuControl.displayRealPlayerHelp();
+                    MainMenuControl.displayShuffleCardsHelp();
+                    break;
                 case "Q":
                     return Game.QUIT; //Make an EXIT like in the tic tac toe Game class
             }

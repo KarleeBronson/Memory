@@ -40,7 +40,7 @@ public class Player implements Serializable{
 
     public String getName() {
         Scanner inFile = Memory2.getInputFile();
-        System.out.println("Enter your name:");
+        System.out.println("Enter your name Player A:");
         this.name = inFile.nextLine();
         return name;
     }
@@ -72,6 +72,9 @@ public class Player implements Serializable{
     }
 
     public String getName2() {
+       Scanner inFile = Memory2.getInputFile();
+        System.out.println("Enter your name Player B:");
+        this.name2 = inFile.nextLine();
         return name2;
     }
 

@@ -12,9 +12,9 @@ public class MainMenuControl {
 
     public MainMenuControl() {
     }
-     public void displayBoardHelp() {
+     public static void displayBoardHelp() {
         System.out.println();
-        this.displayHelpBorder();
+        displayHelpBorder();
         System.out.println(
                 "\tThe game board for Memory. It consist of 2 rows with "
                 + "\n\t5 cards in each row. Players click on the different cards  "
@@ -23,7 +23,7 @@ public class MainMenuControl {
         displayHelpBorder();
     }
 
-    public void displayGameHelp() {
+    public static void displayGameHelp() {
         System.out.println();
         displayHelpBorder();
         System.out.println(
@@ -37,7 +37,7 @@ public class MainMenuControl {
         displayHelpBorder();
     }
 
-    public void displayRealPlayerHelp() {
+    public static void displayRealPlayerHelp() {
         System.out.println();
         displayHelpBorder();
         System.out.println(
@@ -46,7 +46,7 @@ public class MainMenuControl {
         displayHelpBorder();
     }
 
-    public void displayComputerPlayerHelp() {
+    public static void displayComputerPlayerHelp() {
         System.out.println();
         displayHelpBorder();
         System.out.println(
@@ -55,7 +55,7 @@ public class MainMenuControl {
         displayHelpBorder();
     }
 
-    public void displayFlippedDownCardHelp() {
+    public static void displayFlippedDownCardHelp() {
         System.out.println();
         displayHelpBorder();
         System.out.println(
@@ -63,7 +63,7 @@ public class MainMenuControl {
         displayHelpBorder();
     }
 
-    public void displayFlippedUpCardHelp() {
+    public static void displayFlippedUpCardHelp() {
         System.out.println();
         displayHelpBorder();
         System.out.println(
@@ -73,7 +73,7 @@ public class MainMenuControl {
         displayHelpBorder();
     }
 
-    public void displayCollectCardHelp() {
+    public static void displayCollectCardHelp() {
          System.out.println();
         displayHelpBorder();
         System.out.println(
@@ -81,14 +81,14 @@ public class MainMenuControl {
         displayHelpBorder();
     }
     
-    public void displayShuffleCardsHelp() {
+    public static void displayShuffleCardsHelp() {
          System.out.println();
          displayHelpBorder();
          System.out.println(
-                 "/tThis option will shuffle the cards on the board.");
+                 "\tThis option will shuffle the cards on the board.");
          displayHelpBorder();
     }
-    public void displayHelpBorder() {
+    public static void displayHelpBorder() {
         System.out.println(
                 "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
