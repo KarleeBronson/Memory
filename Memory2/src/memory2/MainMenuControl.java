@@ -8,7 +8,7 @@ package memory2;
  *
  * @author Karalee Foster
  */
-public class MainMenuControl {
+public class MainMenuControl  {
 
     public MainMenuControl() {
     }

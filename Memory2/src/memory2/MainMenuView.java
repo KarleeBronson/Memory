@@ -10,20 +10,27 @@ import java.util.Scanner;
  *
  * @author Karalee Foster
  */
-public class MainMenuView {
-
-    public MainMenuView() {
-    }
-    private static final String[][] menuItems = {
+public class MainMenuView extends Menu {
+    
+    static final String[][] menuItems = {
         {"S", "Start game"},
         {"H", "Help"},
         {"Q", "Exit Memory"}
     };
-    MainMenuControl mainMenuControl = new MainMenuControl();
-
-    public String getInput(Object object) {
-
-        String gameStatus = Game.PLAYING; // make a PLAYING like in the tictactoe game class
+    
+    public MainMenuView() {
+        super(MainMenuView.menuItems);
+    }
+  
+    /**
+     *
+     * @param object
+     * @return
+     */
+@Override  
+public String getInput(Object object) {
+    
+    String gameStatus = Game.PLAYING; // make a PLAYING like in the tictactoe game class
         do {
             this.display();
 
@@ -57,44 +64,5 @@ public class MainMenuView {
 
         return "QUIT";
     }
-
-    public final String getCommand() {
-
-        Scanner inFile = Memory2.getInputFile();
-        String command;
-        boolean valid = false;
-        do {
-            command = inFile.nextLine();
-            command = command.trim().toUpperCase();
-            valid = validCommand(command);
-            if (!validCommand(command)) {
-                new Memory2Error().displayError("Invalid command. Please enter a valid command."); //create a MemoryError Class like in the tictactoe example
-                continue;
-            }
-
-        } while (!valid);
-
-        return command;
-    }
-
-    public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }
-
-    private boolean validCommand(String command) {
-        String[][] items = MainMenuView.menuItems;
-
-        for (String[] item : MainMenuView.menuItems) {
-            if (item[0].equals(command)) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
+    
