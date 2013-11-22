@@ -40,8 +40,10 @@ private String[][] menuItems = null;
   */
    
     MainMenuControl mainMenuControl = new MainMenuControl();
+    CardMenuControl cardMenuControl = new CardMenuControl();
     
      public abstract String getInput(Object object); 
+       
 
     /**
      *
@@ -70,16 +72,16 @@ private String[][] menuItems = null;
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
+        for (int i = 0; i < this.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
     }
 
     private boolean validCommand(String command) {
-        String[][] items = MainMenuView.menuItems;
+        String[][] items = this.menuItems;
 
-        for (String[] item : MainMenuView.menuItems) {
+        for (String[] item : this.menuItems) {
             if (item[0].equals(command)) {
                 return true;
             }
