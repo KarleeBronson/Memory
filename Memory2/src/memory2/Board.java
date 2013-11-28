@@ -11,6 +11,10 @@ package memory2;
  */
 import java.io.Serializable;
 
+/**
+ *
+ * @author Karalee Foster
+ */
 public class Board implements Serializable {
 
    public static String cardArray[][];       //a two-dimensional array of cards (i.e., the cards laid out face down)

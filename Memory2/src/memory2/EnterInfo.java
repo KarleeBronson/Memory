@@ -11,5 +11,10 @@ package memory2;
  * @author kbronson
  */
 public interface EnterInfo {
-    
+    /**
+     *
+     * @param object
+     * @return
+     */
+    Object getInput(Object object);
 }

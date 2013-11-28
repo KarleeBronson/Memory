@@ -39,9 +39,9 @@ private final static String[][] menuItems = {
     }
 
     // display the card menu and get the end users input selection
-    public String getInput() {
+    public GameStatus getInput() {
 
-        String gameStatus = Game.PLAYING; 
+        String gameStatus = "PLAYING"; 
         do {
             this.display();
 
@@ -67,11 +67,11 @@ private final static String[][] menuItems = {
                     CardMenuControl.displayCard6();
                     break;          
                 case "Q":
-                    return "QUIT";
+                    return GameStatus.QUIT;
             }
         } while (!gameStatus.equals("QUIT"));
 
-        return gameStatus;
+        return GameStatus.QUIT;
     }
 
     // displays the help menu

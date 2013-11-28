@@ -11,17 +11,18 @@ import java.io.Serializable;
  *
  * @author kbronson
  */
-public class Game implements Serializable{
+public class Game implements Serializable {
     //public static final String START_GAME = "START_GAME";
-    public static final String PLAYING = "PLAYING";
-    public static final String QUIT = "QUIT";
+
+ //   public static final String PLAYING = "PLAYING";
+  //  public static final String QUIT = "QUIT";
 
     // public String status;
     //Player playerA;
     //Player PlayerB;
     public Game() {
-       // Board myBoard = new Board();
-       // myBoard.displayCardArray();
+        // Board myBoard = new Board();
+        // myBoard.displayCardArray();
         //myBoard.displayCardArray();
         //myBoard.displayWhoseTurn();  
         //CardMenuView cardMenuView = new CardMenuView();
@@ -32,16 +33,21 @@ public class Game implements Serializable{
          myPlayer.displayPoints();
          myPlayer.getWinnerLoser();
          }*/
-
         // we need this and some of the other methods in game, or we need to write loops to make our card menu loop.
-    //public void start(){
+        //public void start(){
         //while{status.equals = Game.PLAYING;
         // }
-    //public void quit(){
+        //public void quit(){
         //status = Game.QUIT;
         //}
-    
     }
+
+    public void displayGameStatus() {
+        for (GameStatus status : GameStatus.values()) {
+            System.out.printf("%s\t%s\t\n", status, status.getStatus());
+        }
+    }
+
     public void displayWinningMessage() {
         System.out.println(
                 "\n\t*************************************************************************************************"

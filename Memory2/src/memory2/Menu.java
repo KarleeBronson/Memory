@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author kbronson
  */
-public abstract class  Menu {
+public abstract class  Menu implements DisplayInfo, EnterInfo {
     
 private String[][] menuItems = null;
 
@@ -42,7 +42,7 @@ private String[][] menuItems = null;
     MainMenuControl mainMenuControl = new MainMenuControl();
     CardMenuControl cardMenuControl = new CardMenuControl();
     
-     public abstract String getInput(Object object); 
+     public abstract GameStatus getInput(Object object); 
        
 
     /**
@@ -68,7 +68,7 @@ private String[][] menuItems = null;
         return command;
     }
 
-    protected final void display() {
+    public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 

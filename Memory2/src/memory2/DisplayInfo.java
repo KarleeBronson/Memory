@@ -11,5 +11,9 @@ package memory2;
  * @author kbronson
  */
 public interface DisplayInfo {
-    
+    /**
+     *
+     * @return
+     */
+    Object display(Object object);
 }

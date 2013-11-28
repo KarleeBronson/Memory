@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Karalee Foster
  */
-public class MainMenuView extends Menu {
+public class MainMenuView extends Menu implements EnterInfo{
     
     static final String[][] menuItems = {
         {"S", "Start game"},
@@ -28,9 +28,9 @@ public class MainMenuView extends Menu {
      * @return
      */
 @Override  
-public String getInput(Object object) {
+public GameStatus getInput(Object object) {
     
-    String gameStatus = Game.PLAYING; // make a PLAYING like in the tictactoe game class
+    String gameStatus = "PLAYING"; // make a PLAYING like in the tictactoe game class
         do {
             this.display();
 
@@ -58,11 +58,18 @@ public String getInput(Object object) {
                     MainMenuControl.displayShuffleCardsHelp();
                     break;
                 case "Q":
-                    return Game.QUIT; //Make an EXIT like in the tic tac toe Game class
+                    return GameStatus.QUIT; //Make an EXIT like in the tic tac toe Game class
             }
         } while (!gameStatus.equals("QUIT"));
 
-        return "QUIT";
+        return GameStatus.QUIT;
     }
+//not otherwise compatable
+    @Override
+    public Object display(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
 }
     

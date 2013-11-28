@@ -53,9 +53,10 @@ public class Memory2 {
         myGame.displayHelp();
         
         MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.getInput(myGame);
+        GameStatus input = mainMenuView.getInput(myGame);//not otherwise compatable
 
         Game newGame = new Game();
+        newGame.displayGameStatus();
         //newGame.start();
         //newGame.displayGame();
         //newGame.displayTiedMessage();
