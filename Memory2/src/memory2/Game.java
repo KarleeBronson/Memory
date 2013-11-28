@@ -41,7 +41,7 @@ public class Game implements Serializable {
         //status = Game.QUIT;
         //}
     }
-
+//testing GameStatus Enm
     public void displayGameStatus() {
         for (GameStatus status : GameStatus.values()) {
             System.out.printf("%s\t%s\t\n", status, status.getStatus());
