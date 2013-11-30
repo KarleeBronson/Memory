@@ -17,4 +17,5 @@ public interface EnterInfo {
      * @return
      */
     Object getInput(Object object);
+    String getName();
 }

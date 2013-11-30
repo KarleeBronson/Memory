@@ -16,4 +16,5 @@ public interface DisplayInfo {
      * @return
      */
     Object display(Object object);
+    Object displayError(Object object);
 }

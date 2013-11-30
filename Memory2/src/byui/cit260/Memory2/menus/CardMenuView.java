@@ -2,9 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package memory2;
+package byui.cit260.Memory2.menus;
 
 import java.util.Scanner;
+import memory2.GameStatus;
+import memory2.Memory2;
+import memory2.Memory2Error;
 
 /**
  * Card Menu

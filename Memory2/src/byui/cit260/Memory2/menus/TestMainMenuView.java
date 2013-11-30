@@ -2,15 +2,19 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package memory2;
+package byui.cit260.Memory2.menus;
 
+import byui.cit260.Memory2.menus.Menu;
 import java.util.Scanner;
+import memory2.Board;
+import memory2.EnterInfo;
+import memory2.GameStatus;
 
 /**
  *
  * @author Karalee Foster
  */
-public class MainMenuView extends Menu implements EnterInfo{
+public class TestMainMenuView extends Menu implements EnterInfo{
     
     static final String[][] menuItems = {
         {"S", "Start game"},
@@ -18,8 +22,8 @@ public class MainMenuView extends Menu implements EnterInfo{
         {"Q", "Exit Memory"}
     };
     
-    public MainMenuView() {
-        super(MainMenuView.menuItems);
+    public TestMainMenuView() {
+        super(TestMainMenuView.menuItems);
     }
   
     /**
@@ -67,6 +71,16 @@ public GameStatus getInput(Object object) {
 //not otherwise compatable
     @Override
     public Object display(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Object displayError(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

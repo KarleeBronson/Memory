@@ -4,9 +4,14 @@
  * and open the template in the editor.
  */
 
-package memory2;
+package byui.cit260.Memory2.menus;
 
 import java.util.Scanner;
+import memory2.DisplayInfo;
+import memory2.EnterInfo;
+import memory2.GameStatus;
+import memory2.Memory2;
+import memory2.Memory2Error;
 
 /**
  *

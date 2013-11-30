@@ -4,6 +4,8 @@
  */
 package memory2;
 
+import byui.cit260.Memory2.menus.CardMenuView;
+import byui.cit260.Memory2.menus.MainMenuView;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -56,7 +58,7 @@ public class Memory2 {
         GameStatus input = mainMenuView.getInput(myGame);//not otherwise compatable
 
         Game newGame = new Game();
-        newGame.displayGameStatus();
+        
         //newGame.start();
         //newGame.displayGame();
         //newGame.displayTiedMessage();
