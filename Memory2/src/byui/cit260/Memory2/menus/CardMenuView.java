@@ -5,7 +5,7 @@
 package byui.cit260.Memory2.menus;
 
 import java.util.Scanner;
-import memory2.GameStatus;
+import byui.cit260.Memory2.enums.GameStatus;
 import memory2.Memory2;
 import memory2.Memory2Error;
 

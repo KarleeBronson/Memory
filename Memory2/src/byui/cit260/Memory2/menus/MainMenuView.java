@@ -7,8 +7,8 @@ package byui.cit260.Memory2.menus;
 import byui.cit260.Memory2.menus.Menu;
 import java.util.Scanner;
 import memory2.Board;
-import memory2.EnterInfo;
-import memory2.GameStatus;
+import byui.cit260.Memory2.interfaces.EnterInfo;
+import byui.cit260.Memory2.enums.GameStatus;
 
 /**
  *

@@ -4,8 +4,8 @@
  */
 package byui.cit260.Memory2.menus;
 
-import memory2.EnterInfo;
-import memory2.GameStatus;
+import byui.cit260.Memory2.interfaces.EnterInfo;
+import byui.cit260.Memory2.enums.GameStatus;
 
 /**
  *

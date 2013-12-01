@@ -4,6 +4,7 @@
  */
 package memory2;
 
+import byui.cit260.Memory2.enums.GameStatus;
 import byui.cit260.Memory2.menus.CardMenuView;
 import byui.cit260.Memory2.menus.MainMenuView;
 import java.io.IOException;
