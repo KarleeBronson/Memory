@@ -6,7 +6,7 @@ package memory2;
 
 /**
  *
- * @author Karalee Foster
+ * @author Karalee Foster & Karlee Bronson
  */
 public enum GameStatus {
     //public static final String START_GAME = "START_GAME";

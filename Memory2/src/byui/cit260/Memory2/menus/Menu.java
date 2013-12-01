@@ -15,7 +15,7 @@ import memory2.Memory2Error;
 
 /**
  *
- * @author kbronson
+ * @author kbronson and Karalee Olsen
  */
 public abstract class  Menu implements DisplayInfo, EnterInfo {
     

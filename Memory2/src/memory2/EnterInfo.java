@@ -8,7 +8,7 @@ package memory2;
 
 /**
  *
- * @author kbronson
+ * @author kbronson & Karalee Olsen
  */
 public interface EnterInfo {
     /**
