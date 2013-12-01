@@ -4,7 +4,7 @@
  */
 package byui.cit260.Memory2.menus;
 
-import memory2.TestText;
+import byui.cit260.Memory2.enums.TestText;
 
 /**
  *
