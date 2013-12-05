@@ -6,6 +6,9 @@ package byui.cit260.Memory2.menus;
 
 import byui.cit260.Memory2.interfaces.EnterInfo;
 import byui.cit260.Memory2.enums.GameStatus;
+import byui.cit260.Memory2.exception.MenuException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -29,22 +32,26 @@ public class TestMenuView extends Menu implements EnterInfo {
 
         GameStatus gameStatus = GameStatus.PLAYING;
         do {
-            this.display();
+            try {
+                this.display();
 
-            // get commaned entered
-            String command = this.getCommand();
-            switch (command) {
-                case "H":
-                    this.displayTest(Test.HELLO);
-                    break;
-                case "T":
-                    this.displayTest(Test.TESTING);
-                    break;
-                case "G":
-                    this.displayTest(Test.GOODBYE);
-                    break;
-                case "Q":
-                    return GameStatus.QUIT;
+                // get commaned entered
+                String command = this.getCommand();
+                switch (command) {
+                    case "H":
+                        this.displayTest(Test.HELLO);
+                        break;
+                    case "T":
+                        this.displayTest(Test.TESTING);
+                        break;
+                    case "G":
+                        this.displayTest(Test.GOODBYE);
+                        break;
+                    case "Q":
+                        return GameStatus.QUIT;
+                }
+            } catch (MenuException ex) {
+                Logger.getLogger(TestMenuView.class.getName()).log(Level.SEVERE, null, ex);
             }
         } while (gameStatus != GameStatus.QUIT);
 

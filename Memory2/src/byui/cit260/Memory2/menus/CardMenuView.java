@@ -6,6 +6,7 @@ package byui.cit260.Memory2.menus;
 
 import java.util.Scanner;
 import byui.cit260.Memory2.enums.GameStatus;
+import byui.cit260.Memory2.exception.MenuException;
 import memory2.Memory2;
 import memory2.Memory2Error;
 
@@ -42,7 +43,7 @@ private final static String[][] menuItems = {
     }
 
     // display the card menu and get the end users input selection
-    public GameStatus getInput() {
+    public GameStatus getInput() throws MenuException {
 
         String gameStatus = "PLAYING"; 
         do {
@@ -89,13 +90,13 @@ private final static String[][] menuItems = {
     }
 
     // retrieves the command entered by the end user
-    protected final String getCard() {
+    protected final String getCard() throws MenuException {
 
         Scanner inFile = Memory2.getInputFile(); // create like in the tictactoe example on the main class
         String card;
         boolean valid = false;
         do {
-
+            try{
             card = inFile.nextLine();
             card = card.trim().toUpperCase();
             valid = validCard(card);
@@ -103,7 +104,10 @@ private final static String[][] menuItems = {
                 new Memory2Error().displayError("Invalid card. Please enter a valid card."); 
                 continue;
             }
-
+            }
+            catch(NumberFormatException e){
+                throw new MenuException("Invalid card #. Please enter a valid card #.");
+            }
         } while (!valid);
 
         return card;

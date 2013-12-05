@@ -52,6 +52,7 @@ public class Memory2 {
     //}
     public static void main(String[] args) throws IOException {
 
+        try{
         Memory2 myGame = new Memory2();
         myGame.displayHelp();
         
@@ -76,7 +77,13 @@ public class Memory2 {
          */
         //HelpMenu myHelpMenu = new HelpMenu();
         // myHelpMenu.displayHelpMenu();
-
+        }
+        catch(Throwable ex){
+            Memory2Error.displayErorr("Unexpected error: " + ex.getMessage());
+        }
+        finally{
+            Memory2.inFile.close();
+        }
     }
 
     public void displayHelp() {

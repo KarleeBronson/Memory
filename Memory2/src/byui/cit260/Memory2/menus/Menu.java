@@ -10,6 +10,7 @@ import java.util.Scanner;
 import byui.cit260.Memory2.interfaces.DisplayInfo;
 import byui.cit260.Memory2.interfaces.EnterInfo;
 import byui.cit260.Memory2.enums.GameStatus;
+import byui.cit260.Memory2.exception.MenuException;
 import memory2.Memory2;
 import memory2.Memory2Error;
 
@@ -54,12 +55,13 @@ private String[][] menuItems = null;
      *
      * @return
      */
-    protected final String getCommand() {
+    protected final String getCommand() throws MenuException {
 
         Scanner inFile = Memory2.getInputFile();
         String command;
         boolean valid = false;
         do {
+            try{
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             valid = validCommand(command);
@@ -67,7 +69,10 @@ private String[][] menuItems = null;
                 new Memory2Error().displayError("Invalid command. Please enter a valid command."); //create a MemoryError Class like in the tictactoe example
                 continue;
             }
-
+            }
+            catch(Exception e){
+                throw new MenuException("Invalid command. Please enter a valid command.");
+            }
         } while (!valid);
 
         return command;
