@@ -9,6 +9,7 @@ package memory2;
  *
  * @author kbronson
  */
+import byui.cit260.Memory2.exception.BoardException;
 import java.io.Serializable;
 
 /**
@@ -25,7 +26,7 @@ public class Board implements Serializable {
     public Board() {
     }
 
-    public static void displayCardArray() {
+    public static void displayCardArray() throws BoardException {
         String cardArray[][] = {{"CARD1", "CARD2", "CARD3"},
             {"CARD4", "CARD5", "CARD6"}};
         System.out.println("These are the cards.\n");
@@ -34,11 +35,16 @@ public class Board implements Serializable {
         //       + "to flip over, one at a time. \nFor example : \n2\n6 ");
     }
 
-    public static void display(String x[][]) {
+    public static void display(String x[][]) throws BoardException {
         for (int row = 0; row < x.length; row++) {
+           try{
             for (int column = 0; column < x[row].length; column++) {
                 System.out.print(x[row][column] + "\t");
             }
+           }
+           catch(Exception e){
+               throw new BoardException("Messed up function");
+           }
             System.out.println();
         }
     }
