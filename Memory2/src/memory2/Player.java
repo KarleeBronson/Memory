@@ -4,6 +4,7 @@
  */
 package memory2;
 
+import byui.cit260.Memory2.exception.PlayerException;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -12,6 +13,7 @@ import java.util.Scanner;
  * @author kbronson
  */
 public class Player implements Serializable{
+    private static String[] x1;
    private int points = 0;
    public String name = "";
     public String name2 = "";
@@ -52,6 +54,18 @@ public class Player implements Serializable{
     public void displayName() {
         System.out.println("Your name will be displayed here" + playerA.name + playerB.name);
     }
+    
+    /*public static void displayName(String x[][]) throws PlayerException {
+       for (int PlayerA = name; x.length >= playerA; playerA++) {
+           try {
+               for (int playerA = 0; x[playerA].length >= playerB; playerB++) {
+                   System.out.print(x1[playerB] + "/t");
+               }
+           }catch(Exception e){
+               throw new PlayerException ("")
+                       }
+           System.out.println();
+       }   */
 
     private void getWinnerLoser() {
 
