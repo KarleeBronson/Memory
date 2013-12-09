@@ -9,6 +9,7 @@ import java.util.Scanner;
 import memory2.Board;
 import byui.cit260.Memory2.interfaces.EnterInfo;
 import byui.cit260.Memory2.enums.GameStatus;
+import byui.cit260.Memory2.exception.BoardException;
 import byui.cit260.Memory2.exception.MenuException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -69,6 +70,8 @@ public GameStatus getInput(Object object) {
                     return GameStatus.QUIT; //Make an EXIT like in the tic tac toe Game class
             }
         } catch (MenuException ex) {
+            Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (BoardException ex) {
             Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
         }
         } while (!gameStatus.equals("QUIT"));
