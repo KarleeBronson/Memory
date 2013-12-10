@@ -4,12 +4,16 @@
  */
 package byui.cit260.Memory2.frames;
 
+import byui.cit260.Memory2.enums.GameStatus;
 import byui.cit260.Memory2.exception.BoardException;
 import byui.cit260.Memory2.exception.MenuException;
 import byui.cit260.Memory2.menus.CardMenuView;
+import byui.cit260.Memory2.menus.MainMenuControl;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import memory2.Board;
+import memory2.Memory2;
 
 /**
  *
@@ -84,6 +88,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jbExit.setText("Exit");
+        jbExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
@@ -153,28 +162,50 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
-        // TODO add your handling code here:
+       try{
+            MainMenuControl.displayBoardHelp();
+                    MainMenuControl.displayComputerPlayerHelp();
+                    MainMenuControl.displayCollectCardHelp();
+                    MainMenuControl.displayGameHelp();
+                    MainMenuControl.displayFlippedDownCardHelp();
+                    MainMenuControl.displayFlippedUpCardHelp();
+                    MainMenuControl.displayRealPlayerHelp();
+                    MainMenuControl.displayShuffleCardsHelp();
+                   
+                
+        } catch (Exception e) {
+     JOptionPane.showMessageDialog(this,"Bad Second Letter",
+             "Error", JOptionPane.ERROR_MESSAGE);
+   
+    }                                           
     }//GEN-LAST:event_jbHelpActionPerformed
 
     private void jbMenuStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuStartActionPerformed
          //Player myPlayer = new Player();
                    // myPlayer.getName();
                     //myPlayer.getName2();
-                    Board myBoard = new Board();
+                  
         try {
-            Board.displayCardArray();
-        } catch (BoardException ex) {
-            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
+             Board myBoard = new Board();
+                    Board.displayCardArray();
                     CardMenuView myCardMenu = new CardMenuView();
-        try {
-            myCardMenu.getInput();
-                    //cardMenuView.display();
-        } catch (MenuException ex) {
-            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                myCardMenu.getInput();
+            } catch (MenuException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (BoardException e) {
+     JOptionPane.showMessageDialog(this,"Bad First Letter",
+             "Error", JOptionPane.ERROR_MESSAGE);
+   
     }//GEN-LAST:event_jbMenuStartActionPerformed
-
+    }
+    private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
+        {this.dispose();
+    }//GEN-LAST:eavent_jbExitActionPerformed
+      
+    }//GEN-LAST:event_jbExitActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -220,4 +251,16 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jpTitle;
     private javax.swing.JTextArea jtWelcome;
     // End of variables declaration//GEN-END:variables
+
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void displayMainFrame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
