@@ -4,6 +4,13 @@
  */
 package byui.cit260.Memory2.frames;
 
+import byui.cit260.Memory2.exception.BoardException;
+import byui.cit260.Memory2.exception.MenuException;
+import byui.cit260.Memory2.menus.CardMenuView;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import memory2.Board;
+
 /**
  *
  * @author Karalee Foster
@@ -61,6 +68,11 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jbMenuStart.setText("Start Game");
+        jbMenuStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMenuStartActionPerformed(evt);
+            }
+        });
 
         jbHelp.setText("Help");
         jbHelp.setMaximumSize(new java.awt.Dimension(53, 23));
@@ -143,6 +155,25 @@ public class MainFrame extends javax.swing.JFrame {
     private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbHelpActionPerformed
+
+    private void jbMenuStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuStartActionPerformed
+         //Player myPlayer = new Player();
+                   // myPlayer.getName();
+                    //myPlayer.getName2();
+                    Board myBoard = new Board();
+        try {
+            Board.displayCardArray();
+        } catch (BoardException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                    CardMenuView myCardMenu = new CardMenuView();
+        try {
+            myCardMenu.getInput();
+                    //cardMenuView.display();
+        } catch (MenuException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jbMenuStartActionPerformed
 
     /**
      * @param args the command line arguments
