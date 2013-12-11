@@ -5,6 +5,7 @@
 package memory2;
 
 import byui.cit260.Memory2.enums.GameStatus;
+import byui.cit260.Memory2.frames.GetNamesFrame;
 import byui.cit260.Memory2.frames.MainFrame;
 import byui.cit260.Memory2.menus.CardMenuView;
 import byui.cit260.Memory2.menus.MainMenuView;
@@ -28,6 +29,7 @@ public class Memory2 {
     public static final Scanner inFile = new Scanner(System.in);
     public static final CardMenuView cardMenu = new CardMenuView();
     public static MainFrame mainFrame = new MainFrame();
+   public static GetNamesFrame getNamesFrame = new GetNamesFrame();
     //public static final HelpMenuView helpMenu = new HelpMenuView();
    
 
@@ -65,7 +67,11 @@ public class Memory2 {
                     Memory2.mainFrame.setVisible(true);
                 }
             });
-        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GetNamesFrame().setVisible(true);
+            }
+        }); 
         MainMenuView mainMenuView = new MainMenuView();
         GameStatus input = mainMenuView.getInput(myGame);//not otherwise compatable
 
