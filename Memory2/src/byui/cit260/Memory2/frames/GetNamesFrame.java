@@ -4,15 +4,27 @@
  */
 package byui.cit260.Memory2.frames;
 
+import javax.swing.JOptionPane;
+import memory2.Game;
+import memory2.Player;
+
 /**
  *
  * @author Karalee Foster
  */
 public class GetNamesFrame extends javax.swing.JFrame {
+private Player myPlayer = new Player(); 
+public GetNamesFrame getNamesFrame;
+private Game game = new Game();
 
     /**
      * Creates new form GetNamesFrame
      */
+    public GetNamesFrame(Game game) {
+        this.game = game;
+    }
+
+
     public GetNamesFrame() {
         initComponents();
     }
@@ -131,7 +143,18 @@ public class GetNamesFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jPlayer1ActionPerformed
 
     private void jStorePlayerNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStorePlayerNamesActionPerformed
-        // TODO add your handling code here:
+try{
+    myPlayer.getName2();
+    myPlayer.getName();   
+    myPlayer.setName2("");
+    myPlayer.setName("");
+        
+    }
+catch (Exception e) {
+     JOptionPane.showMessageDialog(this,"Bad Second Letter",
+             "Error", JOptionPane.ERROR_MESSAGE);
+   
+    }                                      
     }//GEN-LAST:event_jStorePlayerNamesActionPerformed
 
     /**

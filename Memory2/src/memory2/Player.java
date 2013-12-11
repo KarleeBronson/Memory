@@ -44,12 +44,14 @@ public class Player implements Serializable{
         Scanner inFile = Memory2.getInputFile();
         System.out.println("Enter your name Player A:");
         this.name = inFile.nextLine();
-        return name;
+                return name;
     }
 
     public void setName(String name) {
         this.name = name;
+        
     }
+      
 
     public void displayName() {
         System.out.println("Your name will be displayed here" + playerA.name + playerB.name);
