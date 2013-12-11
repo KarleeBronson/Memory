@@ -197,7 +197,11 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
         //Player myPlayer = new Player();
         // myPlayer.getName();
         //myPlayer.getName2();
-
+java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new BoardFrame().setVisible(true);
+            }
+        });
         try {
 
             Board.displayCardArray();
@@ -212,6 +216,7 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
             JOptionPane.showMessageDialog(this, "Bad First Letter",
                     "Error", JOptionPane.ERROR_MESSAGE);
         }
+        this.dispose();
     }//GEN-LAST:event_jbMenuStartActionPerformed
 
     private void jbEnterNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEnterNamesActionPerformed
@@ -220,6 +225,7 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
                 new GetNamesFrame().setVisible(true);
             }
         });
+       this.dispose();
     }//GEN-LAST:event_jbEnterNamesActionPerformed
     
 

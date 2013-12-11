@@ -5,6 +5,7 @@
 package memory2;
 
 import byui.cit260.Memory2.exception.PlayerException;
+import byui.cit260.Memory2.menus.CardMenuControl;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -27,9 +28,14 @@ public class Player implements Serializable{
     }
 
     private int getPoints() {
+         
+       //for(points = 0; points<= 5; points++){
+       //    if( ){
+      // }
         return points;
 
     }
+  //  }
 
     private void displayPoints() {
         System.out.println("Display Points:" + points);
@@ -37,6 +43,7 @@ public class Player implements Serializable{
     }
 
     private void setPoints(int points) {
+        
         this.points = points;
     }
 

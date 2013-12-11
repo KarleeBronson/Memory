@@ -29,6 +29,7 @@ public class BoardFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToggleButton7 = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -36,12 +37,14 @@ public class BoardFrame extends javax.swing.JFrame {
         jbQuit = new javax.swing.JButton();
         jbScore = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jbCard1 = new javax.swing.JButton();
-        jbCard2 = new javax.swing.JButton();
-        jbCard3 = new javax.swing.JButton();
-        jbCard4 = new javax.swing.JButton();
-        jbCard5 = new javax.swing.JButton();
-        jbCard6 = new javax.swing.JButton();
+        jbCard1 = new javax.swing.JToggleButton();
+        jbCard4 = new javax.swing.JToggleButton();
+        jbCard2 = new javax.swing.JToggleButton();
+        jbCard5 = new javax.swing.JToggleButton();
+        jbCard3 = new javax.swing.JToggleButton();
+        jbCard6 = new javax.swing.JToggleButton();
+
+        jToggleButton7.setText("jToggleButton7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,7 +58,7 @@ public class BoardFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(177, 177, 177)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,7 +107,6 @@ public class BoardFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jbCard1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jbCard1.setText("1");
         jbCard1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,23 +114,6 @@ public class BoardFrame extends javax.swing.JFrame {
             }
         });
 
-        jbCard2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jbCard2.setText("2");
-        jbCard2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbCard2ActionPerformed(evt);
-            }
-        });
-
-        jbCard3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jbCard3.setText("3");
-        jbCard3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbCard3ActionPerformed(evt);
-            }
-        });
-
-        jbCard4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jbCard4.setText("4");
         jbCard4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +121,13 @@ public class BoardFrame extends javax.swing.JFrame {
             }
         });
 
-        jbCard5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jbCard2.setText("2");
+        jbCard2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCard2ActionPerformed(evt);
+            }
+        });
+
         jbCard5.setText("5");
         jbCard5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +135,13 @@ public class BoardFrame extends javax.swing.JFrame {
             }
         });
 
-        jbCard6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jbCard3.setText("3");
+        jbCard3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCard3ActionPerformed(evt);
+            }
+        });
+
         jbCard6.setText("6");
         jbCard6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,34 +154,34 @@ public class BoardFrame extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbCard4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCard1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbCard2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCard5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbCard3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCard6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbCard4, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                    .addComponent(jbCard1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbCard5, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                    .addComponent(jbCard2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbCard3, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                    .addComponent(jbCard6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
-                    .addComponent(jbCard1)
-                    .addComponent(jbCard2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbCard3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbCard2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCard3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCard1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
-                    .addComponent(jbCard5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbCard6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbCard4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbCard4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCard5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCard6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -215,33 +212,38 @@ public class BoardFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbPlayActionPerformed
 
+    private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MainFrame().setVisible(true);
+            }
+        }); 
+        this.dispose();
+    }//GEN-LAST:event_jbQuitActionPerformed
+
     private void jbCard1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard1ActionPerformed
         CardMenuControl.displayCard1();
     }//GEN-LAST:event_jbCard1ActionPerformed
+
+    private void jbCard3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard3ActionPerformed
+        CardMenuControl.displayCard2();
+    }//GEN-LAST:event_jbCard3ActionPerformed
 
     private void jbCard2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard2ActionPerformed
         CardMenuControl.displayCard2();
     }//GEN-LAST:event_jbCard2ActionPerformed
 
-    private void jbCard3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard3ActionPerformed
-        CardMenuControl.displayCard3();
-    }//GEN-LAST:event_jbCard3ActionPerformed
-
     private void jbCard4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard4ActionPerformed
-        CardMenuControl.displayCard4();
+       CardMenuControl.displayCard4();
     }//GEN-LAST:event_jbCard4ActionPerformed
 
     private void jbCard5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard5ActionPerformed
-        CardMenuControl.displayCard5();
+        CardMenuControl.displayCard1();
     }//GEN-LAST:event_jbCard5ActionPerformed
 
     private void jbCard6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard6ActionPerformed
-        CardMenuControl.displayCard6();
+       CardMenuControl.displayCard4();
     }//GEN-LAST:event_jbCard6ActionPerformed
-
-    private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
-         this.dispose();
-    }//GEN-LAST:event_jbQuitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,12 +284,13 @@ public class BoardFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JButton jbCard1;
-    private javax.swing.JButton jbCard2;
-    private javax.swing.JButton jbCard3;
-    private javax.swing.JButton jbCard4;
-    private javax.swing.JButton jbCard5;
-    private javax.swing.JButton jbCard6;
+    private javax.swing.JToggleButton jToggleButton7;
+    private javax.swing.JToggleButton jbCard1;
+    private javax.swing.JToggleButton jbCard2;
+    private javax.swing.JToggleButton jbCard3;
+    private javax.swing.JToggleButton jbCard4;
+    private javax.swing.JToggleButton jbCard5;
+    private javax.swing.JToggleButton jbCard6;
     private javax.swing.JButton jbPlay;
     private javax.swing.JButton jbQuit;
     private javax.swing.JButton jbScore;

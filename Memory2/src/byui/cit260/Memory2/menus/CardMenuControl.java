@@ -27,13 +27,13 @@ public CardMenuControl() {
                 "\tThe card is a red star.");
         displayCardBorder();
     }
-    public static void displayCard3() {
+   /* public static void displayCard3() {
         System.out.println();
         displayCardBorder();
         System.out.println(
                 "\tThe card is a red star.");
         displayCardBorder();
-    }
+    }*/
     public static void displayCard4() {
         System.out.println();
         displayCardBorder();
@@ -41,7 +41,7 @@ public CardMenuControl() {
                 "\tThe card is a green star.");
         displayCardBorder();
     }
-    public static void displayCard5() {
+    /*public static void displayCard5() {
         System.out.println();
         displayCardBorder();
         System.out.println(
@@ -54,7 +54,7 @@ public CardMenuControl() {
         System.out.println(
                 "\tThe card is a green star.");
         displayCardBorder();
-    }
+    }*/
     /*public void displayCard7() {
         System.out.println();
         this.displayCardBorder();

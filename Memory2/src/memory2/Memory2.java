@@ -109,7 +109,7 @@ public class Memory2 {
             Memory2Error.displayErorr("Unexpected error: " + ex.getMessage());
         }
         finally{
-        //    Memory2.inFile.close(); 
+            //Memory2.inFile.close(); 
         }
     }
 

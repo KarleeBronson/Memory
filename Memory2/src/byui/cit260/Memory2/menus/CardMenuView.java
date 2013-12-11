@@ -59,16 +59,16 @@ private final static String[][] menuItems = {
                     CardMenuControl.displayCard2();
                     break;
                 case "3":
-                    CardMenuControl.displayCard3();
+                    CardMenuControl.displayCard2();
                     break;
                 case "4":
                     CardMenuControl.displayCard4();
                     break;
                 case "5":
-                    CardMenuControl.displayCard5();
+                    CardMenuControl.displayCard1();
                     break;
                 case "6":
-                    CardMenuControl.displayCard6();
+                    CardMenuControl.displayCard4();
                     break;          
                 case "Q":
                     return GameStatus.QUIT;
