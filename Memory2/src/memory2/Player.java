@@ -22,8 +22,8 @@ public class Player implements Serializable{
     Player playerB;
 
     public Player() {
-        this.playerB = new Player();
-        this.playerA = new Player();
+        //this.playerB = new Player();
+       // this.playerA = new Player();
     }
 
     private int getPoints() {

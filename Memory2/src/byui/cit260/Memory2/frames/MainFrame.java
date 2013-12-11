@@ -14,12 +14,16 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import memory2.Board;
 import memory2.Memory2;
+import memory2.Player;
 
 /**
  *
  * @author Karalee Foster
  */
 public class MainFrame extends javax.swing.JFrame {
+
+    private Board myBoard = new Board();
+    private Player myPlayer = new Player();
 
     /**
      * Creates new form MainFrame
@@ -162,50 +166,53 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
-       try{
+        try {
             MainMenuControl.displayBoardHelp();
-                    MainMenuControl.displayComputerPlayerHelp();
-                    MainMenuControl.displayCollectCardHelp();
-                    MainMenuControl.displayGameHelp();
-                    MainMenuControl.displayFlippedDownCardHelp();
-                    MainMenuControl.displayFlippedUpCardHelp();
-                    MainMenuControl.displayRealPlayerHelp();
-                    MainMenuControl.displayShuffleCardsHelp();
-                   
-                
+            MainMenuControl.displayComputerPlayerHelp();
+            MainMenuControl.displayCollectCardHelp();
+            MainMenuControl.displayGameHelp();
+            MainMenuControl.displayFlippedDownCardHelp();
+            MainMenuControl.displayFlippedUpCardHelp();
+            MainMenuControl.displayRealPlayerHelp();
+            MainMenuControl.displayShuffleCardsHelp();
+
+
         } catch (Exception e) {
-     JOptionPane.showMessageDialog(this,"Bad Second Letter",
-             "Error", JOptionPane.ERROR_MESSAGE);
-   
-    }                                           
+            JOptionPane.showMessageDialog(this, "Bad Second Letter",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+
+        }
     }//GEN-LAST:event_jbHelpActionPerformed
 
     private void jbMenuStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuStartActionPerformed
-         //Player myPlayer = new Player();
-                   // myPlayer.getName();
-                    //myPlayer.getName2();
-                  
+        //Player myPlayer = new Player();
+        // myPlayer.getName();
+        //myPlayer.getName2();
+
         try {
-             Board myBoard = new Board();
-                    Board.displayCardArray();
-                    CardMenuView myCardMenu = new CardMenuView();
+
+            Board.displayCardArray();
+            CardMenuView myCardMenu = new CardMenuView();
+            
             try {
                 myCardMenu.getInput();
             } catch (MenuException ex) {
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (BoardException e) {
-     JOptionPane.showMessageDialog(this,"Bad First Letter",
-             "Error", JOptionPane.ERROR_MESSAGE);
-   
+            JOptionPane.showMessageDialog(this, "Bad First Letter",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+
     }//GEN-LAST:event_jbMenuStartActionPerformed
     }
-    private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
-        {this.dispose();
-    }//GEN-LAST:eavent_jbExitActionPerformed
-      
-    }//GEN-LAST:event_jbExitActionPerformed
-    
+
+    private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {
+        {
+            this.dispose();
+        }
+
+    }
+
     /**
      * @param args the command line arguments
      */
