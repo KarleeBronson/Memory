@@ -30,6 +30,7 @@ public class Memory2 {
     public static final CardMenuView cardMenu = new CardMenuView();
     public static MainFrame mainFrame = new MainFrame();
    public static GetNamesFrame getNamesFrame = new GetNamesFrame();
+   
     //public static final HelpMenuView helpMenu = new HelpMenuView();
    
 
@@ -67,11 +68,23 @@ public class Memory2 {
                     Memory2.mainFrame.setVisible(true);
                 }
             });
+        
+           
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new GetNamesFrame().setVisible(true);
             }
         }); 
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Memory2.mainFrame = new MainFrame();
+                    Memory2.mainFrame.setVisible(false);
+                }
+            });
+        
+        mainFrame.destroy();
+                
         MainMenuView mainMenuView = new MainMenuView();
         GameStatus input = mainMenuView.getInput(myGame);//not otherwise compatable
 
