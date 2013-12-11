@@ -24,7 +24,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private Board myBoard = new Board();
     private Player myPlayer = new Player();
-
+GetNamesFrame getNamesFrame = new GetNamesFrame();
     /**
      * Creates new form MainFrame
      */
@@ -48,6 +48,7 @@ public class MainFrame extends javax.swing.JFrame {
         jbMenuStart = new javax.swing.JButton();
         jbHelp = new javax.swing.JButton();
         jbExit = new javax.swing.JButton();
+        jbEnterNames = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtWelcome = new javax.swing.JTextArea();
 
@@ -83,8 +84,6 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jbHelp.setText("Help");
-        jbHelp.setMaximumSize(new java.awt.Dimension(53, 23));
-        jbHelp.setMinimumSize(new java.awt.Dimension(53, 23));
         jbHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbHelpActionPerformed(evt);
@@ -98,25 +97,35 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jbEnterNames.setText("Enter Names");
+        jbEnterNames.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEnterNamesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
         jpMenuItemsLayout.setHorizontalGroup(
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jbMenuStart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbExit)
-                    .addComponent(jbHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jbMenuStart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbExit)
+                        .addComponent(jbHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbEnterNames))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpMenuItemsLayout.setVerticalGroup(
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addComponent(jbEnterNames)
+                .addGap(7, 7, 7)
                 .addComponent(jbMenuStart)
                 .addGap(13, 13, 13)
-                .addComponent(jbHelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbHelp)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbExit)
                 .addContainerGap(67, Short.MAX_VALUE))
@@ -202,9 +211,17 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (BoardException e) {
             JOptionPane.showMessageDialog(this, "Bad First Letter",
                     "Error", JOptionPane.ERROR_MESSAGE);
-
+        }
     }//GEN-LAST:event_jbMenuStartActionPerformed
-    }
+
+    private void jbEnterNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEnterNamesActionPerformed
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GetNamesFrame().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_jbEnterNamesActionPerformed
+    
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {
         {
@@ -250,6 +267,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbEnterNames;
     private javax.swing.JButton jbExit;
     private javax.swing.JButton jbHelp;
     private javax.swing.JButton jbMenuStart;

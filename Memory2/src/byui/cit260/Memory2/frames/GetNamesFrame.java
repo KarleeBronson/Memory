@@ -17,7 +17,7 @@ public class GetNamesFrame extends javax.swing.JFrame {
 private Player myPlayer = new Player(); 
 public GetNamesFrame getNamesFrame;
 private Game game = new Game();
-MainFrame newMainFrame = new MainFrame();
+
 
 
     /**
