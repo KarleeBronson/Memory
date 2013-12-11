@@ -28,9 +28,10 @@ public class Memory2 {
             + "========================================================================\n";
     public static final Scanner inFile = new Scanner(System.in);
     public static final CardMenuView cardMenu = new CardMenuView();
-    public static MainFrame mainFrame = new MainFrame();
-   public static GetNamesFrame getNamesFrame = new GetNamesFrame();
-   
+   // public static MainFrame mainFrame = new MainFrame();
+    public static MainFrame mainFrame = null;
+   //public static GetNamesFrame getNamesFrame = new GetNamesFrame();
+   public static GetNamesFrame getNamesFrame = null;
     //public static final HelpMenuView helpMenu = new HelpMenuView();
    
 
@@ -66,31 +67,25 @@ public class Memory2 {
                 public void run() {
                     Memory2.mainFrame = new MainFrame();
                     Memory2.mainFrame.setVisible(true);
+                    new GetNamesFrame().setVisible(true);
+                    new GetNamesFrame().setVisible(false);
+                    new GetNamesFrame().dispose();
+                    Memory2.mainFrame.setVisible(false);
+                    Memory2.mainFrame.dispose();
                 }
             });
         
            
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GetNamesFrame().setVisible(true);
-            }
-        }); 
+      
         
-        java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    Memory2.mainFrame = new MainFrame();
-                    Memory2.mainFrame.setVisible(false);
-                }
-            });
-        
-        mainFrame.destroy();
+        //mainFrame.destroy();
                 
-        MainMenuView mainMenuView = new MainMenuView();
-        GameStatus input = mainMenuView.getInput(myGame);//not otherwise compatable
+       // MainMenuView mainMenuView = new MainMenuView();
+      // GameStatus input = mainMenuView.getInput(myGame);//not otherwise compatable
 
         Game newGame = new Game();
         
-        MainFrame  newMainFrame = new MainFrame();
+        
         
        
         //newGame.start();
@@ -114,7 +109,7 @@ public class Memory2 {
             Memory2Error.displayErorr("Unexpected error: " + ex.getMessage());
         }
         finally{
-            Memory2.inFile.close();
+        //    Memory2.inFile.close(); 
         }
     }
 

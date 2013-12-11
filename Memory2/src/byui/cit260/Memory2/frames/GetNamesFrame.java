@@ -126,7 +126,7 @@ private Game game = new Game();
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 125, Short.MAX_VALUE)
+                .addGap(0, 126, Short.MAX_VALUE)
                 .addComponent(jpForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -161,8 +161,9 @@ try{
 catch (Exception e) {
      JOptionPane.showMessageDialog(this,"Bad Second Letter",
              "Error", JOptionPane.ERROR_MESSAGE);
-   
-    }                                      
+  
+    }
+this.dispose();
     }//GEN-LAST:event_jStorePlayerNamesActionPerformed
 
     /**
