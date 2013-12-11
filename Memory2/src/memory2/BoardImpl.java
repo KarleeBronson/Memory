@@ -8,11 +8,11 @@ package memory2;
 //None of our other classes seem to meet the requirements of a subclass. 
 public class BoardImpl extends Board {
 
-   /* helpframe 
-            gameframe
-    errorframe 
-            playerframe
-    matchalertframe 
-            boardframe
-    winnerframe*/
+   /* helpframe - karlee
+            gameframe --karlee
+    errorframe -- karlee
+            playerframe-- karlee
+    matchalertframe -- karalee
+            boardframe -- karalee
+    winnerframe--karalee*/
 }
