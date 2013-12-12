@@ -45,8 +45,8 @@
               <Group type="102" attributes="0">
                   <Component id="jpMenuItems" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="360" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="432" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -58,7 +58,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
                           <Component id="jpMenuItems" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -184,7 +184,7 @@
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="&#x9;&#x9;Welcome!&#xa;&#xa;This is the game of Memory. There will be a &#xa;total of 2 players. Players will take turns&#xa;choosing 1 card at a time. By clicking a &#xa;card, it will flip over. The object of the &#xa;game is to find the cards match. The player &#xa;continues until they can&apos;t find a match. The&#xa;player who gets the most matches wins"/>
+                <Property name="text" type="java.lang.String" value="&#x9;Welcome to the game of Memory!&#xa;&#xa;The object of the game is to make the most matches.&#xa;Players will take turns choosing 2 cards at a time&#xa;to find like cards. Clicking a card button will &#xa;diplay the card. If a match is found when the player &#xa;clicks 2 cards, The player pushes the match button &#xa;to record their point. That player continues finding &#xa;matches until they can&apos;t find a match, or all the &#xa;matches. have been found. The player who gets the &#xa;most matches wins. Enjoy!"/>
               </Properties>
             </Component>
           </SubComponents>

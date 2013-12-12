@@ -8,13 +8,15 @@ import javax.swing.JOptionPane;
 import memory2.Game;
 import memory2.Memory2;
 import memory2.Player;
+import memory2.PlayerB;
 
 /**
  *
  * @author Karalee Foster
  */
 public class GetNamesFrame extends javax.swing.JFrame {
-private Player myPlayer = new Player(); 
+private Player myPlayer = new Player();
+private PlayerB playerB = new PlayerB();
 public GetNamesFrame getNamesFrame;
 private Game game = new Game();
 
@@ -48,6 +50,8 @@ private Game game = new Game();
         jPlayer1 = new javax.swing.JTextField();
         jPlayer2 = new javax.swing.JTextField();
         jStorePlayerNames = new javax.swing.JButton();
+        jLPlayerA = new javax.swing.JLabel();
+        jLPlayerB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(482, 268));
@@ -81,12 +85,22 @@ private Game game = new Game();
             }
         });
 
+        jPlayer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPlayer2ActionPerformed(evt);
+            }
+        });
+
         jStorePlayerNames.setText("Save Names");
         jStorePlayerNames.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jStorePlayerNamesActionPerformed(evt);
             }
         });
+
+        jLPlayerA.setText("Player A");
+
+        jLPlayerB.setText("Player B");
 
         javax.swing.GroupLayout jpFormLayout = new javax.swing.GroupLayout(jpForm);
         jpForm.setLayout(jpFormLayout);
@@ -95,7 +109,11 @@ private Game game = new Game();
             .addGroup(jpFormLayout.createSequentialGroup()
                 .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpFormLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
+                        .addGap(18, 18, 18)
+                        .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLPlayerA)
+                            .addComponent(jLPlayerB))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPlayerNames, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -112,9 +130,13 @@ private Game game = new Game();
                 .addGap(6, 6, 6)
                 .addComponent(jPlayerNames)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLPlayerA))
                 .addGap(11, 11, 11)
-                .addComponent(jPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLPlayerB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jStorePlayerNames)
                 .addContainerGap(44, Short.MAX_VALUE))
@@ -126,7 +148,7 @@ private Game game = new Game();
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 126, Short.MAX_VALUE)
+                .addGap(0, 120, Short.MAX_VALUE)
                 .addComponent(jpForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -142,15 +164,17 @@ private Game game = new Game();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPlayer1ActionPerformed
-        // TODO add your handling code here:
+        myPlayer.getName();
+        myPlayer.setName("");
     }//GEN-LAST:event_jPlayer1ActionPerformed
 
     private void jStorePlayerNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStorePlayerNamesActionPerformed
 try{
   //  myPlayer.getName2();
-   // myPlayer.getName();   
-    myPlayer.setName2("");
-    myPlayer.setName("");
+   //    
+     String playerAName = this.jPlayer1.getText();
+        String playerBName = this.jPlayer2.getText();
+    
         java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
                     Memory2.mainFrame = new MainFrame();
@@ -165,6 +189,11 @@ catch (Exception e) {
     }
 this.dispose();
     }//GEN-LAST:event_jStorePlayerNamesActionPerformed
+
+    private void jPlayer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPlayer2ActionPerformed
+         playerB.getName();
+          playerB.setName("");
+    }//GEN-LAST:event_jPlayer2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,6 +230,8 @@ this.dispose();
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLPlayerA;
+    private javax.swing.JLabel jLPlayerB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jPlayer1;

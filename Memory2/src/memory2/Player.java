@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public class Player implements Serializable{
     private static String[] x1;
-   private int points = 0;
+   public static int points = 0;
    public String name = "";
     public String name2 = "";
     public String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
@@ -27,24 +27,21 @@ public class Player implements Serializable{
        // this.playerA = new Player();
     }
 
-    private int getPoints() {
-         
-       //for(points = 0; points<= 5; points++){
-       //    if( ){
-      // }
-        return points;
-
+    public static int getPoints() {
+       int i;
+       
+       for(i = 0; i<= 1; i++){
+         points += i;
+    }return points;
     }
-  //  }
 
-    private void displayPoints() {
-        System.out.println("Display Points:" + points);
+    public void displayPoints() {
+        System.out.println(this.name + "'s Points:" + points);
 
     }
 
-    private void setPoints(int points) {
-        
-        this.points = points;
+   public static void setPoints( int points) {
+        Player.points = points;
     }
 
     public String getName() {
@@ -94,19 +91,10 @@ public class Player implements Serializable{
 
     }
 
-    public String getName2() {
-       Scanner inFile = Memory2.getInputFile();
-        System.out.println("Enter your name Player B:");
-        this.name2 = inFile.nextLine();
-        return name2;
-    }
-
-    public void setName2(String name2) {
-        this.name2 = name2;
-    }
+    
 
     public Player getPlayerA() {
-        return playerA;
+       return playerA;
     }
 
     public void setPlayerA(Player playerA) {

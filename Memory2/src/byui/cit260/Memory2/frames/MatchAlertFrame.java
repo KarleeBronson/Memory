@@ -4,6 +4,9 @@
  */
 package byui.cit260.Memory2.frames;
 
+import memory2.Player;
+import memory2.PlayerB;
+
 /**
  *
  * @author Karalee Foster
@@ -89,12 +92,13 @@ public class MatchAlertFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbPlayerAPointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlayerAPointsActionPerformed
-        
+        Player.getPoints();
+       
         this.dispose();
     }//GEN-LAST:event_jbPlayerAPointsActionPerformed
 
     private void jbPlayerBPointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlayerBPointsActionPerformed
-        
+         PlayerB.getPoints();
         this.dispose();
     }//GEN-LAST:event_jbPlayerBPointsActionPerformed
 

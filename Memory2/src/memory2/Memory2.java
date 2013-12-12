@@ -61,7 +61,7 @@ public class Memory2 {
 
         try{
         Memory2 myGame = new Memory2();
-        myGame.displayHelp();
+        //myGame.displayHelp();
         
         java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
@@ -74,20 +74,11 @@ public class Memory2 {
                     Memory2.mainFrame.dispose();
                 }
             });
-        
            
-      
-        
-        //mainFrame.destroy();
-                
        // MainMenuView mainMenuView = new MainMenuView();
       // GameStatus input = mainMenuView.getInput(myGame);//not otherwise compatable
 
         Game newGame = new Game();
-        
-        
-        
-       
         //newGame.start();
         //newGame.displayGame();
         //newGame.displayTiedMessage();
@@ -113,8 +104,8 @@ public class Memory2 {
         }
     }
 
-    public void displayHelp() {
+   /* public void displayHelp() {
         System.out.println("Welcome player A and Player B \n");
         System.out.println(Memory2.instructions);
-    }
+    }*/
 }

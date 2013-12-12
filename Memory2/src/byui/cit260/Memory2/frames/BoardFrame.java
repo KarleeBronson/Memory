@@ -6,13 +6,16 @@ package byui.cit260.Memory2.frames;
 
 import byui.cit260.Memory2.enums.GameStatus;
 import byui.cit260.Memory2.menus.CardMenuControl;
+import memory2.Player;
+import memory2.PlayerB;
 
 /**
  *
  * @author Karalee Foster
  */
 public class BoardFrame extends javax.swing.JFrame {
-
+Player myPlayer = new Player();
+PlayerB playerB = new PlayerB();
     /**
      * Creates new form BoardFrame
      */
@@ -30,10 +33,11 @@ public class BoardFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jToggleButton7 = new javax.swing.JToggleButton();
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jbPlay = new javax.swing.JButton();
+        jbMatch = new javax.swing.JButton();
         jbQuit = new javax.swing.JButton();
         jbScore = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -45,6 +49,8 @@ public class BoardFrame extends javax.swing.JFrame {
         jbCard6 = new javax.swing.JToggleButton();
 
         jToggleButton7.setText("jToggleButton7");
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,10 +74,10 @@ public class BoardFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jbPlay.setText("Play");
-        jbPlay.addActionListener(new java.awt.event.ActionListener() {
+        jbMatch.setText("Match");
+        jbMatch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbPlayActionPerformed(evt);
+                jbMatchActionPerformed(evt);
             }
         });
 
@@ -83,6 +89,11 @@ public class BoardFrame extends javax.swing.JFrame {
         });
 
         jbScore.setText("Score");
+        jbScore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbScoreActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -91,7 +102,7 @@ public class BoardFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbPlay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbMatch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbScore, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                     .addComponent(jbQuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -99,7 +110,7 @@ public class BoardFrame extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jbPlay)
+                .addComponent(jbMatch)
                 .addGap(18, 18, 18)
                 .addComponent(jbScore)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -172,10 +183,11 @@ public class BoardFrame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbCard2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCard3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCard1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbCard1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jbCard2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbCard3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbCard4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -208,9 +220,13 @@ public class BoardFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlayActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbPlayActionPerformed
+    private void jbMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMatchActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MatchAlertFrame().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_jbMatchActionPerformed
 
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -222,28 +238,60 @@ public class BoardFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbQuitActionPerformed
 
     private void jbCard1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard1ActionPerformed
-        CardMenuControl.displayCard1();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Card1().setVisible(true);
+            }
+        });
     }//GEN-LAST:event_jbCard1ActionPerformed
 
     private void jbCard3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard3ActionPerformed
-        CardMenuControl.displayCard2();
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Card2().setVisible(true);
+            }
+        });
     }//GEN-LAST:event_jbCard3ActionPerformed
 
     private void jbCard2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard2ActionPerformed
-        CardMenuControl.displayCard2();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Card2().setVisible(true);
+            }
+        });
     }//GEN-LAST:event_jbCard2ActionPerformed
 
     private void jbCard4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard4ActionPerformed
-       CardMenuControl.displayCard4();
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Card3().setVisible(true);
+            }
+        });
     }//GEN-LAST:event_jbCard4ActionPerformed
 
     private void jbCard5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard5ActionPerformed
-        CardMenuControl.displayCard1();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Card1().setVisible(true);
+            }
+        });
     }//GEN-LAST:event_jbCard5ActionPerformed
 
     private void jbCard6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard6ActionPerformed
-       CardMenuControl.displayCard4();
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Card3().setVisible(true);
+            }
+        });
     }//GEN-LAST:event_jbCard6ActionPerformed
+
+    private void jbScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbScoreActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ScoreBoard().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_jbScoreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,6 +328,7 @@ public class BoardFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -291,7 +340,7 @@ public class BoardFrame extends javax.swing.JFrame {
     private javax.swing.JToggleButton jbCard4;
     private javax.swing.JToggleButton jbCard5;
     private javax.swing.JToggleButton jbCard6;
-    private javax.swing.JButton jbPlay;
+    private javax.swing.JButton jbMatch;
     private javax.swing.JButton jbQuit;
     private javax.swing.JButton jbScore;
     // End of variables declaration//GEN-END:variables

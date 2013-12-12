@@ -133,7 +133,7 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
 
         jtWelcome.setColumns(20);
         jtWelcome.setRows(5);
-        jtWelcome.setText("\t\tWelcome!\n\nThis is the game of Memory. There will be a \ntotal of 2 players. Players will take turns\nchoosing 1 card at a time. By clicking a \ncard, it will flip over. The object of the \ngame is to find the cards match. The player \ncontinues until they can't find a match. The\nplayer who gets the most matches wins");
+        jtWelcome.setText("\tWelcome to the game of Memory!\n\nThe object of the game is to make the most matches.\nPlayers will take turns choosing 2 cards at a time\nto find like cards. Clicking a card button will \ndiplay the card. If a match is found when the player \nclicks 2 cards, The player pushes the match button \nto record their point. That player continues finding \nmatches until they can't find a match, or all the \nmatches. have been found. The player who gets the \nmost matches wins. Enjoy!");
         jScrollPane1.setViewportView(jtWelcome);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -144,8 +144,8 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +155,7 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 16, Short.MAX_VALUE)
                         .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
