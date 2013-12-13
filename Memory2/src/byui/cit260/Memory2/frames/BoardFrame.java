@@ -1,4 +1,4 @@
-/*
+/*/
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -17,8 +17,12 @@ import memory2.PlayerB;
  * @author Karalee Foster
  */
 public class BoardFrame extends javax.swing.JFrame {
-Player myPlayer = new Player();
-PlayerB playerB = new PlayerB();
+
+    Player myPlayer = new Player();
+    //PlayerB playerB = new PlayerB();
+    String card1 = "";
+
+//declare array
     /**
      * Creates new form BoardFrame
      */
@@ -236,56 +240,131 @@ PlayerB playerB = new PlayerB();
             public void run() {
                 new MainFrame().setVisible(true);
             }
-        }); 
+        });
         this.dispose();
     }//GEN-LAST:event_jbQuitActionPerformed
 
     private void jbCard1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard1ActionPerformed
+
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Card1().setVisible(true);
+                if (card1.equals("")) { // checks to see what the card picked is 
+                    card1 = "1";   //sets the value of the card picked
+                } else {
+                    if (card1.equals("5")) { // checks to see if the value of the second card picked is a match
+                        myPlayer.addPoint(); // adds a point to the player
+                        new MatchAlertFrame().setVisible(true);// match frame alert
+                    } else {
+                        new NotAMatch().setVisible(true);// not a match frame
+                    }
+                    card1 = ""; //resets the card
+                }
             }
         });
+        this.dispose();
     }//GEN-LAST:event_jbCard1ActionPerformed
 
     private void jbCard3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard3ActionPerformed
-       java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Card2().setVisible(true);
+                if (card1.equals("")) { // checks to see what the card picked is 
+                    card1 = "3";   //sets the value of the card picked
+                } else {
+                    if (card1.equals("2")) { // checks to see if the value of the second card picked is a match
+                        myPlayer.addPoint(); // adds a point to the player
+                        new MatchAlertFrame().setVisible(true);// match frame alert
+                    } else {
+                        new NotAMatch().setVisible(true);// not a match frame
+                    }
+                    card1 = ""; //resets the card
+                }
             }
         });
+        this.dispose();
     }//GEN-LAST:event_jbCard3ActionPerformed
 
     private void jbCard2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard2ActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Card2().setVisible(true);
+                if (card1.equals("")) { // checks to see what the card picked is 
+                    card1 = "2";   //sets the value of the card picked
+                } else {
+                    if (card1.equals("3")) { // checks to see if the value of the second card picked is a match
+                        myPlayer.addPoint(); // adds a point to the player
+                        new MatchAlertFrame().setVisible(true);// match frame alert
+                    } else {
+                        new NotAMatch().setVisible(true);// not a match frame
+                    }
+                    card1 = ""; //resets the card
+                }
             }
         });
+        this.dispose();
     }//GEN-LAST:event_jbCard2ActionPerformed
 
     private void jbCard4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard4ActionPerformed
-       java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Card3().setVisible(true);
+                if (card1.equals("")) { // checks to see what the card picked is 
+                    card1 = "4";   //sets the value of the card picked
+                } else {
+                    if (card1.equals("6")) { // checks to see if the value of the second card picked is a match
+                        myPlayer.addPoint(); // adds a point to the player
+                        new MatchAlertFrame().setVisible(true);// match frame alert
+                    } else {
+                        new NotAMatch().setVisible(true);// not a match frame
+                    }
+                    card1 = ""; //resets the card
+                }
             }
         });
+        this.dispose();
     }//GEN-LAST:event_jbCard4ActionPerformed
 
     private void jbCard5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard5ActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Card1().setVisible(true);
+                if (card1.equals("")) { // checks to see what the card picked is 
+                    card1 = "5";   //sets the value of the card picked
+                } else {
+                    if (card1.equals("1")) { // checks to see if the value of the second card picked is a match
+                        myPlayer.addPoint(); // adds a point to the player
+                        new MatchAlertFrame().setVisible(true);// match frame alert
+
+                    } else {
+                        new NotAMatch().setVisible(true);// not a match frame
+                    }
+                    card1 = ""; //resets the card
+                }
             }
         });
+        this.dispose();
     }//GEN-LAST:event_jbCard5ActionPerformed
 
     private void jbCard6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard6ActionPerformed
-       java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Card3().setVisible(true);
+                if (card1.equals("")) { // checks to see what the card picked is 
+                    card1 = "6";   //sets the value of the card picked
+                } else {
+                    if (card1.equals("4")) { // checks to see if the value of the second card picked is a match
+                        myPlayer.addPoint(); // adds a point to the player
+                        new MatchAlertFrame().setVisible(true);// match frame alert
+                    } else {
+                        new NotAMatch().setVisible(true);// not a match frame
+                    }
+                    card1 = ""; //resets the card
+                }
             }
         });
+        this.dispose();
     }//GEN-LAST:event_jbCard6ActionPerformed
 
     private void jbScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbScoreActionPerformed

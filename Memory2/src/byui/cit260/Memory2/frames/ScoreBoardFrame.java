@@ -14,12 +14,12 @@ import memory2.PlayerB;
 public class ScoreBoardFrame extends javax.swing.JFrame {
 Player myPlayer = new Player();
 PlayerB playerB = new PlayerB();
-MatchAlertFrame matchAlertFrame;
+BoardFrame boardFrame;
     /**
      * Creates new form ScoreBoardFrame
      */
     public ScoreBoardFrame() {
-       matchAlertFrame = this.matchAlertFrame ;
+       boardFrame = this.boardFrame ;
         initComponents();
     }
 
@@ -36,7 +36,6 @@ MatchAlertFrame matchAlertFrame;
         jLabel1 = new javax.swing.JLabel();
         PlayerAPoints = new javax.swing.JLabel();
         PlayerBPoints = new javax.swing.JLabel();
-        jbUpdate = new javax.swing.JButton();
         jbBacktogame = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,13 +45,6 @@ MatchAlertFrame matchAlertFrame;
         PlayerAPoints.setText("Player A's Points:");
 
         PlayerBPoints.setText("Player B's Points:");
-
-        jbUpdate.setText("update");
-        jbUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbUpdateActionPerformed(evt);
-            }
-        });
 
         jbBacktogame.setText("back to game");
         jbBacktogame.addActionListener(new java.awt.event.ActionListener() {
@@ -72,15 +64,12 @@ MatchAlertFrame matchAlertFrame;
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(PlayerAPoints, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                            .addComponent(PlayerBPoints, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jbUpdate)
-                        .addGap(28, 28, 28)
-                        .addComponent(jbBacktogame)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jbBacktogame)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(PlayerAPoints, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                                .addComponent(PlayerBPoints, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,9 +80,7 @@ MatchAlertFrame matchAlertFrame;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(PlayerBPoints)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbUpdate)
-                    .addComponent(jbBacktogame))
+                .addComponent(jbBacktogame)
                 .addContainerGap())
         );
 
@@ -116,12 +103,6 @@ MatchAlertFrame matchAlertFrame;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jbUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbUpdateActionPerformed
-       this.PlayerAPoints.setText(
-               "Player A's Points: " + PlayerB.getPoints());
-       
-    }//GEN-LAST:event_jbUpdateActionPerformed
 
     private void jbBacktogameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBacktogameActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -172,6 +153,5 @@ MatchAlertFrame matchAlertFrame;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbBacktogame;
-    private javax.swing.JButton jbUpdate;
     // End of variables declaration//GEN-END:variables
 }

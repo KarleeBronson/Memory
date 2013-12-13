@@ -30,8 +30,7 @@ public class MatchAlertFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jbPlayerAPoints = new javax.swing.JButton();
-        jbPlayerBPoints = new javax.swing.JButton();
+        jbContinueGame = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,17 +38,10 @@ public class MatchAlertFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Lucida Handwriting", 0, 24)); // NOI18N
         jLabel1.setText("Congrats, you got a Match!");
 
-        jbPlayerAPoints.setText("Player A");
-        jbPlayerAPoints.addActionListener(new java.awt.event.ActionListener() {
+        jbContinueGame.setText("continue game");
+        jbContinueGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbPlayerAPointsActionPerformed(evt);
-            }
-        });
-
-        jbPlayerBPoints.setText("Player B");
-        jbPlayerBPoints.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbPlayerBPointsActionPerformed(evt);
+                jbContinueGameActionPerformed(evt);
             }
         });
 
@@ -66,9 +58,7 @@ public class MatchAlertFrame extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(134, 134, 134)
-                        .addComponent(jbPlayerAPoints)
-                        .addGap(48, 48, 48)
-                        .addComponent(jbPlayerBPoints))
+                        .addComponent(jbContinueGame))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(jLabel2)))
@@ -82,25 +72,22 @@ public class MatchAlertFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbPlayerAPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbPlayerBPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jbContinueGame, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbPlayerAPointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlayerAPointsActionPerformed
-        Player.getPoints();
-       
+    private void jbContinueGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbContinueGameActionPerformed
+        //continues game
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new BoardFrame().setVisible(true);
+            }
+        });
         this.dispose();
-    }//GEN-LAST:event_jbPlayerAPointsActionPerformed
-
-    private void jbPlayerBPointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlayerBPointsActionPerformed
-         PlayerB.getPoints();
-        this.dispose();
-    }//GEN-LAST:event_jbPlayerBPointsActionPerformed
+    }//GEN-LAST:event_jbContinueGameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,7 +126,6 @@ public class MatchAlertFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton jbPlayerAPoints;
-    private javax.swing.JButton jbPlayerBPoints;
+    private javax.swing.JButton jbContinueGame;
     // End of variables declaration//GEN-END:variables
 }

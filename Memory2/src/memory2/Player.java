@@ -10,13 +10,15 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 /**
- *Score Value/Keeping score, store score, store players name
+ * Score Value/Keeping score, store score, store players name
+ *
  * @author kbronson
  */
-public class Player implements Serializable{
+public class Player implements Serializable {
+
     private static String[] x1;
-   public static int points = 0;
-   public String name = "";
+    public static int points = 0;
+    public String name = "";
     public String name2 = "";
     public String whoseTurn = "";     //a variable containing a reference to the Player who's turn is next
     Player playerA;
@@ -24,15 +26,17 @@ public class Player implements Serializable{
 
     public Player() {
         //this.playerB = new Player();
-       // this.playerA = new Player();
+        // this.playerA = new Player();
     }
 
-    public static int getPoints() {
-       int i;
-       
-       for(i = 0; i<= 1; i++){
-         points += i;
-    }return points;
+    public int getPoints() {
+
+        return points;
+    }
+
+    public  void addPoint() {
+        setPoints(getPoints() + 1);
+
     }
 
     public void displayPoints() {
@@ -40,39 +44,37 @@ public class Player implements Serializable{
 
     }
 
-   public static void setPoints( int points) {
-        Player.points = points;
+    public void setPoints(int points) {
+        this.points = points;
     }
 
     public String getName() {
         Scanner inFile = Memory2.getInputFile();
         System.out.println("Enter your name Player A:");
         this.name = inFile.nextLine();
-                return name;
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
-        
+
     }
-      
 
     public void displayName() {
         System.out.println("Your name will be displayed here" + playerA.name + playerB.name);
     }
-    
-    /*public static void displayName(String x[][]) throws PlayerException {
-       for (int PlayerA = name; x.length >= playerA; playerA++) {
-           try {
-               for (int playerA = 0; x[playerA].length >= playerB; playerB++) {
-                   System.out.print(x1[playerB] + "/t");
-               }
-           }catch(Exception e){
-               throw new PlayerException ("")
-                       }
-           System.out.println();
-       }   */
 
+    /*public static void displayName(String x[][]) throws PlayerException {
+     for (int PlayerA = name; x.length >= playerA; playerA++) {
+     try {
+     for (int playerA = 0; x[playerA].length >= playerB; playerB++) {
+     System.out.print(x1[playerB] + "/t");
+     }
+     }catch(Exception e){
+     throw new PlayerException ("")
+     }
+     System.out.println();
+     }   */
     private void getWinnerLoser() {
 
         playerA.getName();
@@ -91,10 +93,8 @@ public class Player implements Serializable{
 
     }
 
-    
-
     public Player getPlayerA() {
-       return playerA;
+        return playerA;
     }
 
     public void setPlayerA(Player playerA) {
@@ -108,6 +108,7 @@ public class Player implements Serializable{
     public void setPlayerB(Player playerB) {
         this.playerB = playerB;
     }
+
     public String getWhoseTurn() {
         return whoseTurn;
     }

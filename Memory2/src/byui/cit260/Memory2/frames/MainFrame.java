@@ -24,7 +24,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private Board myBoard = new Board();
     private Player myPlayer = new Player();
-GetNamesFrame getNamesFrame = new GetNamesFrame();
+    GetNamesFrame getNamesFrame = new GetNamesFrame();
+
     /**
      * Creates new form MainFrame
      */
@@ -97,7 +98,7 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
             }
         });
 
-        jbEnterNames.setText("Enter Names");
+        jbEnterNames.setText("Enter Name");
         jbEnterNames.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbEnterNamesActionPerformed(evt);
@@ -145,7 +146,7 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
                 .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,25 +195,16 @@ GetNamesFrame getNamesFrame = new GetNamesFrame();
     }//GEN-LAST:event_jbHelpActionPerformed
 
     private void jbMenuStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuStartActionPerformed
-        //Player myPlayer = new Player();
-        // myPlayer.getName();
-        //myPlayer.getName2();
-java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BoardFrame().setVisible(true);
-            }
-        });
-        try {
+        
 
-            Board.displayCardArray();
-            CardMenuView myCardMenu = new CardMenuView();
-            
-            try {
-                myCardMenu.getInput();
-            } catch (MenuException ex) {
-                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } catch (BoardException e) {
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new BoardFrame().setVisible(true);
+                }
+            });
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Bad First Letter",
                     "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -220,14 +212,13 @@ java.awt.EventQueue.invokeLater(new Runnable() {
     }//GEN-LAST:event_jbMenuStartActionPerformed
 
     private void jbEnterNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEnterNamesActionPerformed
-       java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new GetNamesFrame().setVisible(true);
             }
         });
-       this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jbEnterNamesActionPerformed
-    
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {
         {
@@ -282,7 +273,4 @@ java.awt.EventQueue.invokeLater(new Runnable() {
     private javax.swing.JPanel jpTitle;
     private javax.swing.JTextArea jtWelcome;
     // End of variables declaration//GEN-END:variables
-
-    
-    
 }
