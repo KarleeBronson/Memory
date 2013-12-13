@@ -40,6 +40,11 @@ public class ErrorFrame extends javax.swing.JFrame {
         jLabel1.setText("ERROR!");
 
         jButton1.setText("Resume Game");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Invalid Entry! Please try again!");
 
@@ -72,6 +77,15 @@ public class ErrorFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new BoardFrame().setVisible(true);
+            }
+        });
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
