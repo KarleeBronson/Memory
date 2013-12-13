@@ -177,33 +177,24 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
         try {
-            MainMenuControl.displayBoardHelp();
-            MainMenuControl.displayComputerPlayerHelp();
-            MainMenuControl.displayCollectCardHelp();
-            MainMenuControl.displayGameHelp();
-            MainMenuControl.displayFlippedDownCardHelp();
-            MainMenuControl.displayFlippedUpCardHelp();
-            MainMenuControl.displayRealPlayerHelp();
-            MainMenuControl.displayShuffleCardsHelp();
-
-
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new HelpFrame().setVisible(true);
+                }
+            });
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Bad Second Letter",
                     "Error", JOptionPane.ERROR_MESSAGE);
-
         }
     }//GEN-LAST:event_jbHelpActionPerformed
 
     private void jbMenuStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuStartActionPerformed
-        
-
         try {
             java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
                     new BoardFrame().setVisible(true);
                 }
             });
-
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Bad First Letter",
                     "Error", JOptionPane.ERROR_MESSAGE);
@@ -221,11 +212,9 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbEnterNamesActionPerformed
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {
-        {
-            this.dispose();
-        }
-
+        this.dispose();
     }
+            
 
     /**
      * @param args the command line arguments

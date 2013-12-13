@@ -15,12 +15,11 @@ import memory2.PlayerB;
  * @author Karalee Foster
  */
 public class GetNamesFrame extends javax.swing.JFrame {
-private Player myPlayer = new Player();
+
+    private Player myPlayer = new Player();
 //private PlayerB playerB = new PlayerB();
-public GetNamesFrame getNamesFrame;
-private Game game = new Game();
-
-
+    public GetNamesFrame getNamesFrame;
+    private Game game = new Game();
 
     /**
      * Creates new form GetNamesFrame
@@ -28,7 +27,6 @@ private Game game = new Game();
     public GetNamesFrame(Game game) {
         this.game = game;
     }
-
 
     public GetNamesFrame() {
         initComponents();
@@ -43,36 +41,13 @@ private Game game = new Game();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jpForm = new javax.swing.JPanel();
         jPlayerNames = new javax.swing.JLabel();
         jPlayer1 = new javax.swing.JTextField();
         jStorePlayerNames = new javax.swing.JButton();
-        jLPlayerA = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(482, 268));
-
-        jLabel1.setFont(new java.awt.Font("Lucida Handwriting", 0, 24)); // NOI18N
-        jLabel1.setText("Player's Names");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
 
         jPlayerNames.setFont(new java.awt.Font("Lucida Handwriting", 0, 14)); // NOI18N
         jPlayerNames.setText("Enter Your Names Please:");
@@ -90,8 +65,6 @@ private Game game = new Game();
             }
         });
 
-        jLPlayerA.setText("Player A");
-
         javax.swing.GroupLayout jpFormLayout = new javax.swing.GroupLayout(jpForm);
         jpForm.setLayout(jpFormLayout);
         jpFormLayout.setHorizontalGroup(
@@ -99,47 +72,36 @@ private Game game = new Game();
             .addGroup(jpFormLayout.createSequentialGroup()
                 .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpFormLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLPlayerA)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(27, 27, 27)
                         .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPlayerNames, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPlayerNames, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jpFormLayout.createSequentialGroup()
-                        .addGap(115, 115, 115)
+                        .addGap(89, 89, 89)
                         .addComponent(jStorePlayerNames)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jpFormLayout.setVerticalGroup(
             jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpFormLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(30, 30, 30)
                 .addComponent(jPlayerNames)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLPlayerA))
-                .addGap(42, 42, 42)
+                .addGap(18, 18, 18)
+                .addComponent(jPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jStorePlayerNames)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 120, Short.MAX_VALUE)
-                .addComponent(jpForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jpForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(jpForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jpForm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -151,22 +113,22 @@ private Game game = new Game();
     }//GEN-LAST:event_jPlayer1ActionPerformed
 
     private void jStorePlayerNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStorePlayerNamesActionPerformed
-try{
-    
-       
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        try {
+
+
+            java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
                     Memory2.mainFrame = new MainFrame();
                     Memory2.mainFrame.setVisible(true);
+                    new WelcomeFrame().setVisible(true);
                 }
             });
-    }
-catch (Exception e) {
-     JOptionPane.showMessageDialog(this,"not a name",
-             "Error", JOptionPane.ERROR_MESSAGE);
-  
-    }
-this.dispose();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "not a name",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+
+        }
+        this.dispose();
     }//GEN-LAST:event_jStorePlayerNamesActionPerformed
 
     /**
@@ -204,9 +166,6 @@ this.dispose();
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLPlayerA;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jPlayer1;
     private javax.swing.JLabel jPlayerNames;
     private javax.swing.JButton jStorePlayerNames;

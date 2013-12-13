@@ -65,13 +65,13 @@ public class Memory2 {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
-                    Memory2.mainFrame = new MainFrame();
-                    Memory2.mainFrame.setVisible(true);
+                 //   Memory2.mainFrame = new MainFrame();
+                 //   Memory2.mainFrame.setVisible(true);
                     new GetNamesFrame().setVisible(true);
                     new GetNamesFrame().setVisible(false);
                     new GetNamesFrame().dispose();
-                    Memory2.mainFrame.setVisible(false);
-                    Memory2.mainFrame.dispose();
+                   // Memory2.mainFrame.setVisible(false);
+                   // Memory2.mainFrame.dispose();
                 }
             });
            

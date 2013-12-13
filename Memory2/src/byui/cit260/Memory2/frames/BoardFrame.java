@@ -9,6 +9,7 @@ import byui.cit260.Memory2.CardFrames.Card2;
 import byui.cit260.Memory2.CardFrames.Card1;
 import byui.cit260.Memory2.enums.GameStatus;
 import byui.cit260.Memory2.menus.CardMenuControl;
+import javax.swing.JOptionPane;
 import memory2.Player;
 import memory2.PlayerB;
 
@@ -231,151 +232,190 @@ public class BoardFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
-        this.dispose();
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new MainFrame().setVisible(true);
+                }
+            });
+            this.dispose();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jbQuitActionPerformed
 
     private void jbCard1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard1ActionPerformed
 
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Card1().setVisible(true);
-                if (card1.equals("")) { // checks to see what the card picked is 
-                    card1 = "1";   //sets the value of the card picked
-                } else {
-                    if (card1.equals("5")) { // checks to see if the value of the second card picked is a match
-                        myPlayer.addPoint(); // adds a point to the player
-                        new MatchAlertFrame().setVisible(true);// match frame alert
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new Card1().setVisible(true);
+                    if (card1.equals("")) { // checks to see what the card picked is 
+                        card1 = "1";   //sets the value of the card picked
                     } else {
-                        new NotAMatch().setVisible(true);// not a match frame
+                        if (card1.equals("5")) { // checks to see if the value of the second card picked is a match
+                            myPlayer.addPoint(); // adds a point to the player
+                            new MatchAlertFrame().setVisible(true);// match frame alert
+                        } else {
+                            new NotAMatch().setVisible(true);// not a match frame
+                        }
+                        card1 = ""; //resets the card
                     }
-                    card1 = ""; //resets the card
                 }
-            }
-        });
-        
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jbCard1ActionPerformed
 
     private void jbCard3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard3ActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Card2().setVisible(true);
-                if (card1.equals("")) { // checks to see what the card picked is 
-                    card1 = "3";   //sets the value of the card picked
-                } else {
-                    if (card1.equals("2")) { // checks to see if the value of the second card picked is a match
-                        myPlayer.addPoint(); // adds a point to the player
-                        new MatchAlertFrame().setVisible(true);// match frame alert
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new Card2().setVisible(true);
+                    if (card1.equals("")) { // checks to see what the card picked is 
+                        card1 = "3";   //sets the value of the card picked
                     } else {
-                        new NotAMatch().setVisible(true);// not a match frame
+                        if (card1.equals("2")) { // checks to see if the value of the second card picked is a match
+                            myPlayer.addPoint(); // adds a point to the player
+                            new MatchAlertFrame().setVisible(true);// match frame alert
+                        } else {
+                            new NotAMatch().setVisible(true);// not a match frame
+                        }
+                        card1 = ""; //resets the card
                     }
-                    card1 = ""; //resets the card
                 }
-            }
-        });
-        
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jbCard3ActionPerformed
 
     private void jbCard2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard2ActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Card2().setVisible(true);
-                if (card1.equals("")) { // checks to see what the card picked is 
-                    card1 = "2";   //sets the value of the card picked
-                } else {
-                    if (card1.equals("3")) { // checks to see if the value of the second card picked is a match
-                        myPlayer.addPoint(); // adds a point to the player
-                        new MatchAlertFrame().setVisible(true);// match frame alert
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new Card2().setVisible(true);
+                    if (card1.equals("")) { // checks to see what the card picked is 
+                        card1 = "2";   //sets the value of the card picked
                     } else {
-                        new NotAMatch().setVisible(true);// not a match frame
+                        if (card1.equals("3")) { // checks to see if the value of the second card picked is a match
+                            myPlayer.addPoint(); // adds a point to the player
+                            new MatchAlertFrame().setVisible(true);// match frame alert
+                        } else {
+                            new NotAMatch().setVisible(true);// not a match frame
+                        }
+                        card1 = ""; //resets the card
                     }
-                    card1 = ""; //resets the card
                 }
-            }
-        });
-        
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jbCard2ActionPerformed
 
     private void jbCard4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard4ActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Card3().setVisible(true);
-                if (card1.equals("")) { // checks to see what the card picked is 
-                    card1 = "4";   //sets the value of the card picked
-                } else {
-                    if (card1.equals("6")) { // checks to see if the value of the second card picked is a match
-                        myPlayer.addPoint(); // adds a point to the player
-                        new MatchAlertFrame().setVisible(true);// match frame alert
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new Card3().setVisible(true);
+                    if (card1.equals("")) { // checks to see what the card picked is 
+                        card1 = "4";   //sets the value of the card picked
                     } else {
-                        new NotAMatch().setVisible(true);// not a match frame
+                        if (card1.equals("6")) { // checks to see if the value of the second card picked is a match
+                            myPlayer.addPoint(); // adds a point to the player
+                            new MatchAlertFrame().setVisible(true);// match frame alert
+                        } else {
+                            new NotAMatch().setVisible(true);// not a match frame
+                        }
+                        card1 = ""; //resets the card
                     }
-                    card1 = ""; //resets the card
                 }
-            }
-        });
-        
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jbCard4ActionPerformed
 
     private void jbCard5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard5ActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Card1().setVisible(true);
-                if (card1.equals("")) { // checks to see what the card picked is 
-                    card1 = "5";   //sets the value of the card picked
-                } else {
-                    if (card1.equals("1")) { // checks to see if the value of the second card picked is a match
-                        myPlayer.addPoint(); // adds a point to the player
-                        new MatchAlertFrame().setVisible(true);// match frame alert
-
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new Card1().setVisible(true);
+                    if (card1.equals("")) { // checks to see what the card picked is 
+                        card1 = "5";   //sets the value of the card picked
                     } else {
-                        new NotAMatch().setVisible(true);// not a match frame
+                        if (card1.equals("1")) { // checks to see if the value of the second card picked is a match
+                            myPlayer.addPoint(); // adds a point to the player
+                            new MatchAlertFrame().setVisible(true);// match frame alert
+
+                        } else {
+                            new NotAMatch().setVisible(true);// not a match frame
+                        }
+                        card1 = ""; //resets the card
                     }
-                    card1 = ""; //resets the card
                 }
-            }
-        });
-        
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jbCard5ActionPerformed
 
     private void jbCard6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard6ActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Card3().setVisible(true);
-                if (card1.equals("")) { // checks to see what the card picked is 
-                    card1 = "6";   //sets the value of the card picked
-                } else {
-                    if (card1.equals("4")) { // checks to see if the value of the second card picked is a match
-                        myPlayer.addPoint(); // adds a point to the player
-                        new MatchAlertFrame().setVisible(true);// match frame alert
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new Card3().setVisible(true);
+                    if (card1.equals("")) { // checks to see what the card picked is 
+                        card1 = "6";   //sets the value of the card picked
                     } else {
-                        new NotAMatch().setVisible(true);// not a match frame
+                        if (card1.equals("4")) { // checks to see if the value of the second card picked is a match
+                            myPlayer.addPoint(); // adds a point to the player
+                            new MatchAlertFrame().setVisible(true);// match frame alert
+                        } else {
+                            new NotAMatch().setVisible(true);// not a match frame
+                        }
+                        card1 = ""; //resets the card
                     }
-                    card1 = ""; //resets the card
                 }
-            }
-        });
-        
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+
+        }
     }//GEN-LAST:event_jbCard6ActionPerformed
 
     private void jbScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbScoreActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ScoreBoardFrame().setVisible(true);
-            }
-        });
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new ScoreBoardFrame().setVisible(true);
+                }
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jbScoreActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new HelpFrame().setVisible(true);
-            }
-        });
+        try {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new HelpFrame().setVisible(true);
+                }
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "something is wrong",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
