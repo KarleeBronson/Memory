@@ -44,6 +44,7 @@ public class HelpFrame extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setText("GAME OBJECTIVE\nYou- the player will select one card at a time until they get a match.  \nThere are a total of 3 matches (6 cards).\n\nCOLLECT CARDS\nOnce you find a match- we'll keep track of your score in the score board.\n\nFLIPPED CARDS\nflipped up card marks the cards on the board that have already \nbeen matched by a player. \"\nThe flipped up cards cannot be picked again for the duration of the round.");
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Start Game");

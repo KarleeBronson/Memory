@@ -85,6 +85,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="GAME OBJECTIVE&#xa;You- the player will select one card at a time until they get a match.  &#xa;There are a total of 3 matches (6 cards).&#xa;&#xa;COLLECT CARDS&#xa;Once you find a match- we&apos;ll keep track of your score in the score board.&#xa;&#xa;FLIPPED CARDS&#xa;flipped up card marks the cards on the board that have already &#xa;been matched by a player. &quot;&#xa;The flipped up cards cannot be picked again for the duration of the round."/>
           </Properties>
         </Component>
       </SubComponents>
