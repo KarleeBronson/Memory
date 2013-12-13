@@ -4,6 +4,9 @@
  */
 package byui.cit260.Memory2.frames;
 
+import byui.cit260.Memory2.CardFrames.Card3;
+import byui.cit260.Memory2.CardFrames.Card2;
+import byui.cit260.Memory2.CardFrames.Card1;
 import byui.cit260.Memory2.enums.GameStatus;
 import byui.cit260.Memory2.menus.CardMenuControl;
 import memory2.Player;
@@ -288,7 +291,7 @@ PlayerB playerB = new PlayerB();
     private void jbScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbScoreActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ScoreBoard().setVisible(true);
+                new ScoreBoardFrame().setVisible(true);
             }
         });
     }//GEN-LAST:event_jbScoreActionPerformed

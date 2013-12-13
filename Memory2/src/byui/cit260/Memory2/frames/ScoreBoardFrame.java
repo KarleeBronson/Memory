@@ -11,14 +11,14 @@ import memory2.PlayerB;
  *
  * @author Karalee Foster
  */
-public class ScoreBoard extends javax.swing.JFrame {
+public class ScoreBoardFrame extends javax.swing.JFrame {
 Player myPlayer = new Player();
 PlayerB playerB = new PlayerB();
 MatchAlertFrame matchAlertFrame;
     /**
-     * Creates new form ScoreBoard
+     * Creates new form ScoreBoardFrame
      */
-    public ScoreBoard() {
+    public ScoreBoardFrame() {
        matchAlertFrame = this.matchAlertFrame ;
         initComponents();
     }
@@ -149,20 +149,20 @@ MatchAlertFrame matchAlertFrame;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ScoreBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScoreBoardFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ScoreBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScoreBoardFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ScoreBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScoreBoardFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ScoreBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScoreBoardFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ScoreBoard().setVisible(true);
+                new ScoreBoardFrame().setVisible(true);
             }
         });
     }
