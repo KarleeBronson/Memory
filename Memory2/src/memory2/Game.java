@@ -7,7 +7,7 @@ package memory2;
 import java.io.Serializable;
 
 /**
- * Start game, end game, respond to catd selection
+ * Start game, end game, respond to card selection
  *
  * @author kbronson
  */
