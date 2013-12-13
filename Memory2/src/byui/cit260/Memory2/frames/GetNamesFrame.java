@@ -50,7 +50,7 @@ public class GetNamesFrame extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(482, 268));
 
         jPlayerNames.setFont(new java.awt.Font("Lucida Handwriting", 0, 14)); // NOI18N
-        jPlayerNames.setText("Enter Your Names Please:");
+        jPlayerNames.setText("Enter Your Name Please:");
 
         jPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +58,7 @@ public class GetNamesFrame extends javax.swing.JFrame {
             }
         });
 
-        jStorePlayerNames.setText("Save Names");
+        jStorePlayerNames.setText("continue");
         jStorePlayerNames.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jStorePlayerNamesActionPerformed(evt);
@@ -120,7 +120,7 @@ public class GetNamesFrame extends javax.swing.JFrame {
                 public void run() {
                     Memory2.mainFrame = new MainFrame();
                     Memory2.mainFrame.setVisible(true);
-                    new WelcomeFrame().setVisible(true);
+                    
                 }
             });
         } catch (Exception e) {
