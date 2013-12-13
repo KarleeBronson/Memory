@@ -105,11 +105,7 @@ BoardFrame boardFrame;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbBacktogameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBacktogameActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BoardFrame().setVisible(true);
-            }
-        });
+        
          this.dispose();
     }//GEN-LAST:event_jbBacktogameActionPerformed
 

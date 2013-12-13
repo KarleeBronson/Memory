@@ -66,11 +66,7 @@ public class NotAMatch extends javax.swing.JFrame {
 
     private void jbContinueGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbContinueGameActionPerformed
         //continues game
-       java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BoardFrame().setVisible(true);
-            }
-        });
+       
         this.dispose();
     }//GEN-LAST:event_jbContinueGameActionPerformed
 

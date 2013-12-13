@@ -44,9 +44,9 @@ public class BoardFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jbMatch = new javax.swing.JButton();
         jbQuit = new javax.swing.JButton();
         jbScore = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jbCard1 = new javax.swing.JToggleButton();
         jbCard4 = new javax.swing.JToggleButton();
@@ -81,13 +81,6 @@ public class BoardFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jbMatch.setText("Match");
-        jbMatch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbMatchActionPerformed(evt);
-            }
-        });
-
         jbQuit.setText("Quit");
         jbQuit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +95,13 @@ public class BoardFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("help");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -109,20 +109,23 @@ public class BoardFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbMatch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbScore, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                    .addComponent(jbQuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbScore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbQuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jbMatch)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jbScore)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbQuit)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jbCard1.setText("1");
@@ -227,14 +230,6 @@ public class BoardFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMatchActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MatchAlertFrame().setVisible(true);
-            }
-        });
-    }//GEN-LAST:event_jbMatchActionPerformed
-
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -263,7 +258,7 @@ public class BoardFrame extends javax.swing.JFrame {
                 }
             }
         });
-        this.dispose();
+        
     }//GEN-LAST:event_jbCard1ActionPerformed
 
     private void jbCard3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard3ActionPerformed
@@ -283,7 +278,7 @@ public class BoardFrame extends javax.swing.JFrame {
                 }
             }
         });
-        this.dispose();
+        
     }//GEN-LAST:event_jbCard3ActionPerformed
 
     private void jbCard2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard2ActionPerformed
@@ -303,7 +298,7 @@ public class BoardFrame extends javax.swing.JFrame {
                 }
             }
         });
-        this.dispose();
+        
     }//GEN-LAST:event_jbCard2ActionPerformed
 
     private void jbCard4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard4ActionPerformed
@@ -323,7 +318,7 @@ public class BoardFrame extends javax.swing.JFrame {
                 }
             }
         });
-        this.dispose();
+        
     }//GEN-LAST:event_jbCard4ActionPerformed
 
     private void jbCard5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard5ActionPerformed
@@ -344,7 +339,7 @@ public class BoardFrame extends javax.swing.JFrame {
                 }
             }
         });
-        this.dispose();
+        
     }//GEN-LAST:event_jbCard5ActionPerformed
 
     private void jbCard6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCard6ActionPerformed
@@ -364,7 +359,7 @@ public class BoardFrame extends javax.swing.JFrame {
                 }
             }
         });
-        this.dispose();
+        
     }//GEN-LAST:event_jbCard6ActionPerformed
 
     private void jbScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbScoreActionPerformed
@@ -374,6 +369,14 @@ public class BoardFrame extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_jbScoreActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new HelpFrame().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -411,6 +414,7 @@ public class BoardFrame extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -422,7 +426,6 @@ public class BoardFrame extends javax.swing.JFrame {
     private javax.swing.JToggleButton jbCard4;
     private javax.swing.JToggleButton jbCard5;
     private javax.swing.JToggleButton jbCard6;
-    private javax.swing.JButton jbMatch;
     private javax.swing.JButton jbQuit;
     private javax.swing.JButton jbScore;
     // End of variables declaration//GEN-END:variables

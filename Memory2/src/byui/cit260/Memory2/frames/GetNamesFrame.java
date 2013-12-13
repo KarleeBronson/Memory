@@ -153,9 +153,7 @@ private Game game = new Game();
     private void jStorePlayerNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStorePlayerNamesActionPerformed
 try{
     
-     String playerAName = this.jPlayer1.getText();
-       // String playerBName = this.jPlayer2.getText();
-    
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
                     Memory2.mainFrame = new MainFrame();

@@ -36,12 +36,10 @@ public class Player implements Serializable {
 
     public  void addPoint() {
         setPoints(getPoints() + 1);
-
     }
 
     public void displayPoints() {
         System.out.println(this.name + "'s Points:" + points);
-
     }
 
     public void setPoints(int points) {
@@ -92,6 +90,23 @@ public class Player implements Serializable {
         }
 
     }
+/*private void getWinnerLoser() {
+
+        playerA.getName();
+        //playerB.getName();
+
+
+        if (playerA.points < playerB.points) {
+            System.out.println(playerB.name + "wins");
+            System.out.println(playerA.name + "loses");
+        } else if (playerA.points > playerB.points) {
+            System.out.println(playerA.name + "wins");
+            System.out.println(playerB.name + "loses");
+        } else if (playerA == playerB) {
+            System.out.println("players are tied");
+        }
+
+    }*/
 
     public Player getPlayerA() {
         return playerA;

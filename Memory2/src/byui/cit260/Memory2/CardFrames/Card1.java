@@ -4,6 +4,8 @@
  */
 package byui.cit260.Memory2.CardFrames;
 
+import byui.cit260.Memory2.frames.BoardFrame;
+
 /**
  *
  * @author Karalee Foster
@@ -78,6 +80,7 @@ public class Card1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
