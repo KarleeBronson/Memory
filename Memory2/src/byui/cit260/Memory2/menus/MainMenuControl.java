@@ -28,8 +28,8 @@ public class MainMenuControl  {
         displayHelpBorder();
         System.out.println(
                 "\tThe objective of the game is to be the player with the most "
-                + "\n\tcard matches for atleast 2 out of 3 rounds. Each player "
-                + "\n\ttakes turns clicking on two cards on the board. If they get "
+                + "\n\tcard matches for atleast 2 out of 3 rounds. The player "
+                + "\n\ttakes a turn clicking on two cards on the board. If they get "
                 + "\n\ta match, they take another turn. Otherwise, their turn ends"
                 + "\n\tand the next player begins their turn. The player who finds "
                 + "\n\tthe most matches wins the round. The player who wins 2 out "
