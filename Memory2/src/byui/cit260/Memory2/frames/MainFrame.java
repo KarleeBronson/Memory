@@ -199,7 +199,7 @@ public class MainFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Bad First Letter",
                     "Error", JOptionPane.ERROR_MESSAGE);
         }
-        this.dispose();
+       // this.dispose();
     }//GEN-LAST:event_jbMenuStartActionPerformed
 
     private void jbEnterNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEnterNamesActionPerformed
@@ -208,7 +208,7 @@ public class MainFrame extends javax.swing.JFrame {
                 new GetNamesFrame().setVisible(true);
             }
         });
-        this.dispose();
+       // this.dispose();
     }//GEN-LAST:event_jbEnterNamesActionPerformed
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {

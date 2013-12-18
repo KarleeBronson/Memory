@@ -233,11 +233,7 @@ public class BoardFrame extends javax.swing.JFrame {
 
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
         try {
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    new MainFrame().setVisible(true);
-                }
-            });
+            
             this.dispose();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "something is wrong",

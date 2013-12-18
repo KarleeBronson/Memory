@@ -52,12 +52,6 @@ public class GetNamesFrame extends javax.swing.JFrame {
         jPlayerNames.setFont(new java.awt.Font("Lucida Handwriting", 0, 14)); // NOI18N
         jPlayerNames.setText("Enter Your Name Please:");
 
-        jPlayer1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPlayer1ActionPerformed(evt);
-            }
-        });
-
         jStorePlayerNames.setText("continue");
         jStorePlayerNames.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,11 +100,6 @@ public class GetNamesFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPlayer1ActionPerformed
-        myPlayer.getName();
-        myPlayer.setName("");
-    }//GEN-LAST:event_jPlayer1ActionPerformed
 
     private void jStorePlayerNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStorePlayerNamesActionPerformed
         try {
